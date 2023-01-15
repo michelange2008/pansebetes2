@@ -1,0 +1,59 @@
+{
+  "prefixe" : "chiffre",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "id" : {
+      "name" : "id",
+      "type" : "hidden",
+      "isName" : true
+    },
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text",
+      "required" : true
+    },
+    "detail" : {
+      "label" : "détail",
+      "name" : "detail",
+      "type" : "textarea",
+      "required" : false
+    },
+  "groupe_id" : {
+      "label" : "groupe",
+      "name" : "groupe_id",
+      "table" : "groupes",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "typenum_id" : {
+      "label" : "Type de valeur numérique",
+      "name" : "typenum_id",
+      "table" : "typenums",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "min" : {
+      "label" : "minimum",
+      "name" : "min",
+      "type" : "number",
+      "min"  : 0,
+      "step" : 1,
+      "required" : true,
+      "isName" : 0
+    },
+    "requis" : {
+      "label" : "obligatoire (est indispensable pour calculer des ratio et pourcentages)",
+      "name" : "requis",
+      "type" : "ouinon",
+      "required" : true,
+      "isName" : true
+    }
+  }
+}

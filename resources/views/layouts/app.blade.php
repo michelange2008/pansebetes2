@@ -5,31 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Panse-Bêtes') }}</title>
+        <link rel="icon" href="{{url('favicon.ico ')}}" />
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ url('css/app.css') }}" />
+        <link rel="stylesheet" href="{{url('css/bootstrap-table.min.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" />
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <body>
+      @yield('menuprincipal')
+      @yield('menu')
+      @yield('sousmenu')
+      @yield('soustitre')
+      @yield('contenu')
+      @yield('aide')
+      @yield('scripts')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+      <script src="{{ url('js/jquery.min.js') }}"></script>
+      <script src="{{ url('js/jquery-ui.min.js') }}"></script>
+      <script src="{{ url('js/jquery-confirm.min.js') }}"></script>
+      <script src="{{ url('js/bootstrap/bootstrap.min.js') }}"></script>
+      <script src="{{ url('js/bootstrap-table.min.js') }}"></script>
+      <script src="{{ url('js/bootstrap-table-fr-FR.min.js') }}"></script>
+      <script src="{{ url('js/app.js') }}"></script>
+
+      @stack('js')
+
     </body>
 </html>

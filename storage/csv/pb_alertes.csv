@@ -1,0 +1,282 @@
+id,abbr,nom,type,unite,modalite,niveau,theme_id,espece_id
+1001,null,hétérogénéité marquée de l'état coporel des vaches,liste,,OBS,0,1,1
+1002,null,Etat de propreté du troupeau en hiver,liste,,OBS,2,1,1
+1003,null,Comportements agressifs entre les vaches,pourcentage,%,OBS,0,1,1
+1004,null,Pourcentage de vaches avec blessures,pourcentage,%,OBS,15,1,1
+1005,null,Pourcentage d'animaux accidentés au pâturage,pourcentage,%,OBS,2,1,1
+1006,null,Pourcentage d'animaux accidentés en stabulation,pourcentage,%,OBS,3,1,1
+1007,null,Taux de mortalité des animaux d'élevage (génisses après sevrage et vaches),pourcentage,%,OBS,5,1,1
+1008,null,Taux de mortalités des animaux adultes en période d'engraissement,pourcentage,%,OBS,5,1,1
+1009,null,Taux d'animaux de plus de 10 ans,pourcentage,%,OBS,15,1,1
+1010,null,Montant des frais vétérinaires / vélage (hors conseil),valeur,€,OBS,100,1,1
+1011,null,Poids des génisses à la reproduction,liste,,OBS,0,2,1
+1012,null,Variation d'état corporel en phase de reproduction,liste,,OBS,1,2,1
+1013,null,Taux de gestation (nb de vaches pleines / nb de vaches mises à la reproduction),liste,,OBS,0,2,1
+1014,null,Nombre d'avortements pendant les 3 derniers mois de gestation,valeur,avortement(s),OBS,1,2,1
+1015,null,Intervalle vêlage 1 - vêlage 2,valeur,jours,OBS,390,2,1
+1016,null,% de vêlages difficiles des génisses (> 3 avec aide méca),pourcentage,%,OBS,20,2,1
+1017,null,% de vaches avec un problème post-vélage (matrice non-délivrance ou métrite),pourcentage,%,OBS,10,2,1
+1018,null,Poids de naissance des veaux mâles,liste,(par rapport à la moyenne raciale),OBS,1,2,1
+1019,null,Engraissement : nombre d'animaux en acidose clinique,valeur,animaux,OBS,2,3,1
+1020,null,Engraissement : nombre de morts,valeur,animaux,OBS,0,3,1
+1021,null,Vaches : Diarrhées et aspect des bouses,liste,,OBS,0,3,1
+1022,null,Vaches : cas cliniques de météorisation,valeur,cas,OBS,0,3,1
+1023,null,Vaches : cas de tétanie d'herbage,valeur,cas,OBS,0,3,1
+1024,null,Taux de mortalité 0 à 2 j,pourcentage,%,OBS,5,4,1
+1025,null,Taux de mortalité 3 à 15 j,pourcentage,%,OBS,3,4,1
+1026,null,Taux de mortalité 15 j au sevrage,pourcentage,%,OBS,2,4,1
+1027,null,GMQ 0-210 j,liste,,OBS,0,4,1
+1028,null,% veaux avec gros nombril,pourcentage,%,OBS,10,4,1
+1029,null,% de veaux avec problème digestif,pourcentage,%,OBS,10,4,1
+1030,null,% problème respiratoire,pourcentage,%,OBS,5,4,1
+1031,null,% problème fonctionnel (fractures écrasement etc.),pourcentage,%,OBS,3,4,1
+1032,null,Prise de colostrum (% après 6 h),pourcentage,%,OBS,5,4,1
+1033,null,% colostrum ne venant pas de la mère,pourcentage,%,OBS,5,4,1
+1034,null,perte de poids et perte d'état,liste,,OBS,0,5,1
+1035,null,"Présence de poils piqués, robe déstructurée",liste,,OBS,0,5,1
+1036,null,Nombre de traitements curatifs contre les strongles digestifs pour les vaches allaitantes,valeur,nombre de traitements,OBS,0,5,1
+1037,null,Nombre de traitements curatifs contre les strongles digestifs pour les génisses,valeur,nombre de traitements,OBS,0,5,1
+1038,null,Nombre de traitements curatifs contre les stronges respiratoires chez les génisses,valeur,nombre de traitements,OBS,0,5,1
+1039,null,Nombre de traitements curatifs contre les stronges respiratoires chez les vaches allaitantes,valeur,nombre de traitements,OBS,0,5,1
+1040,null,% de bronchites vermineuses,pourcentage,%,OBS,0,5,1
+1041,null,Douve : nombre de cas cliniques,valeur,nombre de cas,OBS,0,5,1
+1042,null,Grande douve et paramphistomes : nombre de traitements curatifs,valeur,nombre de traitements,OBS,0,5,1
+1043,null,"Nombre de ticket d'abattage avec la mention ""foie saisi""",valeur,nombre,OBS,0,5,1
+1044,null,"Traitements curatifs ectoparasites au pâturage (tiques, mouches …)",valeur,nombre de traitements,OBS,0,5,1
+1045,null,"Traitements curatifs ectoparasites en stabulation (poux, gales, teignes, …)",valeur,nombre de traitements,OBS,0,5,1
+1046,null,"% de vaches avec mamelle défectueuse (déséquilibrée, 3 quartiers, trayons à problèmes)",pourcentage,%,OBS,10,6,1
+1047,null,Présence de cas de mammites,valeur,nombre de mammites,OBS,1,6,1
+1048,null,% de vaches ayant boité sévèrement,pourcentage,%,OBS,5,7,1
+1049,null,Nombre de taureau qui boite,valeur,nombre d’animaux,OBS,0,7,1
+1050,null,% d'animaux traités pour boiteries,pourcentage,%,OBS,10,7,1
+2000,null,Hétérogénéité marquée de l'état corporel des vaches intra-lot,liste,,OBS,0,1,2
+2001,null,Animaux avec note d’état corporel inférieur ou égale à 2,valeur,nombre d’animaux,OBS,0,1,2
+2002,null,Animaux en fin de période de tarissement avec note d’état corporel inférieur à 3,valeur,nombre d’animaux,OBS,0,1,2
+2003,null,% d’animaux avec robe déstructurée,pourcentage,%,OBS,25,1,2
+2004,null,Etat de propreté des animaux en bâtiment,liste,,OBS,0,1,2
+2005,null,Comportements agressifs entre elles,liste,,OBS,0,1,2
+2006,blessures,"% d’animaux avec des blessures (gonflements, plaies, coups de corne, ...)",pourcentage,%,OBS,15,1,2
+2007,mort_N_V,% de mortalité des jeunes (de la naissance à l’âge du vêlage),pourcentage,%,CAL,10,1,2
+2008,mort_vaches,% de mortalité des vaches,pourcentage,%,CAL,2,1,2
+2009,renouvellement,% de renouvellement du troupeau,liste,,CAL,0,1,2
+2010,frais_veto,Montant des frais vétérinaires / vache présente (hors conseil),valeur,euros,CAL,80,1,2
+2011,null,Poids des génisses à la première insémination,liste,,NUM,0,2,2
+2012,premier_velage,Age au premier vêlage,valeur,mois,NUM,36,2,2
+2013,null,Intervalle vêlage-1ère insémination (vaches inséminées pendant les 3 derniers mois),valeur,jours,NUM,82,2,2
+2014,null,% de vaches avec 3 inséminations ou plus,pourcentage,%,NUM,20,2,2
+2015,null,% de ré-insémination dans les 60 jours suivant une insémination,pourcentage,%,NUM,35,2,2
+2016,null,IVV moyen du troupeau (hors lactation longues choisies),valeur,jours,NUM,400,2,2
+2017,non_del,% de vaches avec un problème de non-délivrance après vêlage,pourcentage,%,CAL,10,2,2
+2018,vel_genisses_diff,% de vêlages difficiles des génisses,pourcentage,%,CAL,20,2,2
+2019,metrites,% de vaches avec une infection utérine après vêlage,pourcentage,%,CAL,10,2,2
+2020,avortements,% d'avortements pendant les 3 derniers mois. ,pourcentage,%,CAL,1,2,2
+2021,fdl,Cas clinique de fièvre de lait,valeur,nombre d’animaux,NUM,0,3,2
+2022,caillettes,Cas de déplacement de caillette,valeur,nombre d’animaux,NUM,0,3,2
+2023,cetoses,Cas de cétose,valeur,nombre d’animaux,NUM,0,3,2
+2024,null,% de vaches avec TBi >45 g/kg et TPi < 28 ou 30g/kg ( ! particularités raciales),pourcentage,%,OBS,20,3,2
+2025,tetanies,Cas clinique de tétanie d'herbage,valeur,nombre d’animaux,NUM,0,3,2
+2026,null,% de vaches avec TBi – TPi < 3g/kg et TBi faible <35g/kg,pourcentage,%,OBS,15,3,2
+2027,null,"Pourcentage de vaches avec bouses anormales (liquides, mousse, claires)",pourcentage,%,OBS,25,3,2
+2029,uree,Taux d’urée du lait du troupeau,valeur,mg/l,NUM,400,3,2
+2030,celulles,Concentration en Cellules Somatiques du lait de Tank (CCSt) hors lait trié,valeur,Cellules / ml,NUM,250000,6,2
+2031,mammites,Fréquence annuelle de mammites cliniques élevée,pourcentage,%,CAL,20,6,2
+2032,nouv_mamm_tar,% nouvelles infections en période sèche,pourcentage,%,NUM,10,6,2
+2033,primi_nouv_mamm_debut,% d'infections mammaires en début de lactation sur les primipares,pourcentage,%,NUM,10,6,2
+2034,staph,Présence de staphylocoques dans le lait,valeur,nombre de cas,NUM,0,6,2
+2035,Mort_24,% de mortalité durant les premières 24h ,pourcentage,%,CAL,5,4,2
+2036,mort_1_S,% de mortalité de 1 jour de vie jusqu'au sevrage ,pourcentage,%,CAL,5,4,2
+2037,morb_veaux,"% de morbidité total (% de veaux traités, en retard, parmi les veaux élevés)",pourcentage,%,CAL,5,4,2
+2038,omph,% veaux avec gros nombril,pourcentage,%,CAL,5,4,2
+2039,diarrhees_veaux,"% de veaux avec problème digestif (diarrhées, coccidioses)",pourcentage,%,CAL,10,4,2
+2040,respi_veaux,% de veaux avec problèmes respiratoires,pourcentage,%,CAL,5,4,2
+2041,null,Baisse de la production laitière,liste,,OBS,0,5,2
+2042,null,Hétérogénéité de croissance sur les jeunes après 8 mois d’âge,valeur,g/jour,OBS,500,5,2
+2043,null,Etat corporel hétérogène,liste,,OBS,0,5,2
+2044,null,Pas de reprise d'état en fin de lactation,valeur,nombre d’animaux,OBS,0,5,2
+2045,diarrhees_J_A,% de diarrhées sur jeunes et adultes,pourcentage,%,CAL,25,5,2
+2046,null,"Poils piqués et ternes, robe déstructurée",liste,,OBS,0,5,2
+2047,null,Toux estivale ou automnale,liste,,OBS,0,5,2
+2048,null,Essoufflement lors de l’effort,liste,,OBS,0,5,2
+2049,null,Durée de pâturage cumulé avant premier vêlage,liste,,OBS,0,5,2
+2050,null,Œdème sous glossien (signe de la bouteille),liste,,OBS,0,5,2
+2051,null,Ticket d’abattage avec la mention « foie saisie »,valeur,nombre d’animaux,NUM,0,5,2
+2052,null,Vaches maigres à poils piqués ,valeur,nombre d’animaux,OBS,0,5,2
+2053,diarrhees_A,Diarrhées sur les animaux adultes (hors causes alimentaires),valeur,nombre d’animaux,OBS,0,5,2
+2054,null,"Zones de dépilation, de grattage ? ",liste,,OBS,0,5,2
+2055,boiterie_vache,% de vaches boitant sévèrement selon le score de locomotion,pourcentage,%,CAL,5,7,2
+2056,null,Réformes pour problèmes de pattes,valeur,nombre d’animaux,NUM,1,7,2
+2057,boiterie_trait,% d'animaux traités pour boiteries,pourcentage,%,CAL,15,7,2
+2058,sabots_longs,% de vaches avec des sabots allongés dans le troupeau,pourcentage,%,CAL,10,7,2
+2059,salmo,Présence de salmonelles dans le lait,valeur,nombre de cas,NUM,0,6,2
+2060,listeriose,Présence de listeria dans le lait,valeur,nombre de cas,NUM,0,6,2
+2061,coli,Présence de colibacilles dans le lait,valeur,nombre de cas,NUM,0,6,2
+3000,null,État corporel du lot ou du troupeau,liste,,OBS,0,1,3
+3001,null,État de propreté des animaux,liste,,OBS,1,1,3
+3002,null,Taux de réforme,pourcentage,%,OBS,30,1,3
+3003,null,Taux de mortalité des chèvres,pourcentage,%,OBS,5,1,3
+3004,null,% de chèvres atteintes de troubles respiratoires,pourcentage,%,OBS,3,1,3
+3005,null,% de chèvres atteintes de troubles digestifs ?,pourcentage,%,OBS,10,1,3
+3006,null,Poids moyen du lot à 8 mois (par rapport au poids moyen adulte),liste,,OBS,0,1,3
+3007,null,% d'animaux à comportements sociaux anormaux,pourcentage,%,OBS,1,1,3
+3008,null,% d'animaux présentant des troubles nerveux,pourcentage,%,OBS,2,1,3
+3009,null,Poids chevrettes à la première mise à la reproduction,valeur,kg,OBS,35,2,3
+3010,null,Pourcentage de chèvres ayant mis-bas en 2 mois,liste,,OBS,0,2,3
+3011,null,Non-délivrance après mise bas,pourcentage,%,OBS,0,2,3
+3012,null,Pourcentage de mises bas difficiles,pourcentage,%,OBS,0,2,3
+3013,null,Avortements (+ de 3 en 1 semaine ou + de 4 % au total),liste,,OBS,1,2,3
+3014,null,Entérotoxémies,valeur,animaux,OBS,0,3,3
+3015,null,"Toxémies de gestation, cétose",valeur,animaux,OBS,0,3,3
+3016,null,Acidose ruminale,valeur,animaux,OBS,0,3,3
+3017,null,Alcalose,valeur,animaux,OBS,0,3,3
+3018,null,Urolithiase (gravelle) du bouc,valeur,animaux,OBS,0,3,3
+3019,null,Concentration en Cellules Somatiques du lait de Tank (CCSt),valeur,cellules,OBS,3000000,6,3
+3020,null,Si transformation : présence de salmonelles,liste,,OBS,1,6,3
+3021,null,Si transformation : présence de listeria,liste,,OBS,1,6,3
+3022,null,Si transformation : présence de staphylocoques > seuil réglemen.,liste,,OBS,1,6,3
+3023,null,Pourcentage de chèvres infectées incurables,pourcentage,%,OBS,5,6,3
+3024,null,Pourcentage de chèvres avec déséquilibres mammaires importants (largeur 3 doigts),pourcentage,%,OBS,30,6,3
+3025,null,Pourcentage de cas de mammites cliniques pendant le 1er mois,pourcentage,%,OBS,5,6,3
+3026,null,Pourcentage de chèvres avec abcès,pourcentage,%,OBS,2,6,3
+3027,null,Taux de mortalité durant les premières 24h (hors avortement),pourcentage,%,OBS,5,4,3
+3028,null,Renouvellement : Taux de mortalité chez les chevrettes,valeur,nombre,OBS,1,4,3
+3029,null,Taux de mortalité avant sevrage,pourcentage,%,OBS,10,4,3
+3030,null,diarrhées néonatales les 2 premières semaines,pourcentage,%,OBS,15,4,3
+3031,null,infection du nombril,pourcentage,%,OBS,3,4,3
+3032,null,Nombre de cas d'arthrite,valeur,animaux,OBS,1,4,3
+3033,null,problèmes respiratoires,pourcentage,%,OBS,5,4,3
+3034,null,Poids des chevrettes au sevrage,liste,,OBS,0,4,3
+3035,null,"Age des 
+chevrettes au sevrage",liste,,OBS,0,4,3
+3036,null,Cryptosporidiose,liste,,OBS,0,4,3
+3037,null,Coccidiose,liste,,OBS,0,4,3
+3038,null,Résultats de coproscopies,valeur,opg,OBS,800,5,3
+3039,null,Strongles gastro-intestinaux : symptômes,liste,,OBS,0,5,3
+3040,null,Strongles respiratoires : symptômes,liste,,OBS,0,5,3
+3041,null,Traitement systématique contre les strongles digestifs,liste,,OBS,0,5,3
+3042,null,Échec fréquent des traitements,liste,,OBS,0,5,3
+3043,null,% de chèvres avec muqueuses pales,pourcentage,%,OBS,25,5,3
+3044,null,Présence de paramphistomes à l'autopsie,liste,,OBS,0,5,3
+3045,null,"Traitements ectoparasites au pâturage (tiques, mouches ...) ",liste,,OBS,0,5,3
+3046,null,"Traitements ectoparasites en stabulation (poux, gales, teignes,puce …)",liste,,OBS,0,5,3
+3047,null,Onglons déformés ou sabots allongés (ski) fréquents,liste,,OBS,0,7,3
+3048,null,Présence d'arthrites / gros genoux (chèvres),liste,,OBS,0,7,3
+3049,null,Si transformation : présence d’Escherichia coli,liste,,OBS,0,6,3
+3050,null,Présence de lésions cutanées (ectoparasites),liste,,OBS,0,5,3
+3051,null,Présence de kératites (mouches),liste,,OBS,0,5,3
+4000,null,Homogénéité et état corporel du lot ou du troupeau,liste,,OBS,0,1,4
+4001,null,Etat de propreté des animaux,liste,,OBS,0,1,4
+4002,null,Taux de réforme,pourcentage,%,OBS,30,1,4
+4003,null,Taux de mortalité des brebis,pourcentage,%,OBS,5,1,4
+4004,null,% de brebis atteintes de troubles respiratoires chroniques,pourcentage,%,OBS,3,1,4
+4005,null,"% de brebis atteintes de troubles digestifs ? (propreté arrière train, diarrhée, ballonnement, etc..)",pourcentage,%,OBS,10,1,4
+4006,null,Poids moyen du lot à 8 mois,liste,,OBS,0,1,4
+4007,null,"% d'animaux à comportements sociaux anormaux ou stéréotypies (peur, tics, pica, …)",pourcentage,%,OBS,1,1,4
+4008,null,"% d'animaux présentant des troubles nerveux (convulsion, pousser au mur, perte d’équilibre, coma, …)",pourcentage,%,OBS,2,1,4
+4009,null,Taux d'infertilité des antenaises et agnelles : vides / mises à la reproduction,pourcentage,%,OBS,15,2,4
+4010,null,% de mises-bas en 1 mois,liste,,OBS,0,2,4
+4011,null,Taux d’infertilité en fonction de la période et de la durée de la lutte,pourcentage,%,OBS,10,2,4
+4012,null,Taux d'avortement tardif (dans les 15 jours avant la mise bas prévue) des brebis,pourcentage,%,OBS,2,2,4
+4013,null,Taux d’avortement tardif des antenaises,pourcentage,%,OBS,5,2,4
+4014,null,Y-a-t’il eu plus de 3 avortements en une semaine à la dernière mise-bas,liste,,OBS,0,2,4
+4015,null,% de brebis atteintes de toxémie de gestation,pourcentage,%,OBS,1,2,4
+4016,null,% de brebis atteintes de prolapsus vaginal en fin de gestation,pourcentage,%,OBS,3,2,4
+4017,null,% de brebis ayant eu un agnelage difficile,pourcentage,%,OBS,5,2,4
+4018,null,Taux de prolificité,liste,Par rapport à la moyenne raciale,OBS,90,2,4
+4019,null,Durée de mise bas d'un lot,valeur,mois,OBS,2,2,4
+4020,null,% de brebis réformées pour cause de mammite et/ou perte d'un quartier,pourcentage,%,OBS,6,6,4
+4021,null,% de brebis ayant des lésions de la mamelle durant la phase d'allaitement,pourcentage,%,OBS,6,6,4
+4022,null,% d'agneaux de faible poids à la naissance (< 2kg),pourcentage,%,OBS,15,4,4
+4023,null,Taux de mortalité (hors prédation) naissance-vente ,liste,,OBS,1,4,4
+4024,null,Taux de mortinatalité mort-né et dans les premières 48h,pourcentage,%,OBS,5,4,4
+4025,null,Taux de mortalité de 48 heures à 10 jours (parmi les agneaux nés totaux),pourcentage,%,OBS,4,4,4
+4026,null,Taux de mortalité de 10 jours au sevrage-commercialisation (parmi les agneaux nés totaux),pourcentage,%,OBS,3,4,4
+4027,null,Taux de mortalité (hors prédation) entre le sevrage et la première mise bas des agnelles,pourcentage,%,OBS,3,4,4
+4028,null,% d'agneaux n'ayant pas tété 2h après la naissance ,pourcentage,%,OBS,2,4,4
+4029,null,% d’agneaux faibles qui ne se lèvent pas au bout de 20 minutes environs,pourcentage,%,OBS,2,4,4
+4030,null,"% d'agneaux atteints de ""agneau baveur"" (0-5 jours)",pourcentage,%,OBS,3,4,4
+4031,null,"% d'agneaux atteints de troubles du cordon (gros cordon, nombril humide)",pourcentage,%,OBS,2,4,4
+4032,null,% d'agneaux atteints d'ecthyma sévère,pourcentage,%,OBS,5,4,4
+4033,null,% d'agneaux atteints de diarrhée avant 3 semaines,pourcentage,%,OBS,3,4,4
+4035,null,% d'agneaux atteints de diarrhée de 3 semaines au sevrage),pourcentage,%,OBS,5,4,4
+4036,null,% d'agneaux atteints de diarrhée après sevrage en bergerie,pourcentage,%,OBS,5,4,4
+4037,null,% d'agneaux atteints de diarrhée après sevrage à l’herbe,pourcentage,%,OBS,12,4,4
+4038,null,% d'agneaux atteints de troubles respiratoires,pourcentage,%,OBS,5,4,4
+4039,null,% de saisie à l'abattoir en lien avec des problèmes respiratoires (côtelette) pleurésie (si information disponible),pourcentage,%,OBS,1,4,4
+4040,null,% d'agneaux atteints d'arthrite,pourcentage,%,OBS,3,4,4
+4041,null,% d'agneaux atteints de raide,pourcentage,%,OBS,3,4,4
+4042,null,% d'agneaux atteints d'entérotoxémie de 2 semaines à la vente,pourcentage,%,OBS,3,4,4
+4043,null,% d'agneaux atteints de ballonnement / météorisation,pourcentage,%,OBS,2,4,4
+4044,null,% d'agneaux atteints de troubles nerveux,pourcentage,%,OBS,2,4,4
+4045,null,% d'agnelles atteintes de diarrhées au pâturage,pourcentage,%,OBS,10,4,4
+4046,null,% de brebis ayant des lésions de la peau dû à la gale,pourcentage,%,OBS,0,5,4
+4047,null,% de brebis ayant des lésions de la peau (hors gales...) et de la toison :,pourcentage,%,OBS,5,5,4
+4048,null,"Présence de brebis avec indice FAMACHA >3 (rose pâle, blanc)",liste,,OBS,0,5,4
+4049,null,"Signes d’infestation par des parasites gastro-intestinaux (amaigrissement, anémie, copro > 1000, …)",liste,,OBS,0,5,4
+4050,null,"Signes d’infestation par la grande douve + paramphistome (symptômes, sérologie pour GD, copro pour P)",liste,,OBS,0,5,4
+4051,null,Signes d’infestation par la petite douve,liste,,OBS,0,5,4
+4052,null,Signes d’infestation par les strongles pulmonaires,liste,,OBS,0,5,4
+4053,null,Myases - Oestres,liste,,OBS,0,5,4
+4054,null,% de brebis traitées individuellement pour boiteries,pourcentage,%,OBS,5,7,4
+4055,null,Nombre de traitements collectifs /an,valeur,traitements/lot,OBS,3,7,4
+4056,null,% de brebis boitant sévèrement,pourcentage,%,OBS,5,7,4
+4057,null,"Nombre d'intervention curative sur les onglons (soins, parage curatif, pédiluve…)",valeur,interventions,OBS,1,7,4
+5000,null,Homogénéité et état corporel du lot ou du troupeau,liste,,OBS,0,1,5
+5001,null,Etat de propreté des animaux ,liste,,OBS,0,1,5
+5002,null,Taux de réforme ,pourcentage,%,OBS,30,1,5
+5003,null,Taux de mortalité des brebis,pourcentage,%,OBS,5,1,5
+5004,null,% de brebis atteintes de troubles respiratoires (atteinte chronique ou épidémique),pourcentage,%,OBS,3,1,5
+5005,null,"% de brebis atteintes de troubles digestifs ? (propreté arrière train, diarrhée, ballonnement, etc..)",pourcentage,%,OBS,10,1,5
+5006,null,Poids moyen du lot à 8 mois ,liste,,OBS,0,1,5
+5007,null,% d'animaux à comportements sociaux anormaux ou stéréotypies,pourcentage,%,OBS,1,1,5
+5008,null,% d'animaux présentant des troubles nerveux (hors biberon et sevrage),pourcentage,%,OBS,2,1,5
+5009,null,Taux d'infertilité des antenaises et agnelles : % vides / total en repro (sur 2 mois de lutte),pourcentage,%,OBS,15,2,5
+5011,null,Taux d’infertilité en fonction de la période et de la durée de la lutte ,pourcentage,%,OBS,10,2,5
+5012,null,Taux d'avortement tardif adultes (dans les 15 jours avant la mise bas prévue),pourcentage,%,OBS,2,2,5
+5013,null,Taux d'avortement tardif agnelles (dans les 15 jours avant la mise bas prévue),pourcentage,%,OBS,5,2,5
+5014,null,% de brebis atteintes de toxémie de gestation,pourcentage,%,OBS,1,2,5
+5015,null,% de brebis atteintes de prolapsus vaginal en fin de gestation,pourcentage,%,OBS,3,2,5
+5016,null,% de brebis ayant eu un agnelage difficile,liste,,OBS,1,2,5
+5017,null,Taux de prolificité,liste,,OBS,0,2,5
+5018,null,Durée de mise bas d'un lot,valeur,mois,OBS,2,2,5
+5019,null,Mammites cliniques,pourcentage,%,OBS,5,6,5
+5020,null,"Mammites subcliniques, concentration cellulaire du tank",pourcentage,%,OBS,10,6,5
+5021,null,"Germes Listéria, salmonelle, E.coli et STEC",liste,,OBS,0,6,5
+5022,null,Butyriques,liste,,OBS,0,6,5
+5023,null,Pseudomonas,liste,,OBS,0,6,5
+5024,null,% d'agneaux de faible poids à la naissance (< 2kg),pourcentage,%,OBS,15,4,5
+5025,null,Taux de mortalité (hors prédation) naissance-vente (parmi les agneaux nés totaux),pourcentage,%,OBS,12,4,5
+5026,null,Taux de mortinatalité mort-né et dans les premières 48h,pourcentage,%,OBS,5,4,5
+5027,null,Taux de mortalité de 48 heures à 10 jours (parmi les agneaux nés totaux),pourcentage,%,OBS,4,4,5
+5028,null,Taux de mortalité de 10 jours au sevrage-commercialisation (parmi les agneaux nés totaux),pourcentage,%,OBS,3,4,5
+5029,null,Taux de mortalité (hors prédation) entre le sevrage et la première mise bas des agnelles,pourcentage,%,OBS,3,4,5
+5030,null,"% d'agneaux n'ayant pas tété 2h après la naissance (faiblesse, bouche froide, dos rond, bêlement de l'agneau, mamelle tendue, agneau creux...)",pourcentage,%,OBS,2,4,5
+5031,null,% d’agneaux faibles qui ne se lèvent pas au bout de 20 minutes environs,pourcentage,%,OBS,1,4,5
+5032,null,"% d'agneaux atteints de ""agneau baveur"" (0-5 jours)",pourcentage,%,OBS,2,4,5
+5033,null,"% d'agneaux atteints de troubles du cordon (gros cordon, nombril humide)",pourcentage,%,OBS,5,4,5
+5034,null,% d'agneaux atteints d'ecthyma sévère,pourcentage,%,OBS,4,4,5
+5035,null,% d'agneaux atteints de diarrhée avant 1 mois,pourcentage,%,OBS,4,4,5
+5037,null,% d'agneaux atteints de diarrhée entre 1 mois et le sevrage,pourcentage,%,OBS,5,4,5
+5038,null,% d'agneaux atteints de diarrhée (après sevrage) en bergerie,pourcentage,%,OBS,5,4,5
+5039,null,% d'agneaux atteints de diarrhée (après sevrage) à l’herbe,pourcentage,%,OBS,12,4,5
+5040,null,% d'agneaux atteints de troubles respiratoires,pourcentage,%,OBS,5,4,5
+5041,null,% de saisie à l'abattoir en lien avec des problèmes respiratoires (côtelette) pleurésie (si information disponible),pourcentage,%,OBS,1,4,5
+5042,null,% d'agneaux atteints d’arthrite,pourcentage,%,OBS,3,4,5
+5043,null,% d'agneaux atteints de raide,pourcentage,%,OBS,3,4,5
+5044,null,% d'agneaux atteints de troubles locomoteurs d’origine accidentelle,pourcentage,%,OBS,2,4,5
+5045,null,% d'agneaux atteints d'enterotoxémie de 2 semaines à la vente,pourcentage,%,OBS,3,4,5
+5046,null,% d'agneaux atteints de ballonnement / météorisation,pourcentage,%,OBS,2,4,5
+5047,null,% d'agneaux atteints de troubles nerveux,pourcentage,%,OBS,2,4,5
+5048,null,% d'agnelles atteintes de diarrhées au pâturage,pourcentage,%,OBS,10,4,5
+5049,null,% de brebis ayant des lésions de la peau dû à la gale,pourcentage,%,OBS,0,5,5
+5050,null,% de brebis ayant des lésions de la peau (hors gales...) et de la toison : ,pourcentage,%,OBS,5,5,5
+5051,null,"% de brebis avec indice FAMACHA >3 (rose pâle, blanc)",pourcentage,%,OBS,3,5,5
+5052,null,Présence de parasitisme gastro-intestinal,liste,,OBS,1,5,5
+5053,null,Présence de parasitisme par la Grande Douve (+ paramphistome),liste,,OBS,1,5,5
+5054,null,Présence de parasitisme par la Petite Douve,liste,,OBS,1,5,5
+5055,null,Présence de parasitisme par les strongles pulmonaires,liste,,OBS,1,5,5
+5056,null,Présence de Coccidiose,liste,,OBS,1,5,5
+5057,null,Myases,liste,,OBS,1,5,5
+5059,null,% de brebis traitées individuellement pour boiteries ,pourcentage,%,OBS,5,7,5
+5060,null,Nombre de traitements collectifs /an,valeur,nombre de traitements,OBS,3,7,5
+5061,null,% de brebis boitant sévèrement,pourcentage,%,OBS,5,7,5
+5062,null,"Nombre d'intervention curative sur les onglons (soins, parage curatif, pédiluve…) ",valeur,nombre d’animaux,OBS,1,7,5

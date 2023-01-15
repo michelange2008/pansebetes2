@@ -1,0 +1,23 @@
+{
+  "int" : {
+    "id" : "int",
+    "nom" :"Nombre entier"
+  },
+  "float" : {
+    "id" : "float",
+    "nom" : "Nombre avec une virgule"
+  },
+  "liste" : {
+    "id" : "liste",
+    "nom" : "Liste d'éléments"
+  },
+  "liste_multiple" : {
+    "id" : "liste multiple",
+    "nom" : "Liste d'éléments à choix multiples"
+  },
+  "texte" : {
+    "id" : "texte",
+    "nom" : "Texte libre"
+  }
+
+}

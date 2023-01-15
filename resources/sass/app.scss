@@ -1,4 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import "~bootstrap/scss/bootstrap";
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// fontawesome
+@import "faw/fontawesome.scss";
+@import "faw/solid.scss";
+@import "faw/regular.scss";
+
+// Fichiers perso
+@import "front";
+@import "img";
+@import "aide";
+@import "admin";
+@import "fab";
+@import "nestable";
+@import "perso";
+@import "scroll";
+@import "ziehharmonika";
+@import "compare";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}

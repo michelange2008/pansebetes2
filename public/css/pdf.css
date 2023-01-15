@@ -1,0 +1,102 @@
+
+html {
+  margin: 4em 1em 4em 2em;
+  font-size: 80%;
+}
+.page-break {
+    page-break-after: always;
+}
+.entete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pdf-titre {
+  margin-left: 250px;
+  color: #125e6bff;
+}
+
+.pdf-sous-titre {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.logo {
+  height: 100px;
+}
+.theme  {
+  margin: 1px 1px 5px 1px;
+  padding: 3px 15px;
+
+}
+
+.theme-pb {
+  background: #ffe9e9ff;
+  color: #125e6bff;
+}
+
+.theme-ok {
+  background: #008000ff;
+  color: white;
+}
+
+.intitule-alerte {
+  margin-left: 5%;
+}
+
+h3 {
+  margin-bottom: 3px;
+}
+
+h4 {
+  padding-left: 5px;
+  margin-bottom: 2px;
+  color: black;
+}
+
+.question {
+  font-size: 80%;
+  margin-left: 20px;
+  padding-left: 30px;
+  border-left: solid 4px slategrey;
+
+}
+
+.table-groupe {
+  background-color:lightgrey;
+}
+
+.table-chiffres {
+  padding: 6px"
+}
+
+.table-chiffres-bordure {
+  border-bottom:1px solid grey;
+  padding: 5px"
+}
+
+.table-blanc {
+  color: white;
+}
+
+.col-350 {
+  /* max-width: 500px; */
+}
+.col-left {
+  text-align: right;
+}
+
+.table-entete {
+  background: black;
+  color: white;
+}
+.tb-b-r {
+  border-right: dotted 1px black;
+}

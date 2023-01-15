@@ -1,0 +1,16 @@
+@media screen and (max-width: 769px) {
+
+#scroll {
+  background: url("../img/scroll.svg") no-repeat center rgba(245,128,33,0.7);
+  background-size: contain;
+  position: fixed;
+  z-index: 10000;
+  top: calc(70% - 100px);
+  right: 25px;
+  width: 60px;
+  height: 200px;
+  box-shadow: 1px 1px 4px black;
+}
+
+
+}

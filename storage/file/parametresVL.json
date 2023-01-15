@@ -1,0 +1,418 @@
+{
+  "nb_vaches" : {
+    "id" : "nb_vaches",
+    "libelle" : "Nombre de vaches présentes",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "required" : true,
+    "type" : "base"
+  },
+  "nb_genisses_NV" : {
+    "id" : "nb_genisses_NV",
+    "libelle" : "Nombre de génisses de la naissance au vélage",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 1,
+    "required" : true,
+    "type" : "base"
+  },
+  "nb_velages" : {
+    "id" : "nb_velages",
+    "libelle" : "Nombre de vélages",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 0,
+    "required" : true,
+    "type" : "base"
+  },
+  "nb_velages_vaches" : {
+    "id" : "nb_velages_vaches",
+    "libelle" : "nombre de vélages de vaches",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 0,
+    "required" : true,
+    "type" : "base"
+  },
+  "nb_velages_genisses" : {
+    "id" : "nb_velages_genisses",
+    "libelle" : "nombre de vélages de génisses",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "min" : 0,
+    "required" : true,
+    "type" : "base"
+  },
+  "nb_veaux_nes" : {
+    "id" : "nb_veaux_nes",
+    "libelle" : "nombre de veaux nés",
+    "groupe" : "effectifs",
+    "required" : true,
+    "step" : 1,
+    "type" : "base"
+  },
+  "nb_pature" : {
+    "id" : "nb_pature",
+    "libelle" : "Nombre d'animaux au pâturage l'été",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "round" : 0,
+    "type" : "base"
+  },
+  "nb_reformes" : {
+    "id" : "nb_reformes",
+    "libelle" : "Nombre de vaches réformées",
+    "groupe" : "effectifs",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "mort_vaches" : {
+    "id" : "mort_vaches",
+    "libelle" : "Nombre de vaches mortes",
+    "groupe" : "mortalité",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "mort_NV" : {
+    "id" : "mort_nv",
+    "libelle" : "Nombre de génisses mortes (de la naissance au vélage)",
+    "groupe" : "mortalité",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_genisses_NV"
+  },
+  "mort_24" : {
+    "id" : "mort_24",
+    "libelle" : "Nombre de veaux morts dans les premières 24h",
+    "groupe" : "mortalité",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "frais_veto" : {
+    "id" : "frais_veto",
+    "libelle" : "Frais vétérinaires (hors conseil)",
+    "groupe" : "divers",
+    "step" : 1,
+    "round" : 0,
+    "type" : "ratio",
+    "denom" : "nb_vaches"
+  },
+  "premier_velage" : {
+    "id" : "premier_velage",
+    "libelle" : "Age au premier vélage (en mois)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "type" : "entier"
+  },
+  "velIA1" : {
+    "id" : "velIA1",
+    "libelle" : "Intervalle vélage 1ère IA",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 1,
+    "type" : "entier"
+  },
+  "IA_fec_x10" : {
+    "id" : "IA_fec_x10",
+    "libelle" : "nombre d’IA par IA fécondante",
+    "groupe" : "reproduction",
+    "step" : 0.1,
+    "round" : 0.1,
+    "type" : "decimal"
+  },
+  "plus3IA" : {
+    "id" : "plus3IA",
+    "libelle" : "Vaches avec 3 IA ou plus (%)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 1,
+    "type" : "entier"
+  },
+  "IVV" : {
+    "id" : "IVV",
+    "libelle" : "Intervalle vélage - vélage (jours)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 1,
+    "type" : "entier"
+  },
+  "vel_genisses_diff" : {
+    "id" : "vel_genisses_diff",
+    "libelle" : "Nombre de vélages difficiles sur des génisses",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages_genisses"
+  },
+  "non_del" : {
+    "id" : "non_del",
+    "libelle" : "nombre de non délivrances",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "metrites" : {
+    "id" : "metrites",
+    "libelle" : "nombre de métrites",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "avortements" : {
+    "id" : "avortements",
+    "libelle" : "Avortements (3 derniers mois gest.)",
+    "groupe" : "reproduction",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "fdl" : {
+    "id" : "fdl",
+    "libelle" : "nombre de fièvres de lait",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "caillettes" : {
+    "id" : "caillettes",
+    "libelle" : "nombre de caillettes",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "cetoses" : {
+    "id" : "cetoses",
+    "libelle" : "nombre de cétoses",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages"
+  },
+  "tetanies" : {
+    "id" : "tetanies",
+    "libelle" : "nombre de tétanies d’herbage",
+    "groupe" : "post-partum et métabolique",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "tb_anormaux" : {
+    "id" : "tb_anormaux",
+    "libelle" : "Nombre de TB < 30 ou > 45",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "mammites" : {
+    "id" : "mammites",
+    "libelle" : "nombre de mammites cliniques",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_vaches"
+  },
+  "nouv_mamm_tar" : {
+    "id" : "nouv_mamm_tar",
+    "libelle" : "nombre de nouvelles mammites au tarissement",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages_vaches"
+  },
+  "primi_nouv_mamm_debut" : {
+    "id" : "primi_nouv_mamm_debut",
+    "libelle" : "nombre de nouvelles mammites des primipares en début de lactation",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom": "nb_velages_genisses"
+  },
+  "cellules" : {
+    "id" : "cellules",
+    "libelle" : "Nombre de cellules du lait de Tank",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "uree" : {
+    "id" : "uree",
+    "libelle" : "Taux d'urée dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "staphs" : {
+    "id" : "staphs",
+    "libelle" : "Présence de staphylocoques dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "salmo" : {
+    "id" : "salmo",
+    "libelle" : "Présence de salmonelles dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "listeria" : {
+    "id" : "listeria",
+    "libelle" : "Présence de listeria dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "coli" : {
+    "id" : "coli",
+    "libelle" : "Présence de colibacilles dans le lait",
+    "groupe" : "Lait et mamelle",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "mort_24" : {
+    "id" : "mort_24",
+    "libelle" : "Nombre de veaux morts dans les premières 24h",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "mort_1_S" : {
+    "id" : "mort_1_S",
+    "libelle" : "Nombre de veaux morts entre 1 jour et le sevrage",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "morb_veaux" : {
+    "id" : "morb_veaux",
+    "libelle" : "Nombre de veaux malades et soignés",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "omph" : {
+    "id" : "omph",
+    "libelle" : "Nombre de gros  nombrils",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "diarrhees_veaux" : {
+    "id" : "diarrhees_veaux",
+    "libelle" : "Nombre de diarrhées chez les veaux",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "respi_veaux" : {
+    "id" : "respi_veaux",
+    "libelle" : "Nombre de veaux avec problèmes respiratoires",
+    "groupe" : "jeunes",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_veaux_nes"
+  },
+  "diarrhees_J_A" : {
+    "id" : "diarrhees_J_A",
+    "libelle" : "Nombre de cas de diarrhée sur jeunes et adultes",
+    "groupe" : "parasitisme",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_pature"
+  },
+  "foies_saisis" : {
+    "id" : "foies_saisis",
+    "libelle" : "Nombre de foies saisis",
+    "groupe" : "parasitisme",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "boiterie_vache" : {
+    "id" : "boiterie_vache",
+    "libelle" : "Nombre de vaches boitant sévèrement",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "reforme_boiterie" : {
+    "id" : "reforme_boiterie",
+    "libelle" : "Nombre de vaches réformées pour boiteries",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "entier"
+  },
+  "boiterie_trait" : {
+    "id" : "boiterie_trait",
+    "libelle" : "Nombre de vaches traitées pour boiterie",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "sabots_longs" : {
+    "id" : "sabots_longs",
+    "libelle" : "Nombre de vaches avec des sabots allongés",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  },
+  "boiterie_vache" : {
+    "id" : "boiterie_vache",
+    "libelle" : "Nombre de vaches boitant sévèrement",
+    "groupe" : "santé des pieds",
+    "step" : 1,
+    "round" : 0,
+    "type" : "pourcentage",
+    "denom" : "nb_vaches"
+  }
+}

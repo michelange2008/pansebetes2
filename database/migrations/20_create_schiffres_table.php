@@ -19,7 +19,10 @@ return new class extends Migration
                   ->constrained()
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
-            $table->string('libelle', 191);
+            $table->foreignId('chiffre_id')
+                  ->constrained()
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
             $table->double('valeur', 8, 1);
         });
     }

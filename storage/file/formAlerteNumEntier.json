@@ -1,0 +1,30 @@
+{
+  "prefixe" : "num",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "alerte_nom": {
+      "name" : "alerte_nom",
+      "type" : "hidden"
+    },
+    "alerte_id" : {
+      "name" : "alerte_id",
+      "type" : "hidden"
+    },
+    "borne_inf" : {
+      "label" : "Valeur minimum",
+      "name" : "borne_inf",
+      "type" : "number",
+      "required" : false
+    },
+    "borne_sup" : {
+      "label" : "Valeur maximum",
+      "name" : "borne_sup",
+      "type" : "number",
+      "required" : false
+    }
+  }
+}

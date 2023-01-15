@@ -1,0 +1,53 @@
+{
+  "prefixe" : "num",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "alerte_id" : {
+      "name" : "alerte_id",
+      "type" : "hidden"
+    },
+    "alerte_nom": {
+      "name" : "alerte_nom",
+      "type" : "hidden"
+    },
+    "borne_inf" : {
+      "label" : "Valeur minimum",
+      "name" : "borne_inf",
+      "type" : "number",
+      "required" : false
+    },
+    "borne_sup" : {
+      "label" : "Valeur maximum",
+      "name" : "borne_sup",
+      "type" : "number",
+      "required" : false
+    },
+    "num_id" : {
+      "label" : "Numérateur",
+      "name" : "num_id",
+      "table": "chiffres",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "denom_id" : {
+      "label" : "Dénominateur",
+      "name" : "denom_id",
+      "table" : "chiffres",
+      "type" : "select",
+      "required" : false,
+      "options" : {}
+    },
+    "round" : {
+      "label" : "Chiffres après la virgule (0 par défaut)",
+      "name" : "round",
+      "type" : "number",
+      "isName" : 0,
+      "required" : true
+    }
+  }
+}

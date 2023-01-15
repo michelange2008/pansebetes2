@@ -1,0 +1,36 @@
+{
+  "prefixe" : "user",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "name" : {
+      "label" : "nom",
+      "name" : "name",
+      "type" : "text",
+      "isName" : ""
+    },
+    "email" : {
+      "label" : "email",
+      "name" : "email",
+      "type" : "text",
+      "required" : true
+    },
+    "profession" : {
+      "label" : "profession",
+      "name" : "profession",
+      "type" : "text",
+      "required" : false
+    },
+    "region" : {
+      "label" : "region",
+      "name" : "region",
+      "type" : "select",
+      "liste" : "regions.json",
+      "options" : {},
+      "required" : false
+    }
+  }
+}

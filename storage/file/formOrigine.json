@@ -1,0 +1,35 @@
+{
+  "prefixe" : "origine",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "alerte_id" : {
+      "name" : "alerte_id",
+      "type" : "hidden",
+      "isName" : ""
+    },
+    "question" : {
+      "label" : "question",
+      "name" : "question",
+      "type" : "text",
+      "required" : true
+    },
+    "reponse" : {
+      "label" : "réponse",
+      "name" : "reponse",
+      "type" : "text",
+      "required" : true
+    },
+    "categorie_id" : {
+      "label" : "catégorie",
+      "name" : "categorie_id",
+      "table" : "categories",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    }
+  }
+}

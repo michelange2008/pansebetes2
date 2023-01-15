@@ -1,0 +1,17 @@
+.acces {
+  height: 100vh;
+  padding-top: 20vh;
+}
+@media screen and (orientation: landscape) and (max-width:800px) {
+  .acces {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .acces {
+    height: 94vh;
+  }
+}

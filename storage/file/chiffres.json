@@ -1,0 +1,94 @@
+{
+  "VL" : {
+    "nb_vaches" : {
+      "id" : "nb_vaches",
+      "libelle" : "Nombre de vaches",
+      "groupe" : "effectifs",
+      "unite" : "int"
+    },
+    "nb_velages" : {
+      "id" : "nb_velages",
+      "libelle" : "Nombre de vélages",
+      "groupe" : "effectifs",
+      "unite" : "int"
+    },
+    "nb_genisses_SV" : {
+      "id" : "nb_genisses_SV",
+      "libelle" : "Nombre de génisses du sevrage au vélage",
+      "groupe" : "effectifs",
+      "unite" : "int"
+    },
+    "nb_genisses_NS" : {
+      "id" : "nb_genisses_NS",
+      "libelle" : "Nombre de génisses de la naissance au sevrage",
+      "groupe" : "effectifs",
+      "unite" : "int"
+    },
+    "nb_reformes" : {
+      "id" : "nb_reformes",
+      "libelle" : "Nombre de vaches réformées",
+      "groupe" : "effectifs",
+      "unite" : "int"
+    },
+    "frais_vetos" : {
+      "id" : "frais_vetos",
+      "libelle" : "Frais vétérinaires (hors conseil)",
+      "groupe" : "divers",
+      "unite" : "int"
+    },
+    "mortalite_vaches" : {
+      "id" : "mortalite_vaches",
+      "libelle" : "Nombre de vaches mortes",
+      "groupe" : "mortalité",
+      "unite" : "int"
+    },
+    "mortalite_genisses_SV" : {
+      "id" : "mortalite_genisses_SV",
+      "libelle" : "Mortalité des génisses du sevrage au vélage",
+      "groupe" : "mortalité",
+      "unite" : "int"
+    },
+    "mortalite_genisses_NS" : {
+      "id" : "mortalite_genisses_NS",
+      "libelle" : "Mortalité des génisses de la naissance au sevrage",
+      "groupe" : "mortalité",
+      "unite" : "int"
+    },
+    "age_premier_velage" : {
+      "id" : "age_premier_velage",
+      "libelle" : "Age au premier vélage",
+      "groupe" : "reproduction",
+      "unite" : "int"
+    },
+    "IA_fec" : {
+      "id" : "IA_fec",
+      "libelle" : "Nombre d'insémination fécondante",
+      "groupe" : "reproduction",
+      "unite" : "int"
+    },
+    "non_del" : {
+      "id" : "non_del",
+      "libelle" : "Nombre de non-délivrance",
+      "groupe" : "reproduction",
+      "unite" : "int"
+    },
+    "genisses_vel_dif" : {
+      "id" : "genisses_vel_dif",
+      "libelle" : "Nombre de génisses avec un vélage difficile",
+      "groupe" : "reproduction",
+      "unite" : "int"
+    },
+    "metrites" : {
+      "id" : "metrites",
+      "libelle" : "Nombre de métrites",
+      "groupe" : "reproduction",
+      "unite" : "int"
+    },
+    "mort_24" : {
+      "id" : "mort_24",
+      "libelle" : "Nombre de veaux morts dans les 1ères 24 heures",
+      "groupe" : "jeunes",
+      "unite" : "int"
+    }
+  }
+}

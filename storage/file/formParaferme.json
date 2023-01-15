@@ -1,0 +1,47 @@
+{
+  "prefixe" : "paraferme",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "id" : {
+      "label" : "id",
+      "name" : "id",
+      "type" : "hidden"
+    },
+    "ordre" : {
+      "label" : "Ordre",
+      "name" : "ordre",
+      "type" : "number"
+    },
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text",
+      "required" : true
+    },
+    "unite" : {
+      "label" : "unité",
+      "name" : "unite",
+      "type" : "text"
+    },
+    "type" : {
+      "label" : "type",
+      "name" : "type",
+      "type" : "select",
+      "liste" : "parafermeTypes.json",
+      "required" : true,
+      "options" : {}
+    },
+    "parties" : {
+      "label" : "Eléments de la liste (uniquement si Type = Liste)",
+      "name" : "parties",
+      "type" : "textarea",
+      "format" : "text",
+      "placeholder" : "Utilisez la virgule comme séparateur",
+      "required" : true
+    }
+  }
+}

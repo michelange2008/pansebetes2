@@ -1,0 +1,50 @@
+{
+  "prefixe" : "alerte",
+
+  "colonnes" : {
+
+    "theme_nom" : {
+      "col" : "theme_nom",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "id" : {
+      "col" : "alerte_id",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "alerte_nom" : {
+      "col" : "alerte_nom",
+      "type" : "show",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "actif" : {
+      "col" : "actif",
+      "type" : "ouinon",
+      "aligne" : "center",
+      "sortable" : true
+    },
+    "origines" : {
+      "col" : "origines",
+      "intituleLigne" : " ",
+      "type" : "lien",
+      "route" : "origine.indexParAlerte",
+      "aligne" : "center",
+      "sortable" : false
+    }
+  },
+
+  "suppr" : true,
+
+  "tri" : {
+
+    "colonne" : "theme_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}

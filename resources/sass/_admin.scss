@@ -1,0 +1,16 @@
+.cell-delmod {
+  height: 50px;
+}
+.cell-delmod > img {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+.nom {
+  margin: 5px;
+  padding: 5px 10px;
+}
+.nom:hover {
+  background: white;
+  color: red;
+}

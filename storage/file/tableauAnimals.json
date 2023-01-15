@@ -1,0 +1,43 @@
+{
+  "tri" : {
+
+    "colonne" : "num",
+
+    "ordre" : "asc"
+  },
+
+  "liste" : {
+
+    "num" : {
+      "id" : "num",
+      "nom" : "tableaux.num",
+      "align" : "left",
+      "sortable" : false
+    },
+    "nom" : {
+      "id" : "nom",
+      "nom" : "tableaux.nom_animal",
+      "align" : "left",
+      "sortable" : true
+    },
+    "troupeau" : {
+      "id" : "troupeau",
+      "nom" : "tableaux.troupeau",
+      "align" : "left",
+      "width" : "300",
+      "sortable" : true
+    },
+    "typeprod" : {
+      "id" : "typeprod",
+      "nom" : "tableaux.typeprod",
+      "align" : "left",
+      "sortable" : true
+    },
+    "proprietaire" : {
+      "id" : "proprietaire",
+      "nom" : "tableaux.proprietaire",
+      "align" : "left",
+      "sortable" : true
+    }
+  }
+}

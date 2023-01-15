@@ -1,0 +1,50 @@
+{
+  "prefixe" : "origine",
+
+  "route" : false,
+
+  "icone" : "origine.svg",
+
+  "bouton" : false,
+
+  "colonnes" : {
+
+    "categorie_icone" : {
+      "col" : " ",
+      "path" : "categories/",
+      "type" : "icone",
+      "aligne" : "center",
+      "sortable" : false
+    },
+
+    "categorie_nom" : {
+      "col" : "categorie",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "question" : {
+      "col" : "question",
+      "type" : "edit",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "reponse" : {
+      "col" : "reponse",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    }
+  },
+
+  "suppr" : true,
+
+  "tri" : {
+
+    "colonne" : "categorie_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}

@@ -1,0 +1,53 @@
+{
+  "prefixe" : "paraferme",
+
+  "bouton" : {
+    "libelle" : "Ranger",
+    "fa" : "fa-solid fa-arrow-down-short-wide",
+    "route" : "paraferme.ranger"
+  },
+
+  "colonnes" : {
+    "nom" : {
+      "col" : "nom",
+      "type" : "edit",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "type" : {
+      "col" : "type",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "unite" : {
+      "col" : "unite",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "parties" : {
+      "col" : "parties",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : false
+    },
+    "ordre" : {
+      "col" : "ordre",
+      "type" : "item",
+      "aligne" : "right",
+      "sortable" : true
+    }
+  },
+
+  "suppr" : true,
+
+  "tri" : {
+
+    "colonne" : "theme_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}

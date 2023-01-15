@@ -36,7 +36,7 @@ class NumalertesTableSeeder extends Seeder
                 'alerte_id' => 2008,
                 'borne_inf' => 0,
                 'borne_sup' => 4,
-                'num_id' => 1,
+                'num_id' => 9,
                 'denom_id' => 1,
             ),
             2 =>

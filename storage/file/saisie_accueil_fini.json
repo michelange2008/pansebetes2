@@ -1,0 +1,23 @@
+{
+  "titre" : "saisie_titre",
+  "items" : {
+    "un" : {
+      "icone" : "chiffres.svg",
+      "ordre" : "fa-1",
+      "titre" : "saisie_chiffres",
+      "intro_1" : "saisie_intro_1_1",
+      "intro_2" : "saisie_intro_1_2",
+      "couleur" : "otojaune",
+      "route" : "schiffre.edit"
+    },
+    "deux" : {
+      "icone" : "observations.svg",
+      "ordre" : "fa-2",
+      "titre" : "saisie_observations",
+      "intro_1" : "saisie_intro_2_1",
+      "intro_2" : "saisie_intro_2_2",
+      "couleur" : "otorange",
+      "route" : "saisie.observations"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "prefixe" : "chiffre",
+
+  "colonnes" : {
+
+    "chiffre_nom" : {
+      "col" : "chiffre_nom",
+      "type" : "edit",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "chiffre_detail" : {
+      "col" : "chiffre_detail",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : false
+    },
+    "groupe_nom" : {
+      "col" : "groupe_nom",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "requis" : {
+      "col" : "requis",
+      "type" : "ouinon",
+      "aligne" : "center",
+      "sortable" : true
+    }
+  },
+
+  "suppr" : true,
+
+  "tri" : {
+
+    "colonne" : "groupe_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}

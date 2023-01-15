@@ -27,6 +27,7 @@ return new class extends Migration
             $table->boolean('supprimable')->default(1);
             $table->boolean('requis')->default(1);
             $table->integer('min')->default(0);
+            $table->boolean('nonullable')->default(1);
         });
     }
 

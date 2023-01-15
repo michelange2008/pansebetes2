@@ -1,0 +1,64 @@
+{
+  "prefixe" : "alerte",
+
+  "titre" : {
+    "translate" : true
+  },
+
+  "liste" : {
+    "nom" : {
+      "label" : "nom",
+      "name" : "nom",
+      "type" : "text",
+      "required" : true
+    },
+    "type_id" : {
+      "label" : "type",
+      "name" : "type_id",
+      "table" : "types",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "unite" : {
+      "label" : "unité",
+      "name" : "unite",
+      "type" : "text"
+    },
+    "modalite_id" : {
+      "label" : "modalité",
+      "name" : "modalite_id",
+      "table": "modalites",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "theme_id" : {
+      "label" : "thème",
+      "name" : "theme_id",
+      "table" : "themes",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "espece_id" : {
+      "label" : "espèce",
+      "name" : "espece_id",
+      "table" : "especes",
+      "type" : "select",
+      "required" : true,
+      "options" : {}
+    },
+    "actif" : {
+      "label" : "actif",
+      "name" : "actif",
+      "isName" : true,
+      "type": "ouinon"
+    },
+    "editParam" : {
+      "label" : "Créer/Modifier aussi les parametres",
+      "name" : "editParam",
+      "type": "ouinon"
+    }
+  }
+}

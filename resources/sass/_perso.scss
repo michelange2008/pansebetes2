@@ -1,0 +1,484 @@
+:root {
+  --otobleu : #125e6b;
+  --otobleutrans : #125e6bcc;
+  --otobleuclair: #21aac2;
+  --otojaune : #dadf21;
+  --otojaunefonce : #6b6d10;
+  --otorange : #f58021;
+  --otorangefonce: #904b13;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a, a:link, a:hover  {
+  text-decoration: none;
+  color: black;
+}
+.container-fluid {
+  padding-bottom: 5px;
+}
+
+.allervers {
+  color: black;
+  cursor: pointer;
+}
+
+.bg-otobleu {
+  background: $otobleu !important;
+  color: white !important;
+}
+
+.btn-otobleu {
+  background: $otobleu !important;
+  color: white !important;
+}
+
+.bg-otobleu-trans, .btn-otobleu-trans {
+  background: $otobleutrans;
+  color: white;
+}
+.bg-otobleuclair {
+  background: var(--otobleuclair) !important;
+  color: black !important;
+}
+.btn-otobleu:hover {
+  color: black !important;
+  background: var(--otobleuclair) !important;
+}
+
+.btn-otorange, .bg-otorange {
+  background: var(--otorange) !important;
+  color: black;
+}
+
+.btn-otorange:hover{
+  background: var(--otorangefonce);
+  color: white;
+}
+.btn-otojaune, .bg-otojaune  {
+  background: var(--otojaune);
+  color: black;
+}
+
+.btn-otojaune:hover  {
+  background: var(--otojaunefonce);
+  color: white;
+}
+
+.bg-gris-trans {
+  background: #808080cc !important;
+}
+.bg-aide-trans {
+  background: #808080ff;
+  color: white;
+}
+.color-otobleu {
+  color: $otobleu;
+}
+.color-otojaune {
+  color: $otojaune;
+}
+.color-otorange {
+  color: $otorange;
+}
+.nav-link {
+
+  transition: background-color 1s;
+}
+.nav-link:hover {
+  font-weight:400;
+  background: lightgrey;
+  transition: background-color 1s;
+}
+/* LOGIN */
+
+.label-remember-modif {
+  margin-left: 50px;
+  margin-top: 3px;
+}
+
+.oeil {
+  background-size: contain;
+  width: 50px;
+  margin-left: 2px;
+}
+.oeil-ferme {
+  background: url('../img/oeil_ferme.svg') center no-repeat;
+}
+.oeil-ouvert {
+  background: url('../img/oeil_ouvert.svg') center no-repeat;
+}
+
+/* LECTURE LISTE AJOUTER SAISIE */
+.saisie-info {
+  margin-left: 5px;
+}
+.pas-de-saisie {
+	margin: 10vh 3px 0 3px;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  opacity: 1;
+}
+
+.arrowDown {
+  border-width: 20px 15px 0 15px;
+  border-color: #e2e3E5 transparent transparent transparent;
+  right: 10px;
+  bottom: -20px;
+}
+
+.arrowUp {
+  display: none;
+}
+.menu-rond {
+  position: fixed;
+  bottom: 70px;
+  right: 15px;
+  z-index: 10000;
+  height: 325px;
+  width: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.bouton-rond {
+  background: url("../img/plus.svg") no-repeat center var(--otobleu);
+  background-size: contain;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 10000;
+}
+
+.bouton-rond > a {
+  display: block;
+  border-radius: 100%;
+  box-shadow: 6px 6px 12px #aaa;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+}
+
+.menu-item {
+  display: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin: 2px 0;
+  transition: filter 0.5s;
+  cursor: pointer;
+}
+.menu-item:hover {
+  filter:invert(100%);
+  transition: filter 0.8s;
+}
+.desktop-only {
+  display: none;
+}
+.decalage {
+  margin-left: 3px;
+}
+.img-20 {
+  width: 20px;
+  max-height: 20px;
+}
+.img-25 {
+  width: 25px;
+  max-height: 25px;
+}
+.img-40 {
+  width: 40px;
+  max-height: 40px;
+}
+
+.img-40-pale {
+  width: 40px;
+  max-height: 40px;
+  filter: opacity(50%);
+}
+.img-40-pale:hover {
+  width: 40px;
+  max-height: 40px;
+  filter: opacity(100%);
+}
+
+.img-75 {
+  width: 75px;
+  max-height: 75px;
+}
+.img-100 {
+  width: 100%;
+}
+.img-resp {
+  width: 5vw;
+  max-width: 75px;
+  min-width: 25px;
+}
+
+.otoveil {
+  max-height: 40px;
+}
+
+.espece-item {
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+.espece-item:first-of-type {
+  margin-top: 5px;
+}
+
+.espece-item  > img {
+  height: 100%;
+}
+
+.attention {
+  color: var(--otobleu);
+}
+
+.lien-nav {
+  margin: 8px;
+}
+
+.icone-nav {
+  height: 75px;
+}
+
+.theme-item {
+  height: 50px;
+}
+.alerte-item {
+  margin-bottom: 10px;
+  padding: 5px 1%;
+}
+.alerte-item > p {
+  margin-bottom: 5px;
+}
+.alerte-item:first-of-type {
+  margin-top: 5px;
+}
+
+.nb-alertes {
+  color: white;
+  margin: auto 10px;
+}
+
+.zone-saisie {
+  min-width: 100px;
+  width: 20%;
+  background: Wheat;
+}
+.grands-boutons {
+  max-width: 49%;
+}
+
+.accent {
+  padding: 0 2%;
+  color: white;
+  background: var(--otobleu);
+}
+
+.rond {
+  padding: 0 4px;
+  color: white;
+  background: var(--otobleu);
+  border-radius: 100%;
+}
+
+
+.petit-espace-dessous {
+  margin-bottom: 1px;
+}
+
+.coupe {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.origine {
+  margin-bottom: 5px;
+  padding: 5px 0 2px 0;
+}
+.case-a-cocher {
+  margin: auto;
+}
+.non-affiche {
+  display: none ;
+}
+.aide {
+  padding-top: 2px;
+  color: grey;
+  font-style: italic;
+  font-size: 0.95em;
+}
+.element-centre {
+  padding: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.curseur {
+  cursor: pointer;
+}
+.erreur {
+  margin: 20vh 10vw;
+}
+
+/* SAISIE ALERTES */
+.panneau-alerte {
+  margin-top: -17px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: none;
+  border-bottom: solid darkslategrey;
+}
+.panneau-alerte:last-of-type {
+  border-bottom: none;
+}
+
+.element-alerte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/* LECTURE DETAIL */
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.detail-otorange {
+  background: var(--otorange);
+}
+.detail-otobleu {
+  background: var(--otobleu);
+  color: white;
+}
+.detail > h5 {
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.icones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.icones > img {
+  height: 30px;
+}
+.navbar-brand {
+  font-size: 1rem;
+}
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 0.65rem;
+  }
+
+  .detail > h5 {
+    line-height: 2.5rem;
+
+  }
+}
+@media screen and (min-width: 576px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  .smartphone-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+  .nouvelle-saisie-liste {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nouvelle-saisie-item {
+      height: 60px;
+      transition: filter 1s;
+  }
+  .nouvelle-saisie-item:hover {
+    filter: invert(100%);
+    transition: filter 1s;
+  }
+
+
+  .arrowUp {
+    display: block;
+    border-width: 0 15px 20px;
+    border-color: transparent transparent #e2e3E5;
+    left: 10px;
+    top: -20px;
+  }
+  .arrowDown {
+    display: none;
+  }
+  .pas-de-saisie {
+  	margin: 10vh 10%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  html {
+    background: var(--otobleu);
+    padding: 5px;
+  }
+  body {
+    min-height: calc(100vh - 63px);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .group-password {
+    flex: inherit;
+    max-width: 65%;
+  }
+  .detail > h5 {
+    font-size: 1.25rem;
+  }
+
+}
+
+
+@media screen and (min-width: 992px) {
+
+  body {
+    /* max-width: 60%; */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .jconfirm-box-container {
+    max-width: inherit;
+    flex: inherit;
+  }
+
+}
