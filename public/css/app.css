@@ -4800,7 +4800,7 @@ textarea.form-control-lg {
   --bs-alert-link-color: var(--bs-primary-text);
 }
 
-.alert-dark {
+.alert-secondary {
   --bs-alert-color: var(--bs-secondary-text);
   --bs-alert-bg: var(--bs-secondary-bg-subtle);
   --bs-alert-border-color: var(--bs-secondary-border-subtle);

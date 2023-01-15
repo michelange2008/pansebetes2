@@ -6,7 +6,7 @@
     <div class="col-md-12 p-2">
       <div class="d-flex flex-row text-light justify-content-end align-items-center">
         <h6 class="lead m-0 pr-3 text-muted">conception web: Michel BOUY</h6>
-        <img src="{{asset(config('chemins.images'))}}/antikor.svg" alt="" style="height:30px">
+        <img src="{{url('storage/chemins.images')}}/antikor.svg" alt="" style="height:30px">
       </div>
     </div>
   </div>

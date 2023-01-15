@@ -15,7 +15,7 @@
   <div class="row justify-content-sm-center no-gutters">
     <div class="card-deck">
       <div class="card">
-        <img class="img-100" src="{{asset(config('chemins.images'))}}/contact_avis.svg" alt="sur le fond">
+        <img class="img-100" src="{{url('storage/img/contact_avis.svg')}}" alt="sur le fond">
         <div class="card-body">
           <h3 class="card-title">Votre avis</h3>
           <p class="card-text">Il vous est possible de nous dire en quelques clics ce que vous avez pensé de Panse-Bêtes.</p>
@@ -30,7 +30,7 @@
       </div>
 
       <div class="card">
-        <img class="img-100" src="{{asset(config('chemins.images'))}}/contact_methode.svg" alt="sur le fond">
+        <img class="img-100" src="{{url('storage/img/contact_methode.svg')}}" alt="sur le fond">
         <div class="card-body">
           <h3 class="card-title">La méthode</h3>
           <p class="card-text">Mais un formulaire vous semble vraiment trop succinct pour exprimer tout ce que vous avez à dire sur Panse-Bêtes.</p>
@@ -46,7 +46,7 @@
       </div>
 
       <div class="card">
-        <img class="img-100" src="{{asset(config('chemins.images'))}}/contact_application.svg" alt="sur la forme">
+        <img class="img-100" src="{{url('storage/img/contact_application.svg')}}" alt="sur la forme">
         <div class="card-body">
           <h3 class="card-title ">L'application</h3>
           <p class="card-text">Sur la forme, qu'avez-vous pensé de l'application Panse-Bêtes ?</p>

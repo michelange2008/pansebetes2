@@ -6,7 +6,7 @@
 //
 // Alpine.start();
 
-// require('@fontawesome/fontawesome-free/js/all.js');
+require('@fortawesome/fontawesome-free/js/all.js');
 require('./deplierAlertes.js')
 require('./afficherOrigines.js')
 require('./supprLigne')

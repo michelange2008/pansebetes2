@@ -23,7 +23,7 @@
           <h6 class="accordeon-intermediaire">Conception, rédaction, relectures et tests des livrets:</h6>
 
           @foreach($especes as $espece)
-            <h3><img style="height:38px; padding-right:10px" src="{{config('chemins.especes').$espece->icone}}" alt="{{$espece->nom}}">{{ucfirst($espece->nom)}}</h3>
+            <h3><img style="height:38px; padding-right:10px" src="{{url('storage/img/especes').'/'.$espece->icone}}" alt="{{$espece->nom}}">{{ucfirst($espece->nom)}}</h3>
             <div>
               @foreach($participants as $participant)
 
@@ -68,6 +68,6 @@
 @endsection
 
 @push('js')
-  <script src="{{asset(config('chemins.js'))}}/ziehharmonika.js"></script>
-  <script src="{{asset(config('chemins.js'))}}/accordeon.js"></script>
+  <script src="{{url('js')}}/ziehharmonika.js"></script>
+  <script src="{{url('js')}}/accordeon.js"></script>
 @endpush

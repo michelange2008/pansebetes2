@@ -72,15 +72,19 @@
                 ({{ $alerte->type->detail }})
               </p>
 
-              @if ($alerte->numalerte->round == 1)
+              @isset($alerte->numalerte)
 
-                <p>@lang('tableaux.round') {{ $alerte->numalerte->round }} @lang('tableaux.round_un_chiffre').</p>
+                @if ($alerte->numalerte->round == 1)
 
-              @elseif ($alerte->numalerte->round > 1)
+                  <p>@lang('tableaux.round') {{ $alerte->numalerte->round }} @lang('tableaux.round_un_chiffre').</p>
 
-                <p>@lang('tableaux.round') {{ $alerte->numalerte->round }} @lang('tableaux.round_plusieurs_chiffres').</p>
+                @elseif ($alerte->numalerte->round > 1)
 
-              @endif
+                  <p>@lang('tableaux.round') {{ $alerte->numalerte->round }} @lang('tableaux.round_plusieurs_chiffres').</p>
+
+                @endif
+
+              @endisset
 
             </li>
 

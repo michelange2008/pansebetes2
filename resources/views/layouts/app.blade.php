@@ -23,7 +23,7 @@
       @yield('sousmenu')
       @yield('soustitre')
       @yield('contenu')
-      @yield('aide')
+      {{-- @yield('aide') --}}
       @yield('scripts')
 
 
