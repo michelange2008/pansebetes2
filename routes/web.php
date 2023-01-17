@@ -240,13 +240,13 @@ Route::group(['middleware' => ['auth', 'verified', 'menu']], function () {
     Route::prefix('pdf')->controller(PdfController::class)->group(function() {
 
       // Tableau vide pour la saisie de chiffres
-      Route::get('/modeleNum/{espece}', 'PdfController@modeleNum')->name('pdf.modeleNum');
+      Route::get('/modeleNum/{espece}', 'modeleNum')->name('pdf.modeleNum');
       // Tableau vide pour la saisie des observations
-      Route::get('/modeleObs/{espece}', 'PdfController@modeleObs')->name('pdf.modeleObs');
+      Route::get('/modeleObs/{espece}', 'modeleObs')->name('pdf.modeleObs');
       // Tableau vide pour la saisie des données de l'exploitation
-      Route::get('/modeleExploitation', 'PdfController@modeleExploitation')->name('pdf.modeleExploitation');
+      Route::get('/modeleExploitation', 'modeleExploitation')->name('pdf.modeleExploitation');
       // Exportation de la saisie
-      Route::get('/saisie/{saisie}', 'PdfController@saisie')->name('pdf.saisie');
+      Route::get('/saisie/{saisie}', 'saisie')->name('pdf.saisie');
 
     });
 

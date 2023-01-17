@@ -246,6 +246,7 @@ return [
       'Str' => Illuminate\Support\Str::class,
       'Form' => 'Collective\Html\FormFacade',
       'HTML' => 'Collective\Html\HtmlFacade',
+      'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ])->toArray(),
 
