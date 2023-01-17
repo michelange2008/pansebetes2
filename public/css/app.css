@@ -18420,6 +18420,11 @@ a, a:link, a:hover {
   filter: opacity(100%);
 }
 
+.img-200 {
+  width: 200px;
+  max-height: 200px;
+}
+
 .img-75 {
   width: 75px;
   max-height: 75px;

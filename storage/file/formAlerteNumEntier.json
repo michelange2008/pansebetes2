@@ -25,6 +25,13 @@
       "name" : "borne_sup",
       "type" : "number",
       "required" : false
+    },
+    "round" : {
+      "label" : "Chiffres après la virgule (0 par défaut)",
+      "name" : "round",
+      "type" : "number",
+      "isName" : 0,
+      "required" : true
     }
   }
 }

@@ -2,8 +2,6 @@
 
 @extends('menus.menuprincipal')
 
-{{-- @extends('aide.aide_accueil', ['especes' => session('especes')]) --}}
-
 @section('contenu')
 
   <div class="container-fluid">
@@ -25,6 +23,8 @@
       <div class="row justify-content-center">
 
         <div class="col-sm-11 col-md-10 col-lg-9">
+
+          <p class="fst-italic text-danger">@lang('commun.analyse_stat')</p>
 
           @foreach ($parafermes as $paraferme)
 
@@ -66,7 +66,7 @@
                 ])
 
               @endif
-              
+
             @endif
 
           @endforeach

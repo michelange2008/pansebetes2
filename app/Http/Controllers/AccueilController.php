@@ -23,7 +23,8 @@ class AccueilController extends Controller
 
     public function index()
     {
-      return view('front');
+      // return view('front');
+      return view('auth.login2');
     }
     /**
      * Affiche la liste des saisies de l'user identifié ainsi que celles de ces

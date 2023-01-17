@@ -27,6 +27,13 @@
       "type" : "decimal",
       "step" : 0.1,
       "required" : false
+    },
+    "round" : {
+      "label" : "Chiffres après la virgule (0 par défaut)",
+      "name" : "round",
+      "type" : "number",
+      "isName" : 0,
+      "required" : true
     }
   }
 }

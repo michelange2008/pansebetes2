@@ -177,7 +177,7 @@ class NumalerteController extends Controller
                   "borne_sup" => $request->borne_sup,
                   "num_id" => $request->num_id,
                   "denom_id" => $request->denom_id,
-                  "round" => $request->round,
+                  "round" => ($request->round == null) ? 0 : $request->round,
                 ]);
 
       return redirect()->route('alerte.show', $request->alerte_id)
