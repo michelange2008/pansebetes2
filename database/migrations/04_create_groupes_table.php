@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('nom', 50);
             $table->string('icone', 20)->default('default.svg');
+            $table->unsignedInteger('ordre')->default(1);
         });
     }
 

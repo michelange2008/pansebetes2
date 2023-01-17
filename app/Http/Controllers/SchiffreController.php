@@ -88,10 +88,11 @@ class SchiffreController extends Controller
     $chiffres = DB::table('chiffres')->where('espece_id', $saisie->espece->id)
                   ->where('requis', 1)
                   ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
-                  ->select('groupes.nom as groupe_nom', 'chiffres.*')
+                  ->select('groupes.nom as groupes_nom', 'groupes.ordre as groupes_ordre', 'chiffres.*')
+                  ->orderBy('groupes_ordre')
                   ->get();
 
-    $chiffresGroupes = $chiffres->groupBy('groupe_nom');
+    $chiffresGroupes = $chiffres->groupBy('groupes_nom');
 
     return view('saisie.schiffres.edit', [
     'saisie' => $saisie,

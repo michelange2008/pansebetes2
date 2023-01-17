@@ -29,17 +29,14 @@ class PdfController extends Controller
      */
   public function modeleNum(Espece $espece)
     {
-      // $chiffresBruts = $this->LitJson('parametres'.$espece->abbr.'.json');
-      // On en fait une collection et l'on structure par groupe (effectif, mortalité, etc)
-      // $chiffres = Collect($chiffresBruts);
-      // $chiffresGroupes = $chiffres->groupBy('groupe');
-      $chiffres = DB::table('chiffres')->where('espece_id', $espece->id)
-                    ->where('requis', 1)
-                    ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
-                    ->select('groupes.nom as groupe_nom', 'chiffres.*')
-                    ->get();
+        $chiffres = DB::table('chiffres')->where('espece_id', $espece->id)
+                      ->where('requis', 1)
+                      ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                      ->select('groupes.nom as groupes_nom', 'groupes.ordre as groupes_ordre', 'chiffres.*')
+                      ->orderBy('groupes_ordre')
+                      ->get();
 
-      $chiffresGroupes = $chiffres->groupBy('groupe_nom');
+        $chiffresGroupes = $chiffres->groupBy('groupes_nom');
 
         $pdf = PDF::loadView('pdf.modeleNum', [
           'chiffresGroupes' => $chiffresGroupes,
