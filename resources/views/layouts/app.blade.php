@@ -24,17 +24,18 @@
       @yield('soustitre')
       @yield('contenu')
       {{-- @yield('aide') --}}
-      @yield('scripts')
 
 
       <script src="{{ url('js/jquery.min.js') }}"></script>
       <script src="{{ url('js/jquery-ui.min.js') }}"></script>
       <script src="{{ url('js/jquery-confirm.min.js') }}"></script>
+      <script src="{{ url('js/bootstrap.min.js') }}"></script>
       <script src="{{ url('js/bootstrap/bootstrap.min.js') }}"></script>
       <script src="{{ url('js/bootstrap-table.min.js') }}"></script>
       <script src="{{ url('js/bootstrap-table-fr-FR.min.js') }}"></script>
       <script src="{{ url('js/app.js') }}"></script>
 
+      @yield('scripts')
       @stack('js')
 
     </body>

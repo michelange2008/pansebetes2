@@ -125,7 +125,7 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
 
   Route::post('/paraferme/storeRanger', [ParafermeController::class, 'storeRanger'])->name('paraferme.storeRanger');
 
-  Route::resource('/paraferme', 'ParafermeController');
+  Route::resource('/paraferme', ParafermeController::class);
 
 
 });

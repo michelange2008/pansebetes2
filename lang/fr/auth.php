@@ -11,7 +11,11 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'mdp_oublie' => "Vous avez oublié votre mot de passe ?",
+    'email' => "Adresse email",
+    'mdp' => "Mot de passe",
+    'rester_connect'=> "Se souvenir de moi",
+    'connect' => "Se connecter",
     'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements',
     'throttle' => 'Tentatives de connexion trop nombreuses. Veuillez essayer de nouveau dans :seconds secondes.',
 ];

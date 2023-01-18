@@ -22,11 +22,13 @@ const mix = require('laravel-mix');
     })
     .js('resources/js/app.js', 'js');
 
-    mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.css', 'public/css/bootstrap-table.min.css');
-mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.css', 'public/css/jquery-confirm.min.css');
+    mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.css', 'public/css/jquery-confirm.min.css');
 
 mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
 mix.copy('node_modules/jquery-ui-bundle/jquery-ui.min.js', 'public/js/jquery-ui.min.js');
 mix.copy('node_modules/jquery-confirm/dist/jquery-confirm.min.js', 'public/js/jquery-confirm.min.js');
+mix.copy('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootstrap.min.js');
+mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.css', 'public/css/bootstrap-table.min.css');
 mix.copy('node_modules/bootstrap-table/dist/locale/bootstrap-table-fr-FR.min.js', 'public/js/bootstrap-table-fr-FR.min.js');
 mix.copy('node_modules/bootstrap-table/dist/bootstrap-table.min.js', 'public/js/bootstrap-table.min.js');
+mix.copy('node_modules/bootstrap-show-password/dist/bootstrap-show-password.min.js', 'public/js/bootstrap-show-password.min.js');

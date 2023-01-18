@@ -1,11 +1,13 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/bootstrap-table.min.css": "/css/bootstrap-table.min.css",
     "/css/jquery-confirm.min.css": "/css/jquery-confirm.min.css",
     "/js/jquery.min.js": "/js/jquery.min.js",
     "/js/jquery-ui.min.js": "/js/jquery-ui.min.js",
     "/js/jquery-confirm.min.js": "/js/jquery-confirm.min.js",
+    "/js/bootstrap.min.js": "/js/bootstrap.min.js",
+    "/css/bootstrap-table.min.css": "/css/bootstrap-table.min.css",
     "/js/bootstrap-table-fr-FR.min.js": "/js/bootstrap-table-fr-FR.min.js",
-    "/js/bootstrap-table.min.js": "/js/bootstrap-table.min.js"
+    "/js/bootstrap-table.min.js": "/js/bootstrap-table.min.js",
+    "/js/bootstrap-show-password.min.js": "/js/bootstrap-show-password.min.js"
 }

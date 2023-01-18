@@ -1,81 +1,45 @@
-@extends('layouts.app')
+<form class="" action="{{ route('login') }}" method="post">
 
-@section('contenu')
+  @csrf
 
-      <div class="p-3 my-3 bg-otorange">
+  <div class="mb-3">
 
-        <div class="container-fluid py-2">
-
-          <div class="d-flex flex-row justify-content-start align-items-center">
-
-            <div class="col-4">
-
-              <img class="p-2 img-200" src="{{ url('storage/img/pansebetes.jpeg') }}" alt="Logo Panse-Bêtes">
-
-            </div>
-
-            <div class="col-8">
-
-              <h1 class="display-4 fw-bold">Bienvenue sur Panse-Bêtes</h1>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="container-fluid">
-
-      <div class="row my-3 justify-content-middle">
-
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Découvrir</h5>
-                <p class="card-text">Vous ne connaissez pas Panse-Bêtes ?</p>
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-otobleu" type="button" name="button">Découvrir</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Se connecter</h5>
-                  <p class="card-text">Déjà inscrit ? Connectez-vous pour retrouver votre espce Panse-Bêtes</p>
-              </div>
-              <div class="card-footer">
-                <a href="{{route('login')}}">
-                <button class="btn btn-otobleu" type="button" name="button">Se connecter</button>
-              </a>
-              </div>
-            </div>
-        </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">S'enregistrer</h5>
-                <p class="card-text">Pour utiliser Panse-Bêtes, inscrivez-vous ici !</p>
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-otobleu" type="button" name="button">S'inscrire</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <label for="email" class="form-label">@lang('auth.email')</label>
+    <input type="email" name="email" value=""class="form-control">
 
   </div>
 
-@endsection
+  <div class="mb-3">
+
+    <label for="password" class="form-label">@lang('auth.mdp')</label>
+    <input type="password" name="password" value="" class="form-control" data-toggle="password">
+
+  </div>
+
+  <div class="form-check">
+
+    <input id="remember_me" type="checkbox" value="" name="remember"class="form-check-input">
+    <label for="remember_me" class="form-check-label">@lang('auth.rester_connect')</label>
+
+  </div>
+
+  <div class="my-4">
+
+    <button type="submit" name="button" class="btn btn-otobleu">
+      <i class="fa-solid fa-right-to-bracket"></i>
+      @lang('auth.connect')</button>
+
+  </div>
+
+</form>
+
+<hr class="divider">
+<div class="mb-3">
+
+  @if (Route::has('password.request'))
+    <a class="link-primary" href="{{ route('password.request') }}">
+      @lang('auth.mdp_oublie')
+    </a>
+  @endif
+
+</div>
