@@ -5,14 +5,14 @@
   <div class="mb-3">
 
     <label for="email" class="form-label">@lang('auth.email')</label>
-    <input type="email" name="email" value=""class="form-control">
+    <input type="email" name="email" value=""class="form-control" required>
 
   </div>
 
   <div class="mb-3">
 
     <label for="password" class="form-label">@lang('auth.mdp')</label>
-    <input type="password" name="password" value="" class="form-control" data-toggle="password">
+    <input type="password" name="password" value="" class="form-control" required data-toggle="password">
 
   </div>
 
@@ -27,19 +27,16 @@
 
     <button type="submit" name="button" class="btn btn-otobleu">
       <i class="fa-solid fa-right-to-bracket"></i>
-      @lang('auth.connect')</button>
+      @lang('auth.connect')
+    </button>
 
   </div>
 
 </form>
 
-<hr class="divider">
-<div class="mb-3">
-
-  @if (Route::has('password.request'))
-    <a class="link-primary" href="{{ route('password.request') }}">
-      @lang('auth.mdp_oublie')
-    </a>
-  @endif
-
-</div>
+  <hr class="divider">
+@if (Route::has('password.request'))
+  <a class="link-primary" href="{{ route('password.request') }}">
+    @lang('auth.mdp_oublie')
+  </a>
+@endif

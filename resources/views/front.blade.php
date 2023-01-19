@@ -2,88 +2,85 @@
 
 @section('contenu')
 
-      <div class="p-3 my-3 bg-otorange">
+  <div class="p-3 my-3 bg-otorange">
 
-        <div class="container-fluid py-2">
+    <div class="container-fluid py-2">
 
-          <div class="d-flex flex-row justify-content-start align-items-center">
+      <div class="col-md-6">
 
-            <div class="col-4">
-
-              <img class="p-2 img-200" src="{{ url('storage/img/pansebetes.jpeg') }}" alt="Logo Panse-Bêtes">
-
-            </div>
-
-            <div class="col-8">
-
-              <h1 class="display-5 fw-bold">Bienvenue sur Panse-Bêtes</h1>
-
-            </div>
-
-          </div>
-
-        </div>
+        <img class="img-fluid" src="{{ url('storage/img/acsa_itab_otoveil.jpeg') }}" alt="Logo multiple">
 
       </div>
 
-    </div>
+      <div class="d-flex flex-row justify-content-start align-items-center">
 
-    <div class="container-fluid">
+        <div class="col p-2">
 
-      <div class="row my-3 justify-content-middle">
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-around">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-header">
-
-                <img src="{{ url('storage/img/divers/ampoule.svg') }}" class="card-img-top img-50" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Vous ne connaissez pas Panse-Bêtes ?</h5>
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-otobleu" type="button" name="button">Découvrir</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-header">
-
-                <img src="{{ url('storage/img/login.svg') }}" class="card-img-top img-50" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Déjà inscrit, connectez-vous</h5>
-              </div>
-              <div class="card-footer">
-
-                @include('auth.login2')
-
-              </div>
-            </div>
+          <h1 class="display-5 fw-bold">@lang('pb.bienvenue')</h1>
+          <p class="lead">@lang('pb.titre')</p>
+          <p>@lang('pb.obj')</p>
+          <p>@lang('pb.qui')</p>
+          <a href="{{route('visiteur.presentation')}}" class="btn btn-otobleu">
+            <i class="fa-solid fa-arrow-right"></i>
+            @lang('pb.savoir_plus')
+          </a>
         </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-header">
-                <img src="{{ url('storage/img/sign_in.svg') }}" class="card-img-top img-50" alt="...">
 
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">S'enregistrer</h5>
-                <p class="card-text">Pour utiliser Panse-Bêtes, inscrivez-vous ici !</p>
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-otobleu" type="button" name="button">S'inscrire</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
 
   </div>
+
+</div>
+
+<div class="container-fluid">
+
+  <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-around mb-3">
+
+    <div class="col-md-5">
+      <div class="card">
+
+        <div class="card-header d-flex align-items-center">
+          <img src="{{ url('storage/img/login.svg') }}" class="img-50  me-3" alt="...">
+          <h5 class="card-title">@lang('auth.deja_inscrit')</h5>
+        </div>
+
+        <div class="card-body">
+          @include('auth.login2')
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card">
+
+        <div class="card-header d-flex align-items-center">
+          <img src="{{ url('storage/img/sign_in.svg') }}" class="me-3 img-50" alt="...">
+          <h5 class="card-title">@lang('auth.pas_inscrit')</h5>
+        </div>
+
+        <div class="card-body">
+          <p>@lang('pb.faut_compte')</p>
+          <p>@lang('pb.gratuit')</p>
+          <p>@lang('pb.protection_donnees')</p>
+          <p>@lang('pb.supprimer_possible')</p>
+        </div>
+
+        <div class="card-footer">
+          <a class="btn btn-otobleu" href="{{route('register')}}">
+            <i class="fa-solid fa-pencil"></i>
+            @lang('auth.inscrire')
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
 
 @endsection
 

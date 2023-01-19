@@ -21,6 +21,7 @@ use App\Http\Controllers\FermeController;
 use App\Http\Controllers\AmiController;
 use App\Http\Controllers\CompareController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\VisiteurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,6 +39,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', [AccueilController::class, 'index'])->name('front');
+
+Route::get('/presentation', [VisiteurController::class, 'presentation'])->name('visiteur.presentation');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
