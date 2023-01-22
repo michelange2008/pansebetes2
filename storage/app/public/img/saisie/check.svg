@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 100 100"
+   id="svg6"
+   sodipodi:docname="check.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="920"
+     inkscape:window-height="480"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="2.9661017"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6" />
+  <g
+     transform="translate(0,-952.36218)"
+     id="g4"
+     style="fill:#ffffff">
+    <path
+       style="color:#000000;text-indent:0;text-transform:none;direction:ltr;baseline-shift:baseline;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;enable-background:accumulate"
+       d="m 86.834593,966.34866 c -1.0317,0.041 -2.0409,0.4995 -2.75,1.25 -10.5544,11.0427 -29.172,31.3555 -40.5625,43.37504 l -14.0937,-10.7813 c -1.669,-1.27634 -4.3487,-0.91904 -5.625,0.75 -1.2763,1.669 -0.919,4.3487 0.75,5.625 l 17,13 c 1.556,1.1895 4.002,0.9893 5.3437,-0.4375 11.1913,-11.7088 31.969,-34.45864 43,-46.00004 1.109,-1.1432 1.43,-2.9804 0.7745,-4.4319 -0.6555,-1.4515 -2.2461,-2.4254 -3.837,-2.3493 z m -77.8436999,8.0312 v 60.00004 c 2e-4,2.0943 1.9056999,3.9998 3.9999999,4 h 60 c 2.0943,-2e-4 3.9998,-1.9057 4,-4 v -28 c 0.03,-2.1133 -1.8865,-4.057 -4,-4.057 -2.1135,0 -4.0299,1.9437 -4,4.057 v 24 h -52 v -52.00004 h 46 c 2.1132,0.03 4.057,-1.8865 4.057,-4 0,-2.1135 -1.9438,-4.0299 -4.057,-4 h -50 c -2.2994,0.054 -3.9555999,2.3142 -3.9999999,4 z"
+       marker="none"
+       visibility="visible"
+       display="inline"
+       overflow="visible"
+       id="path2"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

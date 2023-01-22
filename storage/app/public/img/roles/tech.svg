@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   data-name="Layer 1"
+   viewBox="0 0 128 128"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="tech.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="6.59375"
+     inkscape:cx="64.075829"
+     inkscape:cy="64.075829"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14" />
+  <title
+     id="title2">miscellaneous 195_expandline</title>
+  <path
+     d="M51.42919,56.9844h2.0176a21.35023,21.35023,0,0,1-4.4209-3.3355L29.0366,61.8984c-.4624.1778-11.3379,4.4624-12.0312,14.0728-.0034.0478-.0054.0962-.0054.144v34.8692a2,2,0,0,0,4,0V76.1909c.5615-7.0166,9.3853-10.5249,9.5171-10.5766Z"
+     id="path4"
+     style="fill:#ffffff;fill-opacity:1" />
+  <path
+     d="M110.99459,75.9297c-.6933-9.6138-11.5752-13.8574-11.9892-14.0142l-19.9976-8.2051a21.23847,21.23847,0,0,1-4.3887,3.274h1.8301l21.0825,8.6494c.0894.0342,8.90731,3.5054,9.46831,10.5156v34.835a2,2,0,0,0,4,0V76.0737C111,76.0259,110.998,75.9775,110.99459,75.9297Z"
+     id="path6"
+     style="fill:#ffffff;fill-opacity:1" />
+  <path
+     d="M44.2026,31.5664c1.1446,9.416,4.2823,22.1777,18.2466,24.2744a18.8095,18.8095,0,0,0,3.27881-.0244c13.65819-2.1611,16.83109-14.0947,18.06889-24.2471.1235-1.0039.2676-2.0117.4116-3.0195.95651-6.6982,1.9453-13.623-2.7656-19.7305-4.042-5.2363-9.0904-8.1855-15.003-8.7656-.747-.0732-4.1201-.0752-4.9921.0156-5.8692.6036-10.879,3.5479-14.8902,8.751-4.7119,6.1055-3.7226,13.0313-2.7661,19.7295C43.9355,29.5576,44.0796,30.5654,44.2026,31.5664Zm5.5225-20.3037c3.3618-4.3604,7.3306-6.7207,12.1338-7.2148.4702-.0489,3.7724-.0547,4.189-.0137,4.8403.4746,8.8403,2.8398,12.2285,7.2295,3.6792,4.7685,2.8501,10.5742,1.9721,16.7207-.1479,1.0342-.2954,2.0683-.4218,3.0986-1.6079,13.1885-6.0113,19.4043-14.7315,20.7842a5.56878,5.56878,0,0,1-2.041.0195c-8.7017-1.3066-13.291-7.7226-14.8813-20.8047-.126-1.0293-.2735-2.0634-.4214-3.0986C46.8735,21.8379,46.0444,16.0322,49.7251,11.2627Z"
+     id="path8"
+     style="fill:#ffffff;fill-opacity:1" />
+  <path
+     d="M69,95.9844H59a2,2,0,0,0,0,4H69a2,2,0,0,0,0-4Z"
+     id="path10"
+     style="fill:#ffffff;fill-opacity:1" />
+  <path
+     d="M94,100H89V86a6.00656,6.00656,0,0,0-6-6H77V78a6.00656,6.00656,0,0,0-6-6H57a6.00655,6.00655,0,0,0-6,6v2H45a6.00655,6.00655,0,0,0-6,6v2.7588l-6.3726-8.9214a2,2,0,1,0-3.2548,2.3252L39,95.6411V118a2,2,0,0,0,4,0V86a2.002,2.002,0,0,1,2-2H83a2.002,2.002,0,0,1,2,2v14.2573c-4.002,1.0142-7,4.9932-7,9.7432,0,4.7495,2.998,8.728,7,9.7422V126a2,2,0,0,0,4,0v-6h5a2.00009,2.00009,0,0,0,2-2V102A2.00009,2.00009,0,0,0,94,100ZM73,80H55V78a2.002,2.002,0,0,1,2-2H71a2.002,2.002,0,0,1,2,2Zm19,36H86.999C84.24269,116,82,113.3086,82,110.0005,82,106.6919,84.24269,104,86.999,104H92Z"
+     id="path12"
+     style="fill:#ffffff;fill-opacity:1" />
+  <metadata
+     id="metadata887">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>miscellaneous 195_expandline</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

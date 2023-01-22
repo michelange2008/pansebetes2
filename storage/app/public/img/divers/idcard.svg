@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Layer 1"
+   viewBox="0 0 100 100"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="idcard.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Artboard 8</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="919"
+     inkscape:window-height="480"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="2.36"
+     inkscape:cx="2.7542373"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6" />
+  <title
+     id="title2">Artboard 8</title>
+  <path
+     d="M65.64,13.49H60.23a10.53,10.53,0,0,0-20.45,0H34.36a2.5,2.5,0,0,0-2.5,2.5V35.61a2.5,2.5,0,0,0,2.5,2.5H65.64a2.5,2.5,0,0,0,2.5-2.5V16A2.5,2.5,0,0,0,65.64,13.49Zm-2.5,19.62H36.86V18.49H42a2.5,2.5,0,0,0,2.5-2.5,5.53,5.53,0,1,1,11.05,0,2.5,2.5,0,0,0,2.5,2.5h5.11ZM98.5,36.83V85.07A9.48,9.48,0,0,1,89,94.54H11A9.48,9.48,0,0,1,1.5,85.07V36.83A9.48,9.48,0,0,1,11,27.36H25.25a2.5,2.5,0,0,1,0,5H11A4.47,4.47,0,0,0,6.5,36.83V85.07A4.47,4.47,0,0,0,11,89.54H89a4.47,4.47,0,0,0,4.47-4.47V36.83A4.47,4.47,0,0,0,89,32.36H74.75a2.5,2.5,0,0,1,0-5H89A9.48,9.48,0,0,1,98.5,36.83ZM33.38,63.61a9.5,9.5,0,1,0-9.62-9.5A9.57,9.57,0,0,0,33.38,63.61Zm0-14a4.5,4.5,0,1,1-4.62,4.5A4.56,4.56,0,0,1,33.38,49.62ZM45,79.3V74.44a3.7,3.7,0,0,0-3.75-3.64H40.06L35.82,75A3.49,3.49,0,0,1,31,75L26.71,70.8H25.48a3.7,3.7,0,0,0-3.75,3.64V79.3a2.5,2.5,0,0,1-5,0V74.44a8.71,8.71,0,0,1,8.75-8.64h2.26a2.5,2.5,0,0,1,1.75.72l3.9,3.83,3.9-3.83A2.5,2.5,0,0,1,39,65.8h2.26A8.71,8.71,0,0,1,50,74.44V79.3a2.5,2.5,0,0,1-5,0ZM86.38,49.92a2.5,2.5,0,0,1-2.5,2.5h-32a2.5,2.5,0,0,1,0-5h32A2.5,2.5,0,0,1,86.38,49.92Zm0,11a2.5,2.5,0,0,1-2.5,2.5H58.58a2.5,2.5,0,0,1,0-5h25.3A2.5,2.5,0,0,1,86.38,61Zm0,11a2.5,2.5,0,0,1-2.5,2.5H58.58a2.5,2.5,0,0,1,0-5h25.3A2.5,2.5,0,0,1,86.38,72Z"
+     id="path4"
+     style="fill:#ffffff" />
+</svg>
