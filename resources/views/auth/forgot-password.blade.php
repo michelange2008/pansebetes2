@@ -1,25 +1,57 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+@extends('layouts.app')
+
+@section('contenu')
+
+  <div class="container-fluid">
+
+    <div class="row my-5">
+
     </div>
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <div class="row justify-content-center my-5">
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+      <div class="col-sm-10 col-md-8 col-lg-6 border birder-2 px-5">
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <div class="alert bg-otobleu my-3">
+
+          <h1>@lang('passwords.password_forgotten')</h1>
+
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
+        <div class="lead my-3">
+
+          <p>@lang('passwords.forgot_password')</p>
+
         </div>
-    </form>
-</x-guest-layout>
+
+        <form method="POST" action="{{ route('password.email') }}" class="p-6">
+          @csrf
+          <label for="email" class="form-label">@lang('auth.email')</label>
+          <input id="email" type="email" name="email" class="form-control" placeholder="@lang('auth.mdp')">
+          @error ('email')
+            <div class="alert alert-danger">
+              {{ $message }}
+            </div>
+          @enderror
+
+          <div class="my-3">
+
+            <button type="submit" class="btn btn-danger">@lang('passwords.email_reset_link')</button>
+          </form>
+
+          </div>
+
+          <div class="lead">
+
+            <p>@lang('passwords.explic_link_reset')</p>
+          </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+@endsection

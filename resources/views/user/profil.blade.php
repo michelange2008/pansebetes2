@@ -32,7 +32,7 @@ affiche les infos du profil de l'utilisateur (nom, origine, fonction)
   <div class="card-footer">
 
     @edit([
-    'route' => route('user.edit', $user),
+      'route' => route('user.edit', $user),
     ])
 
   </div>

@@ -38,4 +38,5 @@ return array(
   "sort_paraferme" => "Ordonner les parametres",
   'compare_index' => "Choix des saisies à comparer",
   'compare_result' => "Comparaison du nombre d'alertes entre plusieurs saisies",
+  'user_destroy' => "Suppression de mon compte"
 );

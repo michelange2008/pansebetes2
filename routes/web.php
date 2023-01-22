@@ -42,15 +42,15 @@ Route::get('/', [AccueilController::class, 'index'])->name('front');
 
 Route::get('/presentation', [VisiteurController::class, 'presentation'])->name('visiteur.presentation');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 Route::middleware('auth', 'verified')->group(function () {
@@ -144,7 +144,8 @@ Route::group(['middleware' => ['auth', 'verified', 'menu']], function () {
     Route::get('/{user}', 'show')->name('user.show');
     Route::get('/edit/{user}', 'edit')->name('user.edit');
     Route::put('/update/{id}', 'update')->name('user.update');
-    Route::delete('/destroy/{id}', 'destroy')->name('user.destroy');
+    Route::get('/wantToDestroy/{id}', 'wantToDestroy')->name('user.wantToDestroy');
+    Route::delete('/destroy', 'destroy')->name('user.destroy');
 
   });
   // Gestion des droits des utilisateurs par l'admin: acceptation, suppression

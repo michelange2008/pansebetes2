@@ -57,6 +57,12 @@
 
           </div>
 
+          <div class="col">
+
+            @include('user.del')
+
+          </div>
+
       </div>
 
       </div>

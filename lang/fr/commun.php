@@ -25,4 +25,5 @@ return [
     Pour les autres chiffres, une absence de valeur est égale à 0.',
   'info_picto_saisie_chiffres' => "Plus d'infos en survolant le petit picto",
   'analyse_stat' => "(Toute analyse statistique concernant ces informations sera collective et anonyme)",
+  'del_user' => "Si vous souhaitez supprimer votre compte et toutes les données associées, cliquez ci-dessous.",
 ];

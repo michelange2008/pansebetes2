@@ -47,7 +47,7 @@
         </div>
 
         <div class="card-body">
-          @include('auth.login2')
+          @include('auth.login')
         </div>
       </div>
     </div>

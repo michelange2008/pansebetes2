@@ -2,6 +2,8 @@
 
 return [
   'del' => "Suppression",
+  'supprimer' => "Supprimer",
+  'del_conf' => "Je confirme la suppression",
   'edit' => "Modifier",
   'valider' => "valider",
   'commencer' => "commencer",

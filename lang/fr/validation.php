@@ -30,6 +30,7 @@ return [
     ],
     'boolean'              => 'Le champ :attribute doit être vrai ou faux.',
     'confirmed'            => 'Le champ de confirmation :attribute ne correspond pas.',
+    'current_password'     => 'Ce mot de passe est incorrect.',
     'date'                 => "Le champ :attribute n'est pas une date valide.",
     'date_format'          => 'Le champ :attribute ne correspond pas au format :format.',
     'different'            => 'Les champs :attribute et :other doivent être différents.',

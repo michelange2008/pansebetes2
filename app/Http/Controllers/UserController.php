@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
 use App\Mail\Accepte;
 use Mail;
@@ -155,16 +158,41 @@ class UserController extends Controller
     }
 
     /**
+     * Envoie à la page de confirmation de la suppression de l'utilisateur
+     * après qu'il ait cliqué sur "supprimer" dans la page de son profil
+     *
+     * @param type var Description
+     * @return return type
+     */
+    public function wantToDestroy(User $user)
+    {
+      return view('user.wantToDestroy', [
+        'user' => $user,
+      ]);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request): RedirectResponse
     {
-        User::destroy($id);
+      $request->validate([
+        'password' => 'required|current-password',
+      ]);
 
-        return response()->json(['message' => $id]);
+        $user = $request->user();
+
+        Auth::logout();
+
+        $user->delete();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return Redirect::to('/');
     }
 
 }

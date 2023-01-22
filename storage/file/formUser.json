@@ -21,7 +21,9 @@
     "profession" : {
       "label" : "profession",
       "name" : "profession",
-      "type" : "text",
+      "type" : "select",
+      "liste" : "professions.json",
+      "options" : {},
       "required" : false
     },
     "region" : {
