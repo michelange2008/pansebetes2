@@ -11,7 +11,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-5">
       <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/idcard.svg" alt="">
+        <img class="mx-3 img-40" src="{{url('storage/img/divers/idcard.svg')}}" alt="">
         <h5 class="mt-2">Ce site est édité par...</h5>
       </div>
       <div class="pl-3">
@@ -26,7 +26,7 @@
     </div>
     <div class="col-md-5">
       <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/cloud.svg" alt="">
+        <img class="mx-3 img-40" src="{{url('storage/img/divers/cloud.svg')}}" alt="">
         <h5 class="mt-2">Ce site est hébergé par...</h5>
       </div>
       <div class="pl-3">
@@ -44,13 +44,13 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/credit.svg" alt="">
+        <img class="mx-3 img-40" src="{{url('storage/img/divers/credits.svg')}}" alt="">
         <h5 class="mt-2">License et crédits</h5>
       </div>
       <div class="ml-3">
         <h5>License</h5>
         <div class="d-flex flex-row justify-content-around align-items-center mb-3">
-          <img style="height:40px" src="{{asset(config('chemins.images'))}}/divers/by-sa.svg" alt="CC-BY-SA">
+          <img style="height:40px" src="{{url('storage/img/divers/by-sa.svg')}}" alt="CC-BY-SA">
           <p class="lead m-0">le site est placé sous licence Creative Commons CC-BY-SA</p>
         </div>
         <p>Le titulaire des droits autorise toute utilisation de l’œuvre originale (y compris à des fins commerciales)
@@ -67,7 +67,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/cookie.svg" alt="">
+        <img class="mr-3 img-40" src="{{url('storage/img/divers/cookie.svg')}}" alt="">
         <h5 class="mt-2">Cookies</h5>
       </div>
       <div class="pl-3">
@@ -83,7 +83,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.images'))}}/divers/rgpd.svg" alt="">
+        <img class="mx-3 img-40" src="{{url('storage/img/divers/rgpd.svg')}}" alt="">
         <h5 class="mt-2">Protection des données personnelles (RGPD)</h5>
       </div>
       <div class="pl-3">
@@ -92,7 +92,7 @@
         <div class="ml-1">
           <p>Les données dont nous disposons sont : l'<strong>adresse de courriel</strong>, la profession et la région (si ces deux dernières données ont été renseignées).
            Le mot de passe est stocké sous forme cryptée: seul l'utilisateur connaît ce mot de passe.</p>
-          <p>l'utilisateur qui ne souhaite plus figurer dans la liste des personnes disposant d'un identifiant devra envoyer un courriel à l'administratrice de Panse-Bêtes <a href="mailto:contact@panse-betes.fr ?subject=Demande de désinscription" title="cliquez pour écrire un mail"><i class="fas fa-envelope"></i></a> </p>
+          <p>l'utilisateur qui ne souhaite plus figurer dans la liste des personnes peut supprimer son compte et toutes les données associées (<a href="{{ route('user.show', auth()->user()) }}"><i class="fa-solid fa-arrow-up-right-from-square"></i>)</a> </p>
         </div>
         <p class="bg-otorange p-1"><strong>Pour les saisies qui ont été réalisées</strong></p>
         <div class="ml-1">
@@ -110,27 +110,5 @@
     </div>
   </div>
 </div>
-
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-      <div class="alert bg-otobleu d-flex">
-        <img class="mr-3 img-40" src="{{asset(config('chemins.note'))}}/count_blanc.svg" alt="">
-        <h5 class="mt-2">Suivi de la fréquentation du site</h5>
-      </div>
-      <div class="pl-3">
-        <p class="lead">Nous avons mis en place un outil de suivi de la fréquentation de Panse-Bêtes afin de connaître l'utilisation de cet outil.</p>
-        <p>Il s'agit d'un logiciel libre, nommé Matomo <a href="https://matomo.org/" title="site de Matomo"><i class="fas fa-external-link-square-alt"></i></a>, qui n'est pas intrusif, qui anonymise votre adresse IP et respecte la réglementation sur la protection de la vie privée.
-          Pour plus d'information, vous pouvez consulter le site de la CNIL <a href="https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience" title="Site de la CNIL"><i class="fas fa-external-link-square-alt"></i></a> </p>
-          <p>Il vous est possible de décider de ne pas être suvi. Il vous suffit de décocher la case ci-dessous. Dans ce cas, ce serait sympa de nous dire ce que vous avez pensé de Panse-Bêtes en allant au menu <a href="{{route('contact')}}">"Nous contacter"</a>.</p>
-          <iframe
-          style="border: 0; width: 100%;"
-          src="https://panse-betes.fr/matomo/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=efeded&fontColor=&fontSize=15px&fontFamily=PT%20Sans">
-        </iframe>
-      </div>
-    </div>
-  </div>
-
-
 
 @endsection
