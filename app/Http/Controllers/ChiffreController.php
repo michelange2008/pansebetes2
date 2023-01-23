@@ -31,7 +31,7 @@ class ChiffreController extends Controller
                     'groupes.nom as groupe_nom', 'typenums.nom as typenum',
                     'chiffres.min as min',
                     'chiffres.requis', 'chiffres.supprimable')
-                    ->orderBy('groupes.ordre')->orderBy('chiffres.id')
+                    ->orderBy('groupes.ordre')->orderBy('id')
                     ->get();
 
       $tablab = new TabLab($chiffres, 'indexTabChiffre.json', 'saisie/chiffres_clair.svg');
