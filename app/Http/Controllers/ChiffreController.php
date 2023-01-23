@@ -17,7 +17,7 @@ class ChiffreController extends Controller
 {
   use LitJson, FormTemplate, ChiffresDependances;
     /**
-     * Display a listing of the resource.
+     * Affiche la liste des paramètres chiffrés
      *
      * @return \Illuminate\Http\Response
      */
