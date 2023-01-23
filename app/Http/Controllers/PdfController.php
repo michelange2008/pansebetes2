@@ -33,7 +33,7 @@ class PdfController extends Controller
                       ->where('requis', 1)
                       ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
                       ->select('groupes.nom as groupes_nom', 'groupes.ordre as groupes_ordre', 'chiffres.*')
-                      ->orderBy('groupes_ordre')
+                      ->orderBy('groupes_ordre')->orderBy('chiffres.id')
                       ->get();
 
         $chiffresGroupes = $chiffres->groupBy('groupes_nom');
