@@ -11,7 +11,7 @@
     </video>
     <div class="d-sm-flex flex-row justify-content-around m-3">
       <div class="b-3 p-3 align-items-center border-left">
-        <h5 class="mr-3">@lang('presentation.video_after')/h5>
+        <h5 class="mr-3">@lang('presentation.video_after')</h5>
         <a href="{{url('storage/presentation/PBpresentation.m4v')}}" download="{{$theme}}">
           <button class="btn btn-otojaune rounded-0" type="button" name="button"><i class="fas fa-file-video"></i> télécharger (10M)</button>
         </a>
