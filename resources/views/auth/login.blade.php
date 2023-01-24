@@ -5,14 +5,26 @@
   <div class="mb-3">
 
     <label for="email" class="form-label">@lang('auth.email')</label>
-    <input type="email" name="email" value=""class="form-control" required>
+    <input type="email" name="email" value=""
+        class="form-control @error ('email') is-invalid @enderror" required>
+      @error ('email')
+        <div class="alert alert-danger">
+          {{ $message }}
+        </div>
+      @enderror
 
   </div>
 
   <div class="mb-3">
 
     <label for="password" class="form-label">@lang('auth.mdp')</label>
-    <input type="password" name="password" value="" class="form-control" required data-toggle="password">
+    <input type="password" name="password" value=""
+    class="form-control" data-toggle = "password" required>
+  @error ('password')
+    <div class="alert alert-danger">
+      {{ $message }}
+    </div>
+  @enderror
 
   </div>
 

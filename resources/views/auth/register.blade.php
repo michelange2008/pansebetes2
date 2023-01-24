@@ -11,7 +11,7 @@
         <div class="alert bg-otobleu d-flex">
           <img class="img-50 px-2" src="{{ url('storage/img/profil_clair.svg') }}" alt="profil">
           <h1>Panse-Bêtes: création d'un compte</h1>
-{{ $errors }}
+
         </div>
 
       </div>
