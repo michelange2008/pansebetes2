@@ -12,7 +12,7 @@ class FrontController extends Controller
   /**
    * Page initiale de Panse-Bêtes avec info, connexion et inscription
    */
-  public function index()
+  public function front()
   {
     return view('front');
   }

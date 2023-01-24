@@ -35,25 +35,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Point d'accès à Panse-Bêtes
-Route::get('/', [FrontController::class, 'index'])->name('front');
-// Vidéo de présentation
-Route::get('/presentation', [FrontController::class, 'presentation'])->name('visiteur.presentation');
-
-// Route::middleware('auth')->group(function () {
-
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-
-// Route::middleware('auth', 'verified')->group(function () {
-//   Route::prefix('/accueil')->controller(AccueilController::class)->group(function() {
-//     Route::get('/', 'index')->name('accueil.index');
-//
-//   });
-//
-// });
+Route::prefix('/')->controller(FrontController::class)->group( function() {
+  // Point d'accès à Panse-Bêtes
+  Route::get('/', 'front')->name('front');
+  // Vidéo de présentation
+  Route::get('/presentation', 'presentation')->name('visiteur.presentation');
+});
 
 Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function() {
 
