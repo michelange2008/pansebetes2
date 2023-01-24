@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\SaisieController;
@@ -21,7 +22,6 @@ use App\Http\Controllers\FermeController;
 use App\Http\Controllers\AmiController;
 use App\Http\Controllers\CompareController;
 use App\Http\Controllers\NoteController;
-use App\Http\Controllers\VisiteurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,16 +35,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', [AccueilController::class, 'index'])->name('front');
-
-Route::get('/presentation', [VisiteurController::class, 'presentation'])->name('visiteur.presentation');
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+// Point d'accès à Panse-Bêtes
+Route::get('/', [FrontController::class, 'index'])->name('front');
+// Vidéo de présentation
+Route::get('/presentation', [FrontController::class, 'presentation'])->name('visiteur.presentation');
 
 // Route::middleware('auth')->group(function () {
 
@@ -53,13 +47,13 @@ Route::get('/presentation', [VisiteurController::class, 'presentation'])->name('
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::middleware('auth', 'verified')->group(function () {
-  Route::prefix('/accueil')->controller(AccueilController::class)->group(function() {
-    Route::get('/', 'index')->name('accueil.index');
-
-  });
-
-});
+// Route::middleware('auth', 'verified')->group(function () {
+//   Route::prefix('/accueil')->controller(AccueilController::class)->group(function() {
+//     Route::get('/', 'index')->name('accueil.index');
+//
+//   });
+//
+// });
 
 Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function() {
 

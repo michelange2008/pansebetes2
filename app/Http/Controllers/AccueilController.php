@@ -21,11 +21,6 @@ class AccueilController extends Controller
     use EffaceElevages;
     use LitJson;
 
-    public function index()
-    {
-      // return view('front');
-      return view('front');
-    }
     /**
      * Affiche la liste des saisies de l'user identifié ainsi que celles de ces
      * amis suivis

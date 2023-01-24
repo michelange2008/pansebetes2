@@ -12,20 +12,20 @@
     <div class="d-sm-flex flex-row justify-content-around m-3">
       <div class="b-3 p-3 align-items-center border-left">
         <h5 class="mr-3">@lang('presentations.video_after')</h5>
-        <a href="{{url('storage/presentation/PBpresentation.m4v')}}" download="{{$theme}}">
+        <a href="{{url('storage/presentation/PBpresentation.m4v')}}" download="PBpresentation">
           <button class="btn btn-otojaune rounded-0" type="button" name="button"><i class="fas fa-file-video"></i> télécharger (10M)</button>
         </a>
       </div>
       <div class="b-3 p-3 align-items-center border-left">
         <h5 class="mr-3">@lang('presentations.see_pdf')</h5>
-        <a href="{{url('storage/presentation/PBpresentation.pdf')}}" download="{{$theme}}">
+        <a href="{{url('storage/presentation/PBpresentation.pdf')}}" download="PBpresentation">
           <button class="btn btn-danger rounded-0" type="button" name="button"><i class="fas fa-file-pdf"></i> télécharger (3M)</button>
         </a>
       </div>
     </div>
     <div class="pr-3 align-self-end">
-      <a href="{{route($route)}}">
-        <button class="btn btn-lg btn-otobleu rounded-0 mx-3" type="button" name="button"><i class="fas fa-undo-alt"></i> {{$bouton}}</button>
+      <a href="{{route('front')}}">
+        <button class="btn btn-lg btn-otobleu rounded-0 mx-3" type="button" name="button"><i class="fas fa-undo-alt"></i> @lang('boutons.accueil')</button>
       </a>
     </div>
   </div>
