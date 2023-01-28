@@ -9,9 +9,11 @@
     name = {{ $name }}
     value = 1
     type="checkbox"
-    @if ($isName)
-      checked = "checked"
-    @endif
+    @isset($isName)
+      @if ($isName)
+        checked = "checked"
+      @endif
+    @endisset
     >
 
     <label class="custom-control-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
