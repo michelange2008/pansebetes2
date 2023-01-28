@@ -21,9 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('profession', 191)->nullable();
             $table->string('region', 191)->nullable();
-            $table->boolean('admin')->default(0);
             $table->foreignId('role_id')->constrained()->default(3);
-            $table->boolean('valide')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
