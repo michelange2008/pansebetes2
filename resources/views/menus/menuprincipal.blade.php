@@ -12,7 +12,7 @@
 
           <li class="nav-item" title="Pour démarrer"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Aide</a></li>
-          @if (!Auth::user()->admin)
+          @if (!Auth::user()->isAdmin)
             <li class="nav-item"><a class="nav-link" href="{{route('notes.create')}}">Votre avis</a></li>
           @endif
           <li class="nav-item dropdown">
@@ -27,7 +27,7 @@
               <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
             </div>
           </li>
-          @if (Auth::user()->admin)
+          @if (Auth::user()->isAdmin)
 
             @include('menus.menuGestion', ['menu' => session('menuGestion')])
 
