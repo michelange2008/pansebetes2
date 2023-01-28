@@ -26,7 +26,7 @@ destiner à supprimer le profil utilisateur
 
   <div class="card-footer">
 
-    <a href="{{ route('user.wantToDestroy', $user) }}" class="btn btn-danger"><i class="fa-solid fa-circle-xmark"></i> @lang('boutons.supprimer')</a>
+    <a href="{{ route('user.wantToDestroy') }}" class="btn btn-danger"><i class="fa-solid fa-circle-xmark"></i> @lang('boutons.supprimer')</a>
 
   </div>
 

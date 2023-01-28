@@ -1,0 +1,60 @@
+{
+  "prefixe" : "user",
+
+  "add" : false,
+
+  "colonnes" : {
+
+    "nom" : {
+      "col" : "user_nom",
+      "type" : "lien",
+      "route" : "admin.roleEdit",
+      "id" : "id",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "email" : {
+      "col" : "user_email",
+      "type" : "email",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "profession" : {
+      "col" : "user_profession",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "region" : {
+      "col" : "user_region",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "role" : {
+      "col" : "user_role",
+      "type" : "item",
+      "aligne" : "left",
+      "sortable" : true
+    },
+    "del" : {
+      "col" : "del",
+      "type" : "lien",
+      "route" : "admin.del",
+      "id" : "id",
+      "aligne" : "center",
+      "sortable" : false
+    }
+  },
+
+  "suppr" : false,
+
+  "tri" : {
+
+    "colonne" : "user_nom",
+
+    "ordre" : "asc"
+  }
+
+
+}
