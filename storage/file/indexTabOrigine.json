@@ -1,6 +1,8 @@
 {
   "prefixe" : "origine",
 
+  "add" : true,
+
   "route" : false,
 
   "icone" : "origine.svg",

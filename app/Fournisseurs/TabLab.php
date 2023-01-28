@@ -25,6 +25,7 @@ class TabLab extends Tab
     $this->indexTab = collect();
     // On récupère les infos de colonne à partir du json
     $cadre = $this->litJson($json);
+
     // On crée le titre
     try {
 
@@ -54,7 +55,10 @@ class TabLab extends Tab
       $this->creeLignes($cadre, $datas);
 
     // Ajoute un bouton "ajout d'un nouvel élément"
-    $this->addBouton($cadre);
+    if($cadre->add) {
+
+      $this->addBouton($cadre);
+    }
 
   }
 
@@ -132,7 +136,6 @@ class TabLab extends Tab
       // On initialise une collection pour la ligne
       $ligne = collect();
       $id = $data->id;
-
       foreach ($data as $key => $value) {
         // $key = intitulé de la variable sélectionné qui doit être égale à un intitulé de colonne dans le json
         if(isset($cadre->colonnes->$key)) {
@@ -227,15 +230,18 @@ class TabLab extends Tab
 
               break;
 
-            //   case 'json':
-            //   try {
-            //     $item = $this->jsonFactory($id, $value);
-            //
-            //   } catch (\Exception $e) {
-            //     dump($e."problème avec l'utilisation du lien jsonFactory");
-            //     dump($colonne);
-            //   }
-            // break;
+              case 'email':
+                try {
+                  $item = $this->emailFactory($id, $value);
+
+                } catch (\Exception $e) {
+                  dump("Problème avec l'utilisation de emailFactory:
+                  à vérifier");
+                  dump($colonne);
+                  dd($e);
+                }
+
+                break;
 
             default:
               $item = $this->itemFactory($id, $value);

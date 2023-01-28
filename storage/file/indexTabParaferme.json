@@ -1,6 +1,8 @@
 {
   "prefixe" : "paraferme",
 
+  "add" : true,
+
   "bouton" : {
     "libelle" : "Ranger",
     "fa" : "fa-solid fa-arrow-down-short-wide",

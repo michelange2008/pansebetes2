@@ -1,6 +1,8 @@
 {
   "prefixe" : "chiffre",
 
+  "add" : true,
+
   "colonnes" : {
 
     "chiffre_nom" : {
