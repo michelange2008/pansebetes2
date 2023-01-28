@@ -74,11 +74,11 @@
         <tbody id="user">
           @foreach ($users as $user)
             @if ($user->valide == 1)
-              <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
+              <tr id="ligne_{{$user->id}}" class="ligne {{($user->isAdmin) ? "text-danger": ""}}">
                 <td id="nom_{{$user->id}}" class="nom">{{$user->name}}</td>
                 <td id="email_{{$user->id}}" class="modifEmail">{{$user->email}}</td>
                 <td id="saisies_{{$user->id}}" class="text-center saisies">{{count($saisies_groupees[$user->id])}}</td>
-                <td id="admin_{{$user->id}}" class="text-center">{{($user->admin) ? "OUI" : "NON"}}</td>
+                <td id="admin_{{$user->id}}" class="text-center">{{($user->isAdmin) ? "OUI" : "NON"}}</td>
 
                 <td id="moins_{{$user->id}}" class="supprimer cell-delmod curseur" title="Supprimer cet utilisateur">
                   <img src="{{asset(config('chemins.admin'))}}/moins.svg" alt="Supprimer">
@@ -112,7 +112,7 @@
         </thead>
         <tbody id="user">
           @foreach ($notes as $note)
-              <tr id="ligne_{{$user->id}}" class="ligne {{($user->admin) ? "text-danger": ""}}">
+              <tr id="ligne_{{$user->id}}" class="ligne {{($user->isAdmin) ? "text-danger": ""}}">
                 <td id="avisnom_{{$user->id}}" class="nom">{{$user->name}}</td>
                 <td id="utilisation_{{$user->id}}" class="text-center saisies">{{$note->utilisation}}</td>
                 <td id="notefond_{{$user->id}}" class="text-center">{{$note->note_fond}}</td>
