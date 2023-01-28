@@ -46,6 +46,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
     public function salertes()
     {
         return $this->hasMany('Salerte', 'alerte_id');
@@ -54,17 +59,6 @@ class User extends Authenticatable implements MustVerifyEmail
     public function slistes()
     {
         return $this->hasMany(Saisie::Class);
-    }
-
-    public function isAdmin()
-    {
-      if($user->isAdmin == 1)
-      {
-        return true;
-      }
-      else {
-        return false;
-      }
     }
 
     public function notes()
