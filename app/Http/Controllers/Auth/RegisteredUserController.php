@@ -43,8 +43,6 @@ class RegisteredUserController extends Controller
             'profession' => ($request->profession != null) ? $request->profession : null,
             'region' => ($request->region != null) ? $request->region : null,
             'role_id' => 3,
-            'admin' => 0,
-            'valide' => 1,
         ]);
 
         event(new Registered($user));

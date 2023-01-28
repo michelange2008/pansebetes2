@@ -19,6 +19,19 @@ abstract class Tab
     return $item;
   }
 
+  public function emailFactory($id, $col)
+  {
+    $item = collect();
+
+    $item->action = 'email';
+
+    $item->id = $id;
+
+    $item->nom = $col;
+
+    return $item;
+  }
+
 public function dateFactory($id, $value)
   {
     $item = collect();
