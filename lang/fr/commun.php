@@ -26,4 +26,7 @@ return [
   'info_picto_saisie_chiffres' => "Plus d'infos en survolant le petit picto",
   'analyse_stat' => "(Toute analyse statistique concernant ces informations sera collective et anonyme)",
   'del_user' => "Si vous souhaitez supprimer votre compte et toutes les données associées, cliquez ci-dessous.",
+  'warning_del_user' => "Attention, vous allez supprimer définitivement l'utilisateur",
+  'et_sa_saisie' => "Ansi que sa saisie.",
+  'est_ses_saisies' => "Ainsi que ses :nb_saisies saisies.",
 ];

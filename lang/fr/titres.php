@@ -12,6 +12,7 @@ return array(
   'chiffres_edit' => "Modifier les données chiffrées",
   'observations_edit' => "Modifier les observations",
   'accueil' => 'Accueil',
+  'user_liste' => "Liste des utilisateurs de Panse-Bêtes",
   'chiffres_liste' => "Paramètres numériques",
   'chiffre_create' => "Ajouter un nouveau paramètre",
   'chiffre_edit' => "Modification d'un paramètre",
@@ -38,5 +39,7 @@ return array(
   "sort_paraferme" => "Ordonner les parametres",
   'compare_index' => "Choix des saisies à comparer",
   'compare_result' => "Comparaison du nombre d'alertes entre plusieurs saisies",
-  'user_destroy' => "Suppression de mon compte"
+  'user_destroy' => "Suppression de mon compte",
+  'modif_utilisateur' => "modification d'un utilisateur",
+  'del_utilisateur' => "Suppression d'un utilisateur",
 );
