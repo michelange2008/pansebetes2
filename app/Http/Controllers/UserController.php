@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function index()
     {
-      if(!Auth::user()->admin)
+      if(!Auth::user()->isAdmin)
       {
         return view('accueil', [
           'especes' => Espece::all(),
@@ -54,40 +54,13 @@ class UserController extends Controller
     }
 
     /**
-     * Création d'un nouvel utilisateur
+     * Non implémenté car réalisé par RegisteredUserController
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-      // validation de la saisie
-        $datas = request()->validate([
-          'nom' => 'required|max:191',
-          'email' => 'required|email|max:191|unique:users',
-          'mot_de_passe' => 'required|min:6',
-          'retapez_votre_mot_de_passe' => 'required|min:6|same:mot_de_passe',
-          'profession' => 'max:191',
-          'region' => 'max:191',
-          'captcha' => 'required|in:agriculture biologique, agriculture bio',
-        ]);
-
-      // création de l'utilisateur
-        $datas = $request->all();
-        dd($datas);
-        $user = new User();
-        $user->name = $datas['nom'];
-        $user->email = $datas['email'];
-        $user->password = bcrypt($datas['mot_de_passe']);
-        $user->valide = $datas['valide'];
-        $user->profession = $datas['profession'];
-        $user->region = $datas['region'];
-        $user->save();
-        return response()->json([
-          "id" => $user->id,
-          "nom" => $user->name,
-          "email" => $user->email
-        ]);
     }
 
     /**
@@ -96,8 +69,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show()
     {
+        $user = Auth()->user();
+
         $titre = new Titre(icone: 'profil_clair.svg', titre: $user->name, translate: false );
 
         $amis_suiveurs = Ami::where('user_id', $user->id)->get();
@@ -121,10 +96,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit()
     {
       // Trait FormTemplate
-      $elements = $this->editForm($user, 'formUser.json');
+      $elements = $this->editForm(Auth::user(), 'formUser.json');
 
       return view('admin.editCreateForm', [
         'elements' => $elements,
@@ -164,10 +139,10 @@ class UserController extends Controller
      * @param type var Description
      * @return return type
      */
-    public function wantToDestroy(User $user)
+    public function wantToDestroy()
     {
       return view('user.wantToDestroy', [
-        'user' => $user,
+        'user' => Auth::user(),
       ]);
     }
 
