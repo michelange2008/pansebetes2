@@ -42,7 +42,7 @@ Route::prefix('/')->controller(FrontController::class)->group( function() {
   Route::get('/presentation', 'presentation')->name('visiteur.presentation');
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function() {
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function() {
 
   Route::get('/dev', [DevController:: class, 'dev'])->name('dev');
   Route::post('/store', [DevController::class, 'store'])->name('dev.store');
@@ -114,7 +114,7 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
 
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function () {
 
   // Gestion des utilisateurs
   Route::prefix('/utilisateur')->controller(UserController::class)->group(function() {
@@ -122,19 +122,24 @@ Route::group(['middleware' => ['auth', 'verified', 'menu']], function () {
     Route::get('/', 'index')->name('user.index');
     Route::get('/create', 'create')->name('user.create');
     Route::post('/store', 'store')->name('user.store');
-    Route::get('/{user}', 'show')->name('user.show');
-    Route::get('/edit/{user}', 'edit')->name('user.edit');
+    Route::get('/', 'show')->name('user.show');
+    Route::get('/edit/', 'edit')->name('user.edit');
     Route::put('/update/{id}', 'update')->name('user.update');
-    Route::get('/wantToDestroy/{id}', 'wantToDestroy')->name('user.wantToDestroy');
+    Route::get('/wantToDestroy', 'wantToDestroy')->name('user.wantToDestroy');
     Route::delete('/destroy', 'destroy')->name('user.destroy');
 
   });
   // Gestion des droits des utilisateurs par l'admin: acceptation, suppression
   Route::prefix('/administration')->controller(AdminController::class)->group( function() {
     // Affiche la liste des utilisateurs avec ceux à valider et ceux validés
-    Route::get('/', 'index')->name('admin.index');
-    // Permet de valider un utilisateur qui a fait une demande d'accès
-    Route::get('/valide/{id}', 'valideUser')->name('admin.valide');
+    Route::get('/', 'utilisateurs')->name('admin.utilisateurs');
+    // Affichage des notes laissées par les utilisateurs
+    Route::get('/notes', 'notes')->name('admin.notes');
+    // Permet à l'administrateur du site de modifier le role_id ou de supprimer
+    Route::get('/roleEdit/{id}', 'roleEdit')->name('admin.roleEdit');
+    Route::put('/{id}', 'roleUpdate')->name('admin.roleUpdate');
+    Route::get('/del/{id}', 'del')->name('admin.del');
+    Route::delete('/{id}', 'destroy')->name('admin.destroy');
 
   });
   // Gestion des appels AJAX
