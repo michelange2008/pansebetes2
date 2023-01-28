@@ -126,6 +126,14 @@
                 <img class="img-50" src="{{ url('storage/img/'.$item->nom) }}" alt="{{ $item->nom }}">
 
               </td>
+            @elseif ($item->action === 'email')
+
+              <td>
+
+                {{ $item->nom }}
+
+              </td>
+
             @endempty
 
           @endforeach

@@ -1,12 +1,16 @@
-<div id="toolbar" class="my-3">
+@isset($indexTab->bouton)
 
-  <a href="{{ $indexTab->bouton->route }}"
+  <div id="toolbar" class="my-3">
 
-    type="submit" class="btn btn-otobleu">
+    <a href="{{ $indexTab->bouton->route }}"
 
-    <i class="fas fa-plus-square"></i>
-     {{ ucfirst(__('tableaux.'.$indexTab->bouton->libelle))}}
+      type="submit" class="btn btn-otobleu">
 
-  </a>
+      <i class="fas fa-plus-square"></i>
+      {{ ucfirst(__('tableaux.'.$indexTab->bouton->libelle))}}
 
-</div>
+    </a>
+
+  </div>
+
+@endisset

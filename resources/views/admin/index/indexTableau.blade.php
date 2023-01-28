@@ -45,6 +45,7 @@
   <tbody>
     @foreach ($datas->liste as $user)
       <tr>
+
           @foreach ($user as $detail)
 
             @empty ($detail->action)
@@ -118,6 +119,14 @@
               <td>
 
                 <img class="img-50" src="{{ url('storage/img/'.$detail->nom) }}" alt="{{ $detail->nom }}">
+
+              </td>
+
+            @elseif ($detail->action === 'email')
+
+              <td>
+
+                {{ $detail->nom }}
 
               </td>
             @endempty

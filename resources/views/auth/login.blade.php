@@ -19,7 +19,7 @@
 
     <label for="password" class="form-label">@lang('auth.mdp')</label>
     <input type="password" name="password" value=""
-    class="form-control" data-toggle = "password" required>
+    class="form-control @error ('email') is-invalid @enderror" data-toggle = "password" required>
   @error ('password')
     <div class="alert alert-danger">
       {{ $message }}
