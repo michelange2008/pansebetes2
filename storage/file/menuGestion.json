@@ -2,9 +2,24 @@
   "admin" : {
     "nom" : "administration",
     "id" : "admin",
-    "route" : "admin.index",
     "icone" : "",
     "niveau" : "niv_1",
+    "hasSousmenu" : true
+  },
+  "users" : {
+    "nom" : "Utilisateurs",
+    "route" : "admin.utilisateurs",
+    "icone" : "infos_perso.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : false
+  },
+  "notes" : {
+    "nom" : "Notes",
+    "route" : "admin.notes",
+    "icone" : "insulte.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
     "hasSousmenu" : false
   },
   "indicateurs" : {
