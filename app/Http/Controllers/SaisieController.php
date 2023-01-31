@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
 use App\Models\Saisie;
 use App\Models\Theme;
 use App\Models\Alerte;
@@ -11,14 +12,12 @@ use App\Models\Critalerte;
 use App\Models\Salerte;
 use App\Models\Sorigine;
 use App\Models\Origine;
-use App\Models\Elevage;
 use App\Traits\CreeAlerte;
 
 use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Indicateurs\Indicateurs;
 
-use App\Traits\CreeSaisie;
 use App\Traits\LitJson;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
@@ -26,7 +25,7 @@ use App\Traits\TypesTools;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, CreeSaisie, LitJson, ThemesTools, FormatSalertes, TypesTools;
+  use CreeAlerte, LitJson, ThemesTools, FormatSalertes, TypesTools;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -34,15 +33,16 @@ class SaisieController extends Controller
   // TODO: supprimer tout ce qui est en rapport avec la saisie par pôle:
   //          - route alerte
   */
-  public function nouvelle($elevage_nom, $espece_id)
+  public function nouvelle(string $saisie_nom, int $espece_id)
   {
-    $elevage = Elevage::firstOrCreate(['nom' => $elevage_nom]);
 
-    session()->put('espece_id', $espece_id);
+    $saisie = Saisie::create([
+      'nom' => $saisie_nom,
+      'user_id' => auth()->user()->id,
+      'espece_id' => $espece_id,
+    ]);
 
-    $saisie_id = $this->nouvelleSaisie($elevage->id);
-
-    return redirect()->route('saisie.show', ['saisie_id' => $saisie_id]);
+    return redirect()->route('saisie.show', ['saisie_id' => $saisie->id]);
   }
 
   /*
@@ -95,6 +95,40 @@ class SaisieController extends Controller
 
       }
 
+    }
+
+    /**
+     * Permet de renommer le nom de la saisie
+     *
+     * @param Saisie $saisie
+     * @return return type
+     */
+    public function renomme(Saisie $saisie)
+    {
+      return view('saisie.renomme', [
+        'saisie' => $saisie,
+      ]);
+    }
+
+    /**
+     * undocumented function summary
+     *
+     * Undocumented function long description
+     *
+     * @param type var Description
+     * @return return type
+     */
+    public function renomStore(Request $request, Saisie $saisie)
+    {
+      $request->validate([
+        'nom' => ['required', 'string', 'max:191'],
+      ]);
+
+      $saisie->nom = $request->nom;
+
+      $saisie->save();
+
+      return redirect()->route('saisie.show', $saisie->id);
     }
 
     /*
@@ -187,20 +221,7 @@ class SaisieController extends Controller
 
     public function destroy($saisie_id)
     {
-      session()->put('saisie_id', $saisie_id);
-
-      $elevage = Saisie::where('id', $saisie_id)->first()->elevage_id;
-
-      $effacerElevage = false;
-
-      if(Saisie::where('elevage_id', $elevage)->count() === 1)
-      {
-        $effacerElevage = true;
-      }
-
       Saisie::destroy($saisie_id);
-
-      if($effacerElevage) Elevage::destroy($elevage);
 
       return redirect()->back();
     }

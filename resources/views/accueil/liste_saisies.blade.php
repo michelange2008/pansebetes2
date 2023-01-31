@@ -14,7 +14,7 @@
 
             <div class="saisie-info d-flex flex-column">
 
-              <h5 class="attention">{{$saisie->elevage->nom}}</h5>
+              <h5 class="attention">{{$saisie->nom}}</h5>
 
               <!-- information sur la saisie: date et nombre d'alertes s'il y en a -->
               <p><em>({{$saisie->created_at->day}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}})</em>

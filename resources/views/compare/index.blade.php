@@ -51,7 +51,7 @@ ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées
                       <input class="form-check-input case" type="checkbox"
                         name="{{ $saisie->id }}" value="{{ $saisie->id }}">
                     </td>
-                    <td>{{ $saisie->elevage->nom }}</td>
+                    <td>{{ $saisie->nom }}</td>
                     <td>
                       {{ $saisie->created_at->day }}
                       {{ $saisie->created_at->monthName }}

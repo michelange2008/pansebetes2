@@ -22,11 +22,6 @@ class Saisie extends Model
         return $this->hasMany(Salerte::class);
     }
 
-    public function elevage()
-    {
-      return $this->belongsTo(Elevage::class);
-    }
-
     public function espece()
     {
       return $this->belongsTo(Espece::class);

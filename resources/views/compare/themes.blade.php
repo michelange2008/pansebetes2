@@ -39,7 +39,7 @@
                   @else
 
                     <th class="text-center">
-                      {{ $entete->elevage->nom }}
+                      {{ $entete->nom }}
                     </br>
                     <span class="d-none d-lg-block">
                         {{ $entete->created_at->day }} {{ $entete->created_at->monthName }} {{ $entete->created_at->year }}

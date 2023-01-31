@@ -182,9 +182,13 @@ Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], functio
 
     Route::controller(SaisieController::class)->group(function() {
 
-      Route::get('/saisie/nouvelle/{elevage}/{espece_id}', 'nouvelle')->name('saisie.nouvelle');
+      Route::get('/saisie/nouvelle/{saisie_nom}/{espece_id}', 'nouvelle')->name('saisie.nouvelle');
       // Affiche la saisie en cours
       Route::get('/saisie/{saisie_id}', 'show')->name('saisie.show');
+
+      Route::get('/saisie/renomme/{saisie}', 'renomme')->name('saisie.renomme');
+
+      Route::post('/saisie/renomStore/{saisie}', 'renomStore')->name('saisie.renomStore');
       // Modifie les observations d'une saisie (les données chiffrées passent par le SchiffreController)
       Route::get('/saisie/observations/{saisie_id}', 'saisieObservations')->name('saisie.observations');
 

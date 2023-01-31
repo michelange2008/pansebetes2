@@ -22,7 +22,6 @@ class DatabaseSeeder extends Seeder
       $this->call(RoleTableSeeder::class);
       $this->call(EspecesTableSeeder::class);
       $this->call(TypesTableSeeder::class);
-      $this->call(ElevagesTableSeeder::class);
       $this->call(ParafermesTableSeeder::class);
       $this->call(AlertesTableSeeder::class);
       $this->call(TypenumsTableSeeder::class);

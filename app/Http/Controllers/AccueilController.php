@@ -10,15 +10,11 @@ use App\Models\Saisie;
 use App\Models\Ami;
 use App\Models\User;
 use App\Models\Participant;
-use App\Traits\CreeSaisie;
-use App\Traits\EffaceElevages;
 use App\Traits\LitJson;
 use App\Comp\Titre;
 
 class AccueilController extends Controller
 {
-    use CreeSaisie;
-    use EffaceElevages;
     use LitJson;
 
     /**
@@ -48,8 +44,6 @@ class AccueilController extends Controller
           }
         }
       }
-      // On supprime les élevages qui n'ont plus de saisie
-      $this->effaceElevages();
 
       $especes = Espece::all();
       session()->forget(['espece_id', 'theme', 'saisie']);

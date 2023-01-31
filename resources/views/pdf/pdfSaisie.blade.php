@@ -9,7 +9,7 @@
 </div>
 
 <div>
-    <h1 style="color:darkslategrey">{{$saisie->elevage->nom}} - {{$saisie->espece->nom}}</h1>
+    <h1 style="color:darkslategrey">{{$saisie->nom}} - {{$saisie->espece->nom}}</h1>
     <h3 class="pdf-sous-titre">Saisie du {{$saisie->created_at->day}}/{{$saisie->created_at->month}}/{{$saisie->created_at->year}}</h3>
 </div>
 <!-- Affichage par Categorie -->

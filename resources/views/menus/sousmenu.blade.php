@@ -9,7 +9,7 @@
         <img class="img-40" src="{{ url('storage/img/especes/'.$saisie->espece->icone)}}" alt="">
 
         <h3 class="pl-3 text-truncate">
-          {{$titre}} ({{$saisie->elevage->nom}} -
+          {{$titre}} ({{$saisie->nom}} -
           <small>
             {{$saisie->created_at->month}} {{$saisie->created_at->locale('fr')->monthName}} {{$saisie->created_at->year}}
           </small>

@@ -111,7 +111,7 @@ class PdfController extends Controller
         'themesIdAvecAlerte' => $themesIdAvecAlerte,
         'categories' => $categoriesAvecOrigines,
       ]);
-      $nomFichier = $saisie->elevage->nom."_".$saisie->espece->nom."_".$saisie->updated_at.".pdf";
+      $nomFichier = $saisie->nom."_".$saisie->espece->nom."_".$saisie->updated_at.".pdf";
 
       return $pdf->stream($nomFichier);
 

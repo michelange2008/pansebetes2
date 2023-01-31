@@ -11,9 +11,6 @@ require('./deplierAlertes.js')
 require('./afficherOrigines.js')
 require('./supprLigne')
 require('./choix_compare.js')
-// require( './bootstrap-table.min.js');
-// require( './bootstrap-table-accent-neutralise.min.js');
-// require( './bootstrap-table-fr-FR.min.js');
 
 $(function() {
 
@@ -27,19 +24,9 @@ $(function() {
     }
   });
 
-  // $.validate({
-  //   validateHiddenInputs: true
-  // });
-
-
-  // $(function () {
-  //   $('[data-toggle="tooltip"]').tooltip()
-  // })
-
   // suppression d'une saisie
     $('.supprime').on('click', function(e){
       var id = '#' + $(this).attr('id');
-      console.log(id);
       e.preventDefault();
       $.confirm({
           title: "Suppression",
@@ -65,10 +52,8 @@ $(function() {
     });
   // Nom pour une nouvelle saisie
     $('.nouvelle-saisie-item').on('click', function(e) {
-      console.log("coucou");
       var espece_id = $(this).attr('id').split('_')[1];
       var route = $(this).attr('route');
-      console.log(route);
       nouvelleSaisie(route, $(this).attr('name'), espece_id);
     });
 
@@ -80,7 +65,7 @@ $(function() {
         content: '' +
         '<form action="" class="formName">' +
         '<div class="form-group">' +
-        '<label>Si l\'élevage n\'appartient pas à la personne connectée, saisir son nom, sinon cliquez simplement sur Ok</label>' +
+        '<label>Saisir un nom pour cette saisie ou utiliser le nom pré-rempli</label>' +
         '<input type="text" placeholder='+nom+' class="name form-control" required />' +
         '</div>' +
         '</form>',
@@ -89,11 +74,11 @@ $(function() {
           text: 'Ok',
           btnClass: 'btn-blue',
           action: function () {
-              var name = this.$content.find('.name').val();
-              if(!name){
-                  var name = nom;
+              var saisie_nom = this.$content.find('.name').val();
+              if(!saisie_nom){
+                  var saisie_nom = nom;
               }
-              window.location.href = route+'/saisie/nouvelle/'+name+'/'+espece_id;
+              window.location.href = route+'/saisie/nouvelle/'+saisie_nom+'/'+espece_id;
           }
         },
         annuler: function () {
