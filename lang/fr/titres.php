@@ -42,4 +42,5 @@ return array(
   'user_destroy' => "Suppression de mon compte",
   'modif_utilisateur' => "modification d'un utilisateur",
   'del_utilisateur' => "Suppression d'un utilisateur",
+  'saisie_renomme' => "Renommer la saisie",
 );

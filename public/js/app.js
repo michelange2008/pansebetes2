@@ -6008,10 +6008,6 @@ __webpack_require__(/*! ./deplierAlertes.js */ "./resources/js/deplierAlertes.js
 __webpack_require__(/*! ./afficherOrigines.js */ "./resources/js/afficherOrigines.js");
 __webpack_require__(/*! ./supprLigne */ "./resources/js/supprLigne.js");
 __webpack_require__(/*! ./choix_compare.js */ "./resources/js/choix_compare.js");
-// require( './bootstrap-table.min.js');
-// require( './bootstrap-table-accent-neutralise.min.js');
-// require( './bootstrap-table-fr-FR.min.js');
-
 $(function () {
   $('#table').bootstrapTable({
     locale: 'fr-FR'
@@ -6022,18 +6018,9 @@ $(function () {
     }
   });
 
-  // $.validate({
-  //   validateHiddenInputs: true
-  // });
-
-  // $(function () {
-  //   $('[data-toggle="tooltip"]').tooltip()
-  // })
-
   // suppression d'une saisie
   $('.supprime').on('click', function (e) {
     var id = '#' + $(this).attr('id');
-    console.log(id);
     e.preventDefault();
     $.confirm({
       title: "Suppression",
@@ -6058,27 +6045,25 @@ $(function () {
   });
   // Nom pour une nouvelle saisie
   $('.nouvelle-saisie-item').on('click', function (e) {
-    console.log("coucou");
     var espece_id = $(this).attr('id').split('_')[1];
     var route = $(this).attr('route');
-    console.log(route);
     nouvelleSaisie(route, $(this).attr('name'), espece_id);
   });
   function nouvelleSaisie(route, nom, espece_id) {
     $.confirm({
       columnClass: 'large',
       title: 'Nouvelle saisie',
-      content: '' + '<form action="" class="formName">' + '<div class="form-group">' + '<label>Si l\'élevage n\'appartient pas à la personne connectée, saisir son nom, sinon cliquez simplement sur Ok</label>' + '<input type="text" placeholder=' + nom + ' class="name form-control" required />' + '</div>' + '</form>',
+      content: '' + '<form action="" class="formName">' + '<div class="form-group">' + '<label>Saisir un nom pour cette saisie ou utiliser le nom pré-rempli</label>' + '<input type="text" placeholder=' + nom + ' class="name form-control" required />' + '</div>' + '</form>',
       buttons: {
         formSubmit: {
           text: 'Ok',
           btnClass: 'btn-blue',
           action: function action() {
-            var name = this.$content.find('.name').val();
-            if (!name) {
-              var name = nom;
+            var saisie_nom = this.$content.find('.name').val();
+            if (!saisie_nom) {
+              var saisie_nom = nom;
             }
-            window.location.href = route + '/saisie/nouvelle/' + name + '/' + espece_id;
+            window.location.href = route + '/saisie/nouvelle/' + saisie_nom + '/' + espece_id;
           }
         },
         annuler: function annuler() {

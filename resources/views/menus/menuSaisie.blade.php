@@ -66,6 +66,10 @@ Pour les saisies nouvelles sans salertes, le menu n'affiche rien d'autre
                 <i class="fa-solid fa-eye"></i> @lang('titres.observations_edit')
               </a>
 
+              <a class="dropdown-item" href="{{ route('saisie.renomme', $saisie) }}">
+                <i class="fa-solid fa-pencil"></i> @lang('titres.saisie_renomme')
+              </a>
+
             </div>
 
           </div>
