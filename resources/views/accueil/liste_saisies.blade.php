@@ -23,7 +23,7 @@
                   {{ ucfirst(__('saisie.no_alerte')) }}</p>
 
                 @elseif ($saisie->salertes->where('danger', 1)->count() === 1)
-                  <strong>{{$saisie->salertes->count()}} @lang('saisie.alerte')</strong>
+                  <strong>{{$saisie->salertes->where('danger', 1)->count()}} @lang('saisie.alerte')</strong>
 
                 @else
                   <strong>{{$saisie->salertes->where('danger', 1)->count()}} @lang('saisie.alertes')</strong>
