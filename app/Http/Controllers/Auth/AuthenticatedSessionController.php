@@ -10,8 +10,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
+use App\Traits\Ntfy;
+
 class AuthenticatedSessionController extends Controller
 {
+    use Ntfy;
     /**
      * Display the login view.
      */
@@ -28,6 +31,7 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        $this->notify(auth()->user()->name." vient de se connecter 😀.");
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }

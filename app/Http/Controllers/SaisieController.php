@@ -22,10 +22,11 @@ use App\Traits\LitJson;
 use App\Traits\ThemesTools;
 use App\Traits\FormatSalertes;
 use App\Traits\TypesTools;
+use App\Traits\Ntfy;
 
 class SaisieController extends Controller
 {
-  use CreeAlerte, LitJson, ThemesTools, FormatSalertes, TypesTools;
+  use CreeAlerte, LitJson, ThemesTools, FormatSalertes, TypesTools, Ntfy;
 
   /*
   // Méthode qui conduit vers une nouvelle saisie
@@ -41,6 +42,10 @@ class SaisieController extends Controller
       'user_id' => auth()->user()->id,
       'espece_id' => $espece_id,
     ]);
+    // Utilisation du trait notify pour me prévenir de l'activité
+    $this->notify(
+      auth()->user()->name." vient de créer une nouvelle saisie."
+    );
 
     return redirect()->route('saisie.show', ['saisie_id' => $saisie->id]);
   }
@@ -123,7 +128,7 @@ class SaisieController extends Controller
       $request->validate([
         'nom' => ['required', 'string', 'max:191'],
       ]);
-
+      $this->notify($saisie->user->name.' a modifié le nom de sa saisie');
       $saisie->nom = $request->nom;
 
       $saisie->save();
