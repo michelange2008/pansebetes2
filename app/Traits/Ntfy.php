@@ -2,7 +2,7 @@
 namespace App\Traits;
 
 /**
- *
+ * Permet d'envoyer un notification sur le compte ntfy défini dans .env
  */
 trait Ntfy
 {
@@ -11,7 +11,7 @@ trait Ntfy
                   string $priority="default",
                   string $tags="+1")
   {
-    file_get_contents('https://ntfy.sh/caracala217', false, stream_context_create([
+    file_get_contents(config('ntfy.ntfy'), false, stream_context_create([
         'http' => [
             'method' => 'POST', // PUT also works
             'header' =>
