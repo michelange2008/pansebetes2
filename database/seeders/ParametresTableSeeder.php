@@ -19,7 +19,7 @@ class ParametresTableSeeder extends CsvSeeder
   {
       $this->table= 'parametres';
       $this->csv_delimiter = ';';
-      $this->filename = base_path().'/storage/app/public/csvs/pb_parametres.csv';
+      $this->filename = base_path('storage/csv/pb_parametres.csv');
       $this->should_trim = true;
   }
     /**
