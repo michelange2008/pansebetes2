@@ -1,0 +1,199 @@
+1;1001;non;0;0
+2;1001;oui;1;0
+3;1002;propre;1;0
+4;1002;peu sale;2;0
+5;1002;sale;3;0
+6;1002;très sale;4;0
+7;1012;bon état d'engraissement;1;0
+8;1012;en voie d'amaigrissement;2;0
+9;1012;maigre;3;0
+11;1018;normal;1;0
+12;1018;plus gros;2;0
+13;1021;normales;0;0
+14;1021;liquide;1;0
+15;1021;liquides + fibres;2;0
+16;1021;liquides + grains;3;0
+17;3000;Moyen et homogène;0;0
+18;3000;Maigre et/ou hétérogène;1;1
+19;3000;Gras et/ou hétérogène;2;1
+20;3001;propre;0;0
+21;3001;sale;1;0
+22;3001;très sale;2;0
+23;3013;oui;0;0
+24;3013;non;1;0
+25;3006;plus de 2/3;0;0
+26;3006;moins de 2/3;1;0
+27;3041;oui;1;0
+28;3041;non;0;0
+29;3042;oui;1;0
+30;3042;non;0;0
+33;3044;oui;1;0
+34;3044;non;0;0
+35;3045;oui;1;0
+36;3045;non;0;0
+37;3046;oui;1;0
+38;3046;non;0;0
+39;3047;oui;1;0
+40;3047;non;0;0
+41;3020;oui;1;0
+42;3020;non;0;0
+43;3021;oui;1;0
+44;3021;non;0;0
+45;3022;oui;1;0
+46;3022;non;0;0
+47;3049;oui;1;0
+48;3049;non;0;0
+49;3039;oui;1;0
+50;3039;non;0;0
+51;3040;oui;1;0
+52;3040;non;0;0
+53;3050;oui;1;0
+54;3050;non;0;0
+55;3051;oui;1;0
+56;3051;non;0;0
+62;2005;Non;0;0
+63;2005;Oui;1;1
+64;2041;Non;0;0
+65;2041;Oui;1;1
+68;2046;Non;0;0
+69;2046;Oui;1;1
+70;2047;Non;0;0
+71;2047;Oui;1;1
+72;2048;Non;0;0
+73;2048;Oui;1;1
+74;2050;Non;0;0
+75;2050;Oui;1;1
+76;2054;Non;0;0
+77;2054;Oui;1;1
+78;4000;homogène et état normal;0;0
+79;4000;hétérogène et trop maigres ou trop gras;1;0
+80;4001;propres;0;0
+81;4001;sales;1;0
+82;4001;très sales;2;0
+83;4014;non;0;0
+84;4014;oui;1;0
+85;4023;moins de 10 % (prolif faible);0;0
+86;4023;moins de 15 % (prolificité élevée);1;0
+87;4023;plus de 10 % (prolif faible);2;0
+88;4023;plus de 15 %;3;0
+89;4048;Non;0;0
+90;4048;Oui;1;0
+91;4049;Non;0;0
+92;4049;Oui;1;0
+93;4050;Non;0;0
+94;4050;Oui;1;0
+95;4051;Non;0;0
+96;4051;Oui;1;0
+97;4052;Non;0;0
+98;4052;Oui;1;0
+99;4053;Non;0;0
+100;4053;Oui;1;0
+101;5000;homogène et état normal;0;0
+102;5000;hétérogène et trop maigres ou trop gras;1;0
+103;5001;propres;0;0
+104;5001;sales;1;0
+105;5001;très sales;2;0
+106;5006;> 2/3 du poids des adultes;0;0
+107;5006;< 2/3 du poids des adultes;1;0
+108;5016;moins de 2 % (toutes races);0;0
+109;5016;2 à 5 % en race herbagère;1;0
+110;5016;2 à 5 % en race rustique;2;0
+111;5016;plus de 5 % (toutes races);3;0
+112;5017;> 90 % de la moyenne de la race;0;0
+113;5017;< 90 % de la moyenne de la race;1;0
+114;5021;absence;0;0
+115;5021;présence;1;0
+116;5022;absence;0;0
+117;5022;présence;1;0
+118;5023;absence;0;0
+119;5023;présence;1;0
+120;5052;Absence;0;0
+121;5052;Touche parfois quelques animaux;1;0
+122;5052;Nombreux animaux atteints;2;0
+123;5052;Mortalité régulière due au parasites;3;0
+124;5053;Absence;0;0
+125;5053;Touche parfois quelques animaux;1;0
+126;5053;Nombreux animaux atteints;2;0
+127;5053;Mortalité régulière due au parasites;3;0
+128;5054;Absence;0;0
+129;5054;Touche parfois quelques animaux;1;0
+130;5054;Nombreux animaux atteints;2;0
+131;5054;Mortalité régulière due au parasites;3;0
+132;5055;Absence;0;0
+133;5055;Touche parfois quelques animaux;1;0
+134;5055;Nombreux animaux atteints;2;0
+135;5055;Mortalité régulière due au parasites;3;0
+136;5056;Absence;0;0
+137;5056;Touche parfois quelques animaux;1;0
+138;5056;Nombreux animaux atteints;2;0
+139;5056;Mortalité régulière due au parasites;3;0
+140;5057;Absence;0;0
+141;5057;Touche parfois quelques animaux;1;0
+142;5057;Nombreux animaux atteints;2;0
+143;5057;Mortalité régulière due au parasites;3;0
+146;3035;Cohérent avec l'objectif;0;0
+147;3035;Non cohérent avec l'objectif;1;0
+148;3036;Non;0;0
+149;3036;Oui;1;0
+150;3037;Non;0;0
+151;3037;Oui;1;0
+152;3048;Non;0;0
+153;3048;Oui;1;0
+154;3034;17 kg ou plus;0;0
+155;3034;moins de 17 kg;1;0
+156;3010;Plus de 90%;0;0
+157;3010;Moins de 90%;1;0
+158;1011;Plus de 70% du poids adulte;0;0
+159;1011;Moins de 70% du poids adulte;1;0
+160;1013;Plus de 70%;0;0
+161;1013;Moins de 70%;1;0
+162;1027;Plus de 800 g/jour;0;0
+163;1027;Moins de 800 g/jour;1;0
+164;1034;absent ou rare et sporadique;0;0
+165;1034;Fréquent sur plusieurs animaux;1;0
+166;1035;Absent ou rare et sporadique;0;0
+167;1035;Fréquent sur plusieurs animaux;1;0
+168;2011;Plus de 60%;0;0
+169;2011;Moins de 60%;1;1
+170;2049;Dix mois ou plus;0;0
+171;2049;Moins de 10 mois;1;1
+172;4006;Plus de 2/3 du poids adulte;0;0
+173;4006;Moins de 2/3 du poids adulte;1;0
+174;4010;Plus de 80%;0;0
+175;4010;Moins de 80%;1;0
+176;4018;Plus de 90%;0;0
+177;4018;Moins de 90%;1;0
+181;2003;moins de 25% des vaches;0;0
+182;2003;plus de 25% des vaches;1;1
+185;2027;moins de 25% des vaches;0;0
+186;2027;plus de 25% des vaches;1;1
+223;2018;OUI;0;1
+224;2018;NON;1;0
+225;2034;Non;0;0
+226;2034;Oui;1;1
+227;2059;NON;0;0
+228;2059;OUI;1;1
+229;2060;NON;0;0
+230;2060;OUI;1;1
+231;2061;NON;0;0
+232;2061;OUI;1;1
+233;2051;NON;0;0
+234;2051;OUI;1;1
+235;2043;Moins de 25%;0;0
+236;2043;De 25 à 50%;1;1
+237;2043;de 50 à 75%;2;1
+238;2043;Plus de 75%;3;1
+241;2006;Moins de 15 %;0;0
+242;2006;Plus de 15 %;1;1
+243;2002;Moins de 25 %;0;0
+244;2002;Plus de 25 %;1;1
+249;2001;Moins de 25 %;0;0
+250;2001;Plus de 25 %;1;1
+251;2000;Homogène;0;0
+252;2000;Hétérogène;1;1
+253;2004;Propre;0;0
+254;2004;Sale;1;1
+255;2004;Très sale;2;1
+256;2004;Très très sale;3;1
+257;2029;moins de 2 mois;0;0
+258;2029;plus de 2 mois;1;1
