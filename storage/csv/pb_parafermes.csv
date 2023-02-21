@@ -1,3 +1,4 @@
+id;nom;type;unite;parties;ordre;supprimable
 3;SAU;int;ha;NULL;6;1
 24;Alimentation;liste multiple;NULL;pâturage, herbe séchée (foin regain), céréales, aliments fermentés;11;1
 25;UTH;float;NULL;NULL;5;1

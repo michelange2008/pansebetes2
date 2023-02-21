@@ -1,3 +1,4 @@
+id;alerte_id;nom;valeur;isAlerte
 1;1001;non;0;0
 2;1001;oui;1;0
 3;1002;propre;1;0

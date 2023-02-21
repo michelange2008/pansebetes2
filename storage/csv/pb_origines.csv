@@ -1,3 +1,4 @@
+id;alerte_id;question;reponse;categorie_id;supprimable
 1;1001;La ration est-elle bien équilibrée en énergie/azote ?;rapport énergie / azote déséquilibré;1;1
 2;1001;La distribution de la ration est-elle bien répartie ?;mauvaise répartition de la ration dans la journée;1;1
 3;1001;Les primipares sont-elles complémentées vis-à-vis des multipares ?;pas de complémentation des primipares / multipares;1;1

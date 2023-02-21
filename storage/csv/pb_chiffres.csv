@@ -1,50 +1,51 @@
-1;Nombre de vaches présentes;NULL;2;1;1;1;0;1;0;1
-2;Nombre de génisses de la naissance au vêlage;NULL;2;1;1;1;0;1;0;1
-3;Nombre total de vêlages;NULL;2;1;1;1;0;1;0;1
-4;Nombre de vêlages de vaches;NULL;2;1;1;1;0;1;0;0
-5;Nombre de vêlages de génisses (1er vêlage);NULL;2;1;1;1;0;1;0;1
-6;Nombre de veaux nés;NULL;2;1;1;1;0;1;0;1
-7;Nombre de vaches réformées;NULL;2;1;1;1;0;1;0;0
-8;Nombre d’animaux au pâturage;En absence de pâturage, cette valeur peut être nulle. Dans ce cas, le nombre de diarrhées estivales doit lui aussi être nul.;2;1;1;1;0;1;0;1
-9;Nombre de vaches mortes;NULL;2;1;2;1;0;1;0;0
-10;Nombre de génisses mortes de la naissance au 1er vêlage;NULL;2;1;2;1;0;1;0;0
-11;Nombre de veaux morts dans les 24 premières heures;NULL;2;1;2;1;0;1;0;0
-12;Frais vétérinaires (hors conseil);NULL;2;1;8;1;0;0;0;0
-13;Age au premier vêlage (en mois);NULL;2;1;3;1;0;1;0;0
-14;Nombre d’IA pour une IA fécondante;NULL;2;2;3;0,1;0;1;0;0
-15;Nombre de vêlages avec aide (vêleuse, césarienne);NULL;2;1;3;1;0;1;0;0
-16;Nombre d’avortements (3 derniers mois gestationnels);NULL;2;1;3;1;0;1;0;0
-17;Nombre de non délivrances;NULL;2;1;9;1;0;1;0;0
-18;Nombre de métrites;NULL;2;1;9;1;0;1;0;0
-19;Nombre de fièvres de lait;NULL;2;1;9;1;0;1;0;0
-20;Nombre de caillettes;NULL;2;1;9;1;0;1;0;0
-21;Nombre de cétoses;NULL;2;1;9;1;0;1;0;0
-22;nombre de tétanies d’herbage;NULL;2;1;9;1;0;1;0;0
-23;Nombre de mammites cliniques;NULL;2;1;4;1;0;1;0;0
-24;Nombre de nouvelles mammites au cours de la période sèche;NULL;2;1;4;1;0;1;0;0
-25;Nombre de mammites en début de lactation sur les primipares;NULL;2;1;4;1;0;1;0;0
-26;Moyenne annuelle des comptages en cellules somatiques;NULL;2;1;4;1;0;1;0;0
-27;Nombre de mois avec un taux d'urée >350 mg/l;NULL;2;1;4;1;0;1;0;0
-28;Présence de staphylocoques dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0
-29;Présence de salmonelles dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0
-30;Présence de listéria dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0
-31;Présence d'E. coli dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0
-32;nombre de TB anormaux;NULL;2;1;4;1;0;0;0;0
-33;Intervalle vêlage - 1ère IA (en jour);NULL;2;1;3;1;0;1;0;0
-34;Pourcentage de vaches à 3 IA ou plus;NULL;2;1;3;1;0;1;0;0
-35;Intervalle vêlage - vêlage (en jour);NULL;2;1;3;1;0;1;0;0
-36;Nombre de veaux morts du 1er jour au sevrage;NULL;2;1;2;1;0;1;0;0
-37;Nombre total de veaux malades, traités et guéris;NULL;2;1;5;1;0;1;0;0
-38;Nombre de veaux avec des infections ombilicales (gros nombrils);NULL;2;1;5;1;0;1;0;0
-39;Nombre de veaux avec problèmes digestifs (diarrhées, coccidioses...);NULL;2;1;5;1;0;1;0;0
-40;Nombre de veaux avec problèmes respiratoires;NULL;2;1;5;1;0;1;0;0
-41;Nombre de diarrhées estivales chez les jeunes et les adultes;NULL;2;1;7;1;0;1;0;0
-42;Nombre de foies saisis;NULL;2;1;7;1;0;1;0;0
-43;Nombre de vaches boitant sévèrement;NULL;2;1;6;1;0;1;0;0
-44;Nombre de vaches réformées pour boiterie;NULL;2;1;6;1;0;1;0;0
-45;Nombre de vaches avec un parage curatif;NULL;2;1;6;1;0;1;0;0
-46;nombre de vaches avec des sabots longs;NULL;2;1;6;1;0;0;0;0
-47;Poids des génisses à la 1ère insémination;NULL;2;1;3;1;0;1;0;0
-48;Nombre de vaches réinséminées 60 jours après une IA;NULL;2;1;3;1;0;1;0;0
-59;mortalité estivale;NULL;2;1;2;1;1;0;0;0
-60;Durée de pâturage cumulé avant premier vêlage (en mois);NULL;2;1;7;1;1;1;0;0
+id;nom;detail;espece_id;typenum_id;groupe_id;step;supprimable;requis;min;nonullable;defaut
+1;Nombre de vaches présentes;NULL;2;1;1;1;0;1;0;1;0
+2;Nombre de génisses de la naissance au vêlage;NULL;2;1;1;1;0;1;0;1;0
+3;Nombre total de vêlages;NULL;2;1;1;1;0;1;0;1;0
+4;Nombre de vêlages de vaches;NULL;2;1;1;1;0;1;0;0;0
+5;Nombre de vêlages de génisses (1er vêlage);NULL;2;1;1;1;0;1;0;1;0
+6;Nombre de veaux nés;NULL;2;1;1;1;0;1;0;1;0
+7;Nombre de vaches réformées;NULL;2;1;1;1;0;1;0;0;0
+8;Nombre d’animaux au pâturage;En absence de pâturage, cette valeur peut être nulle. Dans ce cas, le nombre de diarrhées estivales doit lui aussi être nul.;2;1;1;1;0;1;0;1;0
+9;Nombre de vaches mortes;NULL;2;1;2;1;0;1;0;0;0
+10;Nombre de génisses mortes de la naissance au 1er vêlage;NULL;2;1;2;1;0;1;0;0;0
+11;Nombre de veaux morts dans les 24 premières heures;NULL;2;1;2;1;0;1;0;0;0
+12;Frais vétérinaires (hors conseil);NULL;2;1;8;1;0;0;0;0;0
+13;Age au premier vêlage (en mois);NULL;2;1;3;1;0;1;0;0;0
+14;Nombre d’IA pour une IA fécondante;NULL;2;2;3;0,1;0;1;0;0;0
+15;Nombre de vêlages avec aide (vêleuse, césarienne);NULL;2;1;3;1;0;1;0;0;0
+16;Nombre d’avortements (3 derniers mois gestationnels);NULL;2;1;3;1;0;1;0;0;0
+17;Nombre de non délivrances;NULL;2;1;9;1;0;1;0;0;0
+18;Nombre de métrites;NULL;2;1;9;1;0;1;0;0;0
+19;Nombre de fièvres de lait;NULL;2;1;9;1;0;1;0;0;0
+20;Nombre de caillettes;NULL;2;1;9;1;0;1;0;0;0
+21;Nombre de cétoses;NULL;2;1;9;1;0;1;0;0;0
+22;nombre de tétanies d’herbage;NULL;2;1;9;1;0;1;0;0;0
+23;Nombre de mammites cliniques;NULL;2;1;4;1;0;1;0;0;0
+24;Nombre de nouvelles mammites au cours de la période sèche;NULL;2;1;4;1;0;1;0;0;0
+25;Nombre de mammites en début de lactation sur les primipares;NULL;2;1;4;1;0;1;0;0;0
+26;Moyenne annuelle des comptages en cellules somatiques;NULL;2;1;4;1;0;1;0;0;0
+27;Nombre de mois avec un taux d'urée >350 mg/l;NULL;2;1;4;1;0;1;0;0;0
+28;Présence de staphylocoques dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0;0
+29;Présence de salmonelles dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0;0
+30;Présence de listéria dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0;0
+31;Présence d'E. coli dans le lait dans l'année ?;Indiquer 0 si aucun cas dans l'année et 1 si au moins un cas.;2;1;4;1;0;1;0;0;0
+32;nombre de TB anormaux;NULL;2;1;4;1;0;0;0;0;0
+33;Intervalle vêlage - 1ère IA (en jour);NULL;2;1;3;1;0;1;0;0;60
+34;Pourcentage de vaches à 3 IA ou plus;NULL;2;1;3;1;0;1;0;0;25
+35;Intervalle vêlage - vêlage (en jour);NULL;2;1;3;1;0;1;0;0;390
+36;Nombre de veaux morts du 1er jour au sevrage;NULL;2;1;2;1;0;1;0;0;0
+37;Nombre total de veaux malades, traités et guéris;NULL;2;1;5;1;0;1;0;0;0
+38;Nombre de veaux avec des infections ombilicales (gros nombrils);NULL;2;1;5;1;0;1;0;0;0
+39;Nombre de veaux avec problèmes digestifs (diarrhées, coccidioses...);NULL;2;1;5;1;0;1;0;0;0
+40;Nombre de veaux avec problèmes respiratoires;NULL;2;1;5;1;0;1;0;0;0
+41;Nombre de diarrhées estivales chez les jeunes et les adultes;NULL;2;1;7;1;0;1;0;0;0
+42;Nombre de foies saisis;NULL;2;1;7;1;0;1;0;0;0
+43;Nombre de vaches boitant sévèrement;NULL;2;1;6;1;0;1;0;0;0
+44;Nombre de vaches réformées pour boiterie;NULL;2;1;6;1;0;1;0;0;0
+45;Nombre de vaches avec un parage curatif;NULL;2;1;6;1;0;1;0;0;0
+46;nombre de vaches avec des sabots longs;NULL;2;1;6;1;0;0;0;0;0
+47;Poids des génisses à la 1ère insémination;NULL;2;1;3;1;0;1;0;0;450
+48;Nombre de vaches réinséminées 60 jours après une IA;NULL;2;1;3;1;0;1;0;0;0
+59;mortalité estivale;NULL;2;1;2;1;1;0;0;0;0
+60;Durée de pâturage cumulé avant premier vêlage (en mois);NULL;2;1;7;1;1;1;0;0;8

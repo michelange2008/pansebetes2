@@ -83,7 +83,17 @@
                       required
                     @endif
                   @endisset
-                  value="{{ $chiffresSaisis->where('chiffre_id', $chiffre->id)->first()->valeur  ?? old($chiffre->id) }}"
+
+                  @if ($chiffresSaisis->where('chiffre_id', $chiffre->id)->first() != null)
+                    value="{{ $chiffresSaisis->where('chiffre_id', $chiffre->id)->first()->valeur  ?? old($chiffre->id) }}"
+                  @else
+                    @isset($chiffre->nonullable)
+                      @if (!$chiffre->nonullable)
+                        value="{{ $chiffre->defaut }}"
+                      @endif
+                    @endisset
+
+                  @endif
                   >
                 </div>
 

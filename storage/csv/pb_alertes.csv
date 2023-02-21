@@ -1,3 +1,4 @@
+id;actif;supprimable;nom;type_id;unite;modalite_id;theme_id;espece_id
 1001;1;0;hétérogénéité marquée de l'état coporel des vaches;1;;1;1;1
 1002;1;0;Etat de propreté du troupeau en hiver;1;;1;1;1
 1003;1;0;Comportements agressifs entre les vaches;3;%;2;1;1
