@@ -32,7 +32,13 @@ class CompareController extends Controller
   */
   public function index()
   {
-    $saisies = Saisie::where('user_id', auth()->user()->id)
+    $amis_id = [];
+    foreach (auth()->user()->amis as $ami) {
+      $amis_id[] = $ami->ami_id;
+    }
+    $amis_id[] = auth()->user()->id;
+
+    $saisies = Saisie::whereIn('user_id', $amis_id)
     ->orderByDesc('created_at')
     ->get();
     $titre = new Titre(icone:'divers/compare_blanc.svg', titre:'compare_index');
@@ -55,8 +61,7 @@ class CompareController extends Controller
     // On enlève le token
     $saisies_choisies = $request->except('_token');
     // Il reste la liste des saisies_id qu'on utilise pour récupérer le liste des saisies
-    $saisies = Saisie::where('user_id', auth()->user()->id)
-    ->whereIn('id', $saisies_choisies)
+    $saisies = Saisie::whereIn('id', $saisies_choisies)
     ->orderBy('created_at', 'desc')
     ->get();
 
