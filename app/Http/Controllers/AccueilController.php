@@ -28,7 +28,7 @@ class AccueilController extends Controller
     {
       Log::info(auth()->user()->name." a consulté sa page d'accueil");
 
-      $saisies = Saisie::where('user_id', auth()->user()->id)
+      $saisies = Saisies::where('user_id', auth()->user()->id)
                   ->orderBy('created_at', 'desc')->get();
       // récupère la liste d'amis de l'user authentifié
       $amis = Ami::where('ami_id', auth()->user()->id)->get();
