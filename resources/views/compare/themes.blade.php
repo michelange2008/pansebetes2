@@ -34,7 +34,7 @@
 
                   @if ($loop->first)
 
-                    <th data-width="350">{{ $entete }}</th>
+                    <th data-width="350">{{ __($entete) }}</th>
 
                   @else
 

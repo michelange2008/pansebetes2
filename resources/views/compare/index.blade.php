@@ -1,6 +1,6 @@
 {{-- Issu de CompareController@index
 Le bouton enregistre porte un id (btn_compare) sur laquelle agit choix_compare.js
-ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées 
+ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées
 --}}
 @extends('layouts.app')
 
@@ -32,14 +32,15 @@ ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées
 
             @csrf
 
-            <table class="table">
+            <table class="table table-striped">
 
               <thead class="thead-dark">
                 <tr>
-                  <th>Choisir</th>
-                  <th>Nom</th>
-                  <th>Date</th>
-                  <th>Nombre d'alertes</th>
+                  <th>@lang('tableaux.choisir')</th>
+                  <th>@lang('tableaux.saisie_nom')</th>
+                  <th>@lang('tableaux.date')</th>
+                  <th>@lang('tableaux.eleveur')</th>
+                  <th>@lang('tableaux.nb_alertes')</th>
                 </tr>
               </thead>
 
@@ -51,12 +52,13 @@ ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées
                       <input class="form-check-input case" type="checkbox"
                         name="{{ $saisie->id }}" value="{{ $saisie->id }}">
                     </td>
-                    <td>{{ $saisie->nom }}</td>
+                    <td class="fw-bold">{{ $saisie->nom }}</td>
                     <td>
                       {{ $saisie->created_at->day }}
                       {{ $saisie->created_at->monthName }}
                       {{ $saisie->created_at->year }}
                     </td>
+                    <td>{{ $saisie->user->name }}</td>
                     <td>{{ $saisie->salertes->where('danger', 1)->count() }}</td>
                   </tr>
 
@@ -64,7 +66,7 @@ ce javascript grise le bouton s'il n'y a pas au moins 2 saisies cochées
               </tbody>
 
             </table>
-            <div>Nombre de case cochées: <span id="nb"></span> </div>
+            <div id="nb_label" class="lead fw-bold">Nombre de case cochées: <span id="nb"></span> </div>
             @enregistreAnnule([
               'id' => 'btn_compare',
               'nomBouton' => 'boutons.valider',

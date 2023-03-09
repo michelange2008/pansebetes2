@@ -48,4 +48,10 @@ return [
   'round' => "Valeur arrondie à ",
   "round_un_chiffre" => "chiffre après la virgule",
   "round_plusieurs_chiffres" => "chiffres après la virgule",
+  'nom_themes' => "Noms des thèmes",
+  'choisir' => "Choisir",
+  'saisie_nom' => "Nom de la saisie",
+  'date' => "Date",
+  'eleveur' => "Eleveur",
+  'nb_alertes' => "Nombre d'alertes",
 ];
