@@ -58,13 +58,16 @@
 
                   <label class="col-sm-8 col-form-label"
                   for="C{{ $chiffre->id }}">
+                  {{-- Si le chiffre doit forcément avoir une valeur non null,
+                  on le met en rouge --}}
                   @if ($chiffre->nonullable)
                     <span class="text-danger fw-bold">
                   @else
                     <span>
                   @endif
 
-                  {{ ucfirst($chiffre->nom) }}</span>
+                  {{$chiffre->id.' - '.ucfirst($chiffre->nom) }}</span>
+                  {{-- Si il existe une explication (detail) pour ce chiffre, on l'affiche --}}
                   @if ($chiffre->detail != null)
 
                     <span class="badge rounded-pill text-bg-info" title="{{ $chiffre->detail }}">?</span>

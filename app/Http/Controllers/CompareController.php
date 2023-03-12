@@ -162,6 +162,7 @@ class CompareController extends Controller
     }
     // On rajoute la norme par le trait FormatSalertes et on groupe par nom d'alerte
     $liste_salertes = $this->formatSalertes($liste_salertes)->groupBy('nom');
+
     // On recherche les salertes correspondant aux saisies et au thème et on y
     // joint les alertes correspondantes
     $salertes = DB::table('salertes')
@@ -169,12 +170,14 @@ class CompareController extends Controller
                     ->join('saisies', 'saisies.id', 'saisie_id')
                     ->whereIn('saisie_id', $saisies_tab)
                     ->where('alertes.theme_id', $theme->id)
+                    ->select('saisies.nom as saisie_nom', 'salertes.*', 'alertes.*')
                     ->orderBy('alerte_id')
                     ->orderByDesc('saisies.created_at')
                     ->get();
 
     // On groupe par nom d'alerte
     $salertes = $salertes->groupBy('nom');
+
     // Puis on passe en revue les salertes et les liste_salertes pour créer la
     // 2ème colonne du tableau avec la liste des normes
     foreach ($salertes as $nom => $salerte) {
@@ -196,8 +199,8 @@ class CompareController extends Controller
     $lib_infos->created_at = '';
     $saisies->prepend($lib_infos);
 
-    $titre = new Titre(icone:'saisie/'.$theme->icone, titre:'compare_result', translate:true);
 
+    $titre = new Titre(icone:'saisie/'.$theme->icone, titre:'compare_result', translate:true);
     return view('compare.salertes', [
       'saisies' => $saisies,
       'salertes' => $salertes,

@@ -54,4 +54,5 @@ return [
   'date' => "Date",
   'eleveur' => "Eleveur",
   'nb_alertes' => "Nombre d'alertes",
+  'seuils_alertes' => "Seuils d'alertes",
 ];

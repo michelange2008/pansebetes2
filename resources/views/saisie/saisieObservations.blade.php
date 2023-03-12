@@ -55,7 +55,7 @@
 
                   <div class="form-group">
 
-                    <label class="m-2" for="A{{ $alerte->id }}">{{ $alerte->nom }}</label>
+                    <label class="m-2" for="A{{ $alerte->id }}">{{$alerte->id.' - '.$alerte->nom }}</label>
 
                     @if ($alerte->type_id == Config('constantes.MODALITES.OBS'))
 

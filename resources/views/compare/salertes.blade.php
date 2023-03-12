@@ -29,17 +29,22 @@
 
             <thead class="thead-light fw-bold">
               <tr>
+                {{-- le 1er titre est le nom de l'alerte --}}
                 <td>@lang('saisie.nom_alerte')</td>
-
+                {{-- Puis on parcours la variable saisies --}}
                 @foreach ($saisies as $saisie)
-
+                  {{-- Dont le 1er élément est la norme pour l'alerte --}}
                   @if ($loop->first)
 
-                    <td class="text-center">Seuils d'alertes</td>
-
+                    <td class="text-center">@lang('tableaux.seuils_alertes')</td>
+                  {{-- et les suivants les saisies à comparer --}}
                   @else
 
-                    <td class="text-center">{{ $saisie->created_at->format('d/m/y') }}</td>
+                    <td class="text-center">
+                      {{ $saisie->nom }}
+                      </br>
+                      {{ $saisie->created_at->format('d/m/y') }}
+                    </td>
 
                   @endif
 
@@ -49,33 +54,33 @@
 
             <tbody>
 
-              @foreach ($salertes as $nom => $saisies)
+              @foreach ($salertes as $nom => $saisies_valeurs)
 
               <tr>
                 <td>{{ $nom }}</td>
 
-                @foreach ($saisies as $saisie)
+                @foreach ($saisies_valeurs as $saisie)
 
                   @if ($saisie->danger == 1)
 
                     <td class="bg-otorange text-center m-3 fw-bold">
-                      @if ($saisie->unite == null)
 
-                      @else
+                        @if ($saisie->modalite_id == 2)
 
-                        {{ $saisie->valeur }} {{ $saisie->unite }}
-                      @endif
+                          {{ $saisie->valeur }} {{ $saisie->unite }}
+
+                        @endif
+
                     </td>
 
                   @elseif ($saisie->danger == 0)
 
                     <td class="bg-success text-center">
 
-                      @if ($saisie->unite == null)
-
-                      @else
+                      @if ($saisie->modalite_id == 2)
 
                         {{ $saisie->valeur }} {{ $saisie->unite }}
+
                       @endif
 
                     </td>
@@ -115,9 +120,11 @@
           <form action="{{ route('compare.themes') }}" method="post">
             @csrf
             @foreach ($saisies as $saisie)
+              @if (!$loop->first)
 
-              <input class="d-none" class="form-check-input" type="checkbox"
+                <input class="d-none" class="form-check-input" type="checkbox"
                 name="{{ $saisie->id }}" value="{{ $saisie->id }}" checked="checked">
+              @endif
 
             @endforeach
 
