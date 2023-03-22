@@ -15,7 +15,7 @@
             <div class="saisie-info d-flex flex-column">
 
               <h5 class="attention">
-                NOm de la saisie
+                Nom de la saisie
               </h5>
 
               <!-- information sur la saisie: date et nombre d'alertes s'il y en a -->
