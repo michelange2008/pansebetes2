@@ -15,7 +15,11 @@
             <div class="saisie-info d-flex flex-column">
 
               <h5 class="attention">
-                Nom de la saisie
+                @isset($saisie->nom)
+                    {{ $saisie->nom }}
+                @else
+                    Saisie sans nom
+                @endisset
               </h5>
 
               <!-- information sur la saisie: date et nombre d'alertes s'il y en a -->

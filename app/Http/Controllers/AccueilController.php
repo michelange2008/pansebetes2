@@ -44,7 +44,7 @@ class AccueilController extends Controller
           }
         }
       }
-      dd($saisies);
+
       $especes = Espece::all();
       session()->forget(['espece_id', 'theme', 'saisie']);
 
