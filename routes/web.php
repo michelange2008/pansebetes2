@@ -22,6 +22,7 @@ use App\Http\Controllers\FermeController;
 use App\Http\Controllers\AmiController;
 use App\Http\Controllers\CompareController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\StatsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,7 +43,7 @@ Route::prefix('/')->controller(FrontController::class)->group( function() {
   Route::get('/presentation', 'presentation')->name('visiteur.presentation');
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function() {
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function() {
 
   Route::get('/dev', [DevController:: class, 'dev'])->name('dev');
   Route::post('/store', [DevController::class, 'store'])->name('dev.store');
@@ -114,7 +115,13 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
 
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
+  Route::prefix('/statistiques')->controller(StatsController::class)->group(function() {
+    Route::get('/', 'index')->name('stats.index');
+  });
+});
+
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
 
   // Gestion des utilisateurs
   Route::prefix('/utilisateur')->controller(UserController::class)->group(function() {

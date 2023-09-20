@@ -14,10 +14,10 @@
     "parent" : "admin",
     "hasSousmenu" : false
   },
-  "notes" : {
-    "nom" : "Notes",
-    "route" : "admin.notes",
-    "icone" : "insulte.svg",
+  "stats" : {
+    "nom" : "Statistiques",
+    "route" : "stats.index",
+    "icone" : "stats.svg",
     "niveau" : "niv_2",
     "parent" : "admin",
     "hasSousmenu" : false
