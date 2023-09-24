@@ -87,4 +87,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Region::class);
     }
 
+    function profession() : BelongsTo {
+        return $this->belongsTo(Profession::class);
+    }
+
 }
