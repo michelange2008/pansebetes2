@@ -16,6 +16,7 @@ use App\Models\Role;
 
 class AdminController extends Controller
 {
+  
     public function __construct()
     {
       // accès limité aux administrateurs
@@ -33,10 +34,12 @@ class AdminController extends Controller
       $users = DB::table('users')
               ->where('users.id', '<>', 0)
               ->join('roles', 'roles.id', 'users.role_id')
+              ->join('regions', 'regions.id', 'users.region_id')
               ->select('users.id as id', 'users.name as nom', 'users.email as email',
-              'users.profession as profession', 'users.region as region',
+              'users.profession as profession', 'regions.nom as region',
               'roles.nom as role')
               ->get();
+
       foreach ($users as $user) {
         $user->del = "->";
       }

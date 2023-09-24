@@ -22,7 +22,7 @@ affiche les infos du profil de l'utilisateur (nom, origine, fonction)
 
     <p class="card-text fst-italic">{{ $user->email }}</p>
     <p class="card-text">{{ $user->profession }}</p>
-    <p class="card-text">{{ $user->region }}</p>
+    <p class="card-text">{{ $user->region->nom }}</p>
     @if ($user->isAdmin)
       <p class="card-text fw-bold">{{ ucfirst($user->role->nom) }}</p>
     @endif
