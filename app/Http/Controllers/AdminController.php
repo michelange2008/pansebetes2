@@ -35,8 +35,9 @@ class AdminController extends Controller
               ->where('users.id', '<>', 0)
               ->join('roles', 'roles.id', 'users.role_id')
               ->join('regions', 'regions.id', 'users.region_id')
+              ->join('professions', 'professions.id', 'users.profession_id')
               ->select('users.id as id', 'users.name as nom', 'users.email as email',
-              'users.profession as profession', 'regions.nom as region',
+              'professions.nom as profession', 'regions.nom as region',
               'roles.nom as role')
               ->get();
 

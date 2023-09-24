@@ -7,8 +7,8 @@
 
   <ul>
     <li>Nom: {{$nouveau_user->name}}</li>
-    <li>Profession: {{$nouveau_user->profession}}</li>
-    <li>Région: {{$nouveau_user->region}}</li>
+    <li>Profession: {{$nouveau_user->profession->nom}}</li>
+    <li>Région: {{$nouveau_user->region->nom}}</li>
   </ul>
 
   <p>

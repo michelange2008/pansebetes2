@@ -31,7 +31,7 @@
                   <tr id="ligneNonValide_{{$demande->id}}" class="ligne_nonvalide">
                     <td id="nomNonValide_{{$demande->id}}">{{$demande->name}}</td>
                     <td id="emailNonValide_{{$demande->id}}">{{$demande->email}}</td>
-                    <td id="professionNonValide_{{$demande->id}}">{{$demande->profession}}</td>
+                    <td id="professionNonValide_{{$demande->id}}">{{$demande->profession->nom}}</td>
                     <td id="regionNonValide_{{$demande->id}}">{{str_replace('"', '', $demande->region)}}</td> <!-- fallait enlever les doubles quotes des régions -->
                     <td id="suppr_{{$demande->id}}" class="destroy cell-delmod curseur">
                       <img src="{{asset(config('chemins.admin'))}}/destroy.svg" alt="destroy" title = "Inscription de robot à détruire sans poser de question">
