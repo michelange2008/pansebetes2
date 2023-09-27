@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profession;
+use App\Models\Region;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -20,7 +22,13 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $regions = Region::all();
+        $professions = Profession::all();
+
+        return view('auth.register', [
+            'regions' => $regions,
+            'professions' => $professions,
+        ]);
     }
 
     /**
@@ -40,8 +48,8 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'profession' => ($request->profession != null) ? $request->profession : null,
-            'region' => ($request->region != null) ? $request->region : null,
+            'profession_id' => $request->profession,
+            'region_id' => $request->region,
             'role_id' => 3,
         ]);
 
