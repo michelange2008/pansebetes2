@@ -22,7 +22,7 @@
       "label" : "profession",
       "name" : "profession",
       "type" : "select",
-      "liste" : "professions.json",
+      "table" : "professions",
       "options" : {},
       "required" : false
     },
@@ -30,7 +30,7 @@
       "label" : "region",
       "name" : "region",
       "type" : "select",
-      "liste" : "regions.json",
+      "table" : "regions",
       "options" : {},
       "required" : false
     }
