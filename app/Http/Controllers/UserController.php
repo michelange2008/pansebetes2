@@ -18,6 +18,7 @@ use App\Models\Inscription;
 
 use App\Traits\FormTemplate;
 use App\Comp\Titre;
+use App\Models\Profession;
 
 class UserController extends Controller
 {
@@ -45,7 +46,7 @@ class UserController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
+     * TODO: la route user.index n'existe pas !!!
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -98,6 +99,7 @@ class UserController extends Controller
      */
     public function edit()
     {
+
       // Trait FormTemplate
       $elements = $this->editForm(Auth::user(), 'formUser.json');
 
@@ -125,8 +127,8 @@ class UserController extends Controller
             ->update([
               'name' => $request->name,
               'email' => $request->email,
-              'profession' => $request->profession,
-              'region' => $request->region
+              'profession_id' => $request->profession,
+              'region_id' => $request->region
             ]);
 
       return redirect()->route('user.show', $id)->with('message', 'user_update');

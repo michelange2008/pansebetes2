@@ -1,9 +1,8 @@
-<div class="form-group my-3">
+<div class="my-3 form-group">
 
   <label class="form-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
 
-
-  <select id="{{ $name }}" class="form-control" name="{{ $name }}"
+   <select id="{{ $name }}" class="form-control" name="{{ $name }}"
 
     @isset($required)
       @if ($required) required @endif

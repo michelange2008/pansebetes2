@@ -1,6 +1,6 @@
 <div class="card">
 
-  <div class="card-header d-flex flex-row align-items-center">
+  <div class="flex-row card-header d-flex align-items-center">
 
     <div class="me-3">
 
@@ -32,14 +32,14 @@
 
       @foreach ($user->parafermes->sortBy('ordre') as $paraferme)
 
-        <div class="card-text d-flex flex-row justify-content-between">
+        <div class="flex-row card-text d-flex justify-content-between">
 
           <p>
             {{ ucfirst($paraferme->nom) }} :
           </p>
 
           <p class="fw-bold">
-            {{ ucfirst($paraferme->param->value) }} {{ $paraferme->unite }}
+            {{ ucfirst($paraferme->param->value) }} {{ ($paraferme->unite != "NULL") ? $paraferme->unite : '' }}
           </p>
 
         </div>

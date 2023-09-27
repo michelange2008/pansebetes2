@@ -114,7 +114,7 @@ trait FormTemplate
         $item = $details->name;
         // Et donc le isName qui sert à définir la valeur par défaut prend
         // la valeur dans le model du champ trucmuche_id.
-        $details->isName = $model->$item;
+        $details->isName = $model->$item->id;
 
       } else {
 

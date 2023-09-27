@@ -17,25 +17,82 @@ class RegionSeeder extends Seeder
     {
         DB::table('regions')->insert(
             [
-                ["nom" => "Guadeloupe"],
-                ["nom" => "Martinique"],
-                ["nom" => "Guyane"],
-                ["nom" => "La Réunion"],
-                ["nom" => "Mayotte"],
-                ["nom" => "Île-de-France"],
-                ["nom" => "Centre-Val de Loire"],
-                ["nom" => "Bourgogne-Franche-Comté"],
-                ["nom" => "Normandie"],
-                ["nom" => "Hauts-de-France"],
-                ["nom" => "Grand Est"],
-                ["nom" => "Pays de la Loire"],
-                ["nom" => "Bretagne"],
-                ["nom" => "Nouvelle-Aquitaine"],
-                ["nom" => "Occitanie"],
-                ["nom" => "Auvergne-Rhône-Alpes"],
-                ["nom" => "Provence-Alpes-Côte d'Azur"],
-                ["nom" => "Corse"],
-                ["nom" => "Non précisé"],
+                [
+                    "id" => 1,
+                    "nom" => "Auvergne-Rhône-Alpes"
+                ],
+                [
+                    "id" => 2,
+                    "nom" => "Bourgogne-Franche-Comté"
+                ],
+                [
+                    "id" => 3,
+                    "nom" => "Bretagne"
+                ],
+                [
+                    "id" => 4,
+                    "nom" => "Centre-Val de Loire"
+                ],
+                [
+                    "id" => 5,
+                    "nom" => "Corse"
+                ],
+                [
+                    "id" => 6,
+                    "nom" => "Grand Est"
+                ],
+                [
+                    "id" => 7,
+                    "nom" => "Guadeloupe"
+                ],
+                [
+                    "id" => 8,
+                    "nom" => "Guyane"
+                ],
+                [
+                    "id" => 9,
+                    "nom" => "Hauts-de-France"
+                ],
+                [
+                    "id" => 10,
+                    "nom" => "Île-de-France"
+                ],
+                [
+                    "id" => 11,
+                    "nom" => "La Réunion"
+                ],
+                [
+                    "id" => 12,
+                    "nom" => "Martinique"
+                ],
+                [
+                    "id" => 13,
+                    "nom" => "Mayotte"
+                ],
+                [
+                    "id" => 14,
+                    "nom" => "Normandie"
+                ],
+                [
+                    "id" => 15,
+                    "nom" => "Nouvelle-Aquitaine"
+                ],
+                [
+                    "id" => 16,
+                    "nom" => "Occitanie"
+                ],
+                [
+                    "id" => 17,
+                    "nom" => "Pays de la Loire"
+                ],
+                [
+                    "id" => 18,
+                    "nom" => "Provence-Alpes-Côte d'Azur"
+                ],
+                [
+                    "id" => 100,
+                    "nom" => "Non précisé"
+                ],
             ]
         );
     }

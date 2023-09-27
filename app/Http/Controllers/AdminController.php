@@ -12,6 +12,8 @@ use App\Models\Espece;
 use App\Models\User;
 use App\Models\Saisie;
 use App\Models\Note;
+use App\Models\Profession;
+use App\Models\Region;
 use App\Models\Role;
 
 class AdminController extends Controller
@@ -68,11 +70,14 @@ class AdminController extends Controller
       // $nb_saisies = Saisie::where('user_id', $user->id)->count();
       $titre = new Titre('admin/modifie_gris.svg', "modif_utilisateur");
       $roles = Role::all();
+      $professions = Profession::all();
+      $regions = Region::all();
 
       return view('admin.roleEdit', [
         'user' => $user,
         'roles' =>$roles,
-        // 'nb_saisies' => $nb_saisies,
+        'professions' => $professions,
+        'regions' => $regions,
         'titre' => $titre
       ]);
     }
@@ -89,7 +94,12 @@ class AdminController extends Controller
     {
 
       User::where('id', $id)
-          ->update(['role_id' => $request->role_id]);
+          ->update([
+            'name' => $request->name,
+            'role_id' => $request->role_id,
+            'profession_id' => $request->profession_id,
+            'region_id' => $request->region_id,
+          ]);
 
       return redirect()->route('admin.utilisateurs')->with('message', "role_modifie");
     }

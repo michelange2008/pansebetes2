@@ -16,13 +16,38 @@ class ProfessionSeeder extends Seeder
     public function run()
     {
         DB::table('professions')->insert([
-            ["nom" => "Non précisé"],
-            ["nom" => "Eleveur.euse"],
-            ["nom" => "Animateur.trice"],
-            ["nom" => "Technicien.ne"],
-            ["nom" => "Enseignant.e"],
-            ["nom" => "Vétérinaire"],
-            ["nom" => "Autre"],
+            [
+                "id" => 10,
+                "nom" => "Animateur.trice"
+            ],
+            [
+                "id" => 20,
+                "nom" => "Éleveur.euse"
+            ],
+            [
+                "id" => 30,
+                "nom" => "Enseignant.e"
+            ],
+            [
+                "id" => 40,
+                "nom" => "Étudiant.e"
+            ],
+            [
+                "id" => 50,
+                "nom" => "Technicien.ne"
+            ],
+            [
+                "id" => 60,
+                "nom" => "Vétérinaire"
+            ],
+            [
+                "id" => 90,
+                "nom" => "Autre"
+            ],
+            [
+                "id" => 100,
+                "nom" => "Non précisé"
+            ],
 
         ]);
     }
