@@ -14,14 +14,6 @@
     "parent" : "admin",
     "hasSousmenu" : false
   },
-  "stats" : {
-    "nom" : "Statistiques",
-    "route" : "stats.index",
-    "icone" : "stats.svg",
-    "niveau" : "niv_2",
-    "parent" : "admin",
-    "hasSousmenu" : false
-  },
   "indicateurs" : {
     "nom" : "gestion des indicateurs",
     "id" : "indicateurs",

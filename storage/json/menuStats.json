@@ -1,0 +1,25 @@
+{
+  "stats" : {
+    "nom" : "Statistiques",
+    "id" : "stats",
+    "icone" : "stats.svg",
+    "niveau" : "niv_1",
+    "hasSousmenu" : true
+  },
+  "generales" : {
+    "nom" : "Utilisation de panse-bête",
+    "route" : "stats.generales",
+    "icone" : "pansebetes.svg",
+    "niveau" : "niv_2",
+    "parent" : "stats",
+    "hasSousmenu" : false
+  },
+  "elevages" : {
+    "nom" : "Synthèse des élevages",
+    "route" : "stats.elevages",
+    "icone" : "divers/ferme.svg",
+    "niveau" : "niv_2",
+    "parent" : "stats",
+    "hasSousmenu" : false
+  }
+}

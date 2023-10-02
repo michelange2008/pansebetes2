@@ -14,7 +14,7 @@ use LaravelDaily\LaravelCharts\Classes\LaravelChart;
  */
 class StatsController extends Controller
 {
-    function index(): View
+    function generales(): View
     {
 
         $nb_utilisateurs = User::where('role_id', '<>', 1)->count();

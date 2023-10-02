@@ -19,8 +19,12 @@ class Menu
     public function handle(Request $request, Closure $next)
     {
       $menuGestion = $this->litJson('menuGestion.json');
+      $menuStats = $this->litJson('menuStats.json');
 
-      session(['menuGestion' => $menuGestion]);
+      session([
+        'menuGestion' => $menuGestion,
+        'menuStats' => $menuStats,
+      ]);
 
       return $next($request);
 

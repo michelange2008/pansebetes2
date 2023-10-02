@@ -1,7 +1,7 @@
 @section('menuprincipal')
   <div id="app">
     <nav class="navbar navbar-nav navbar-expand-lg navbar-light bg-light navbar-static-top">
-      <div class="container-fluid flex-nowrap">
+      <div class="flex-nowrap container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuAver" aria-controls="menuAver" aria-expanded="false" aria-label="Toggle-navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,11 +27,18 @@
               <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
             </div>
           </li>
+          {{-- Menu des statistiques dont les conditions d'affichage sont choisies par l'admin --}}
+          @if ( "stats" == "stats")
+
+            @include('menus.menuGestion', ['menu' => session('menuStats')])
+              
+          @endif
+
           @if (Auth::user()->isAdmin)
 
             @include('menus.menuGestion', ['menu' => session('menuGestion')])
 
-          @endif
+          @endif  
 
         </ul>
       </div>

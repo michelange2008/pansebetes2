@@ -36,19 +36,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('/')->controller(FrontController::class)->group( function() {
+Route::prefix('/')->controller(FrontController::class)->group(function () {
   // Point d'accès à Panse-Bêtes
   Route::get('/', 'front')->name('front');
   // Vidéo de présentation
   Route::get('/presentation', 'presentation')->name('visiteur.presentation');
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function() {
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function () {
 
-  Route::get('/dev', [DevController:: class, 'dev'])->name('dev');
+  Route::get('/dev', [DevController::class, 'dev'])->name('dev');
   Route::post('/store', [DevController::class, 'store'])->name('dev.store');
 
-  Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function() {
+  Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function () {
 
     Route::get('/', 'index')->name('chiffre.index');
     Route::get('/create', 'create')->name('chiffre.create');
@@ -57,10 +57,9 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
     // Route::get('/{chiffre_id}', 'show')->name('chiffre.show');
     Route::get('/edit/{chiffre_id}', 'edit')->name('chiffre.edit');
     Route::delete('/delete/{chiffre_id}', 'destroy')->name('chiffre.destroy');
-
   });
 
-  Route::prefix('/alerte')->controller(AlerteController::class)->group(function() {
+  Route::prefix('/alerte')->controller(AlerteController::class)->group(function () {
 
     Route::get('/', 'index')->name('alerte.index');
     Route::get('/index/{espece_nom}', 'indexParEspece')->name('alerte.indexParEspece');
@@ -74,27 +73,24 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
     Route::get('/editListe/{alerte_id}', 'editParamListe')->name('alerte.editParamListe');
     Route::get('/editNum/{alerte_id}', 'editParamNum')->name('alerte.editParamNum');
     Route::delete('/delete/{alerte_id}', 'destroy')->name('alerte.destroy');
-
   });
 
-  Route::prefix('/alerte/num')->controller(NumalerteController::class)->group(function() {
+  Route::prefix('/alerte/num')->controller(NumalerteController::class)->group(function () {
 
     Route::get('/create/{alerte_id}', 'create')->name('num.create');
     Route::post('/store', 'store')->name('num.store');
     Route::put('/update/{alerte_id}', 'update')->name('num.update');
     Route::get('/edit/{alerte_id}', 'edit')->name('num.edit');
-
   });
 
-  Route::prefix('/alerte/liste')->controller(CritalerteController::class)->group(function() {
+  Route::prefix('/alerte/liste')->controller(CritalerteController::class)->group(function () {
 
     Route::get('/create/{alerte_id}', 'create')->name('liste.create');
     Route::post('/store', 'store')->name('liste.store');
     Route::put('/update/{alerte_id}', 'update')->name('liste.update');
     Route::get('/edit/{alerte_id}', 'edit')->name('liste.edit');
-
   });
-  Route::prefix('/origine')->controller(OrigineController::class)->group(function() {
+  Route::prefix('/origine')->controller(OrigineController::class)->group(function () {
 
     Route::get('/', 'index')->name('origine.index');
     Route::get('/index/{alerte_id}', 'indexParAlerte')->name('origine.indexParAlerte');
@@ -103,7 +99,6 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
     Route::put('/update/{origine_id}', 'update')->name('origine.update');
     Route::get('/edit/{origine_id}', 'edit')->name('origine.edit');
     Route::delete('/delete/{origine_id}', 'destroy')->name('origine.destroy');
-
   });
 
   Route::get('/paraferme/ranger', [ParafermeController::class, 'ranger'])->name('paraferme.ranger');
@@ -111,20 +106,23 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
   Route::post('/paraferme/storeRanger', [ParafermeController::class, 'storeRanger'])->name('paraferme.storeRanger');
 
   Route::resource('/paraferme', ParafermeController::class);
-
-
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
-  Route::prefix('/statistiques')->controller(StatsController::class)->group(function() {
-    Route::get('/', 'index')->name('stats.index');
-  });
+// Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
+//   Route::prefix('/statistiques')->controller(StatsController::class)->group(function() {
+//     Route::get('/', 'index')->name('stats.index');
+//   });
+// });
+
+Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
+  Route::get('/generales', 'generales')->name('stats.generales');
+  Route::get('/elevages', 'elevages')->name('stats.elevages');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
 
   // Gestion des utilisateurs
-  Route::prefix('/utilisateur')->controller(UserController::class)->group(function() {
+  Route::prefix('/utilisateur')->controller(UserController::class)->group(function () {
 
     Route::get('/', 'index')->name('user.index');
     Route::get('/create', 'create')->name('user.create');
@@ -134,10 +132,9 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     Route::put('/update/{id}', 'update')->name('user.update');
     Route::get('/wantToDestroy', 'wantToDestroy')->name('user.wantToDestroy');
     Route::delete('/destroy', 'destroy')->name('user.destroy');
-
   });
   // Gestion des droits des utilisateurs par l'admin: acceptation, suppression
-  Route::prefix('/administration')->controller(AdminController::class)->group( function() {
+  Route::prefix('/administration')->controller(AdminController::class)->group(function () {
     // Affiche la liste des utilisateurs avec ceux à valider et ceux validés
     Route::get('/', 'utilisateurs')->name('admin.utilisateurs');
     // Affichage des notes laissées par les utilisateurs
@@ -147,23 +144,21 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     Route::put('/{id}', 'roleUpdate')->name('admin.roleUpdate');
     Route::get('/del/{id}', 'del')->name('admin.del');
     Route::delete('/{id}', 'destroy')->name('admin.destroy');
-
   });
   // Gestion des appels AJAX
-  Route::prefix('/api')->controller(ApiController::class)->group( function() {
+  Route::prefix('/api')->controller(ApiController::class)->group(function () {
     // Route utilisée par admin.js pour changer les saisies d'un utilisateur que l'on supprimme
     Route::get('/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', 'changeSaisieUser')->name('changeSaisieUser');
     // Route utilisée par admin.js pour la même raison que précédemment
     Route::get('/tousSauf/{id}', 'tousSauf')->name('tousSauf');
     // Route utiliséee par afficherOrigines.js pour récupérer la liste des sorigines d'une salerte
     Route::get('/originesSalerte/{salerte_id}', 'originesSalerte');
-
   });
 
 
   // Routes principales
   //
-  Route::controller(AccueilController::class)->group(function() {
+  Route::controller(AccueilController::class)->group(function () {
     // Liste des saisies de l'user authentifié
     Route::get('/accueil', 'accueil')->name('accueil');
     // Liste des saisies d'un ami suivi de l'auteur identifié
@@ -182,77 +177,72 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     Route::get('/aide', 'aide')->name('aide');
 
     Route::get('/aide/video', 'video')->name('aide.video');
-
   });
 
   // Saisies
 
-    Route::controller(SaisieController::class)->group(function() {
+  Route::controller(SaisieController::class)->group(function () {
 
-      Route::get('/saisie/nouvelle/{saisie_nom}/{espece_id}', 'nouvelle')->name('saisie.nouvelle');
-      // Affiche la saisie en cours
-      Route::get('/saisie/{saisie_id}', 'show')->name('saisie.show');
+    Route::get('/saisie/nouvelle/{saisie_nom}/{espece_id}', 'nouvelle')->name('saisie.nouvelle');
+    // Affiche la saisie en cours
+    Route::get('/saisie/{saisie_id}', 'show')->name('saisie.show');
 
-      Route::get('/saisie/renomme/{saisie}', 'renomme')->name('saisie.renomme');
+    Route::get('/saisie/renomme/{saisie}', 'renomme')->name('saisie.renomme');
 
-      Route::post('/saisie/renomStore/{saisie}', 'renomStore')->name('saisie.renomStore');
-      // Modifie les observations d'une saisie (les données chiffrées passent par le SchiffreController)
-      Route::get('/saisie/observations/{saisie_id}', 'saisieObservations')->name('saisie.observations');
+    Route::post('/saisie/renomStore/{saisie}', 'renomStore')->name('saisie.renomStore');
+    // Modifie les observations d'une saisie (les données chiffrées passent par le SchiffreController)
+    Route::get('/saisie/observations/{saisie_id}', 'saisieObservations')->name('saisie.observations');
 
-      Route::post('/saisie/enregistreObservations', 'enregistreObservations')->name('saisie.enregistreObservations')->middleware('nullToZero');
+    Route::post('/saisie/enregistreObservations', 'enregistreObservations')->name('saisie.enregistreObservations')->middleware('nullToZero');
 
-      Route::get('/saisie/destroy/{saisie_id}', 'destroy')->name('saisie.destroy');
+    Route::get('/saisie/destroy/{saisie_id}', 'destroy')->name('saisie.destroy');
 
-      // Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
+    // Route::get('/saisie/resultats', 'enregistre')->name('saisie.resultats');
 
-    });
+  });
 
-    // Gestion de la saisie des paramètres numériques
-    Route::prefix('/saisie/schiffres')->controller(SchiffreController::class)->group(function() {
+  // Gestion de la saisie des paramètres numériques
+  Route::prefix('/saisie/schiffres')->controller(SchiffreController::class)->group(function () {
 
-      Route::get('/edit/{saisie_id}', 'edit')->name('schiffre.edit');
+    Route::get('/edit/{saisie_id}', 'edit')->name('schiffre.edit');
 
-      Route::post('/store', 'store')->name('schiffre.store');
+    Route::post('/store', 'store')->name('schiffre.store');
 
-      Route::get('/{saisie_id}', 'show')->name('schiffre.show');
+    Route::get('/{saisie_id}', 'show')->name('schiffre.show');
+  });
 
-    });
+  Route::controller(SalerteController::class)->group(function () {
 
-    Route::controller(SalerteController::class)->group(function() {
+    Route::get('/salerte/{saisie_id}/{theme_id}', 'index')->name('salerte.index');
+  });
 
-      Route::get('/salerte/{saisie_id}/{theme_id}', 'index')->name('salerte.index');
+  // Routes des Sorigines
 
-    });
+  Route::prefix('/saisie/sorigines')->controller(SorigineController::class)->group(function () {
 
-    // Routes des Sorigines
+    Route::get('/{saisie_id}', 'index')->name('sorigines.index');
 
-    Route::prefix('/saisie/sorigines')->controller(SorigineController::class)->group(function() {
+    Route::get('/show/{saisie_id}', 'show')->name('sorigines.show');
 
-      Route::get('/{saisie_id}', 'index')->name('sorigines.index');
+    Route::post('/edit', 'edit')->name('sorigines.edit');
 
-      Route::get('/show/{saisie_id}', 'show')->name('sorigines.show');
+    Route::post('/enregistre', 'store')->name('sorigines.store');
+  });
+  // Production de pdf
+  Route::prefix('pdf')->controller(PdfController::class)->group(function () {
 
-      Route::post('/edit', 'edit')->name('sorigines.edit');
-
-      Route::post('/enregistre', 'store')->name('sorigines.store');
-
-    });
-    // Production de pdf
-    Route::prefix('pdf')->controller(PdfController::class)->group(function() {
-
-      // Tableau vide pour la saisie de chiffres
-      Route::get('/modeleNum/{espece}', 'modeleNum')->name('pdf.modeleNum');
-      // Tableau vide pour la saisie des observations
-      Route::get('/modeleObs/{espece}', 'modeleObs')->name('pdf.modeleObs');
-      // Tableau vide pour la saisie des données de l'exploitation
-      Route::get('/modeleExploitation', 'modeleExploitation')->name('pdf.modeleExploitation');
-      // Exportation de la saisie
-      Route::get('/saisie/{saisie}', 'saisie')->name('pdf.saisie');
-
-    });
+    // Tableau vide pour la saisie de chiffres
+    Route::get('/modeleNum/{espece}', 'modeleNum')->name('pdf.modeleNum');
+    // Tableau vide pour la saisie des observations
+    Route::get('/modeleObs/{espece}', 'modeleObs')->name('pdf.modeleObs');
+    // Tableau vide pour la saisie des données de l'exploitation
+    Route::get('/modeleExploitation', 'modeleExploitation')->name('pdf.modeleExploitation');
+    // Exportation de la saisie
+    Route::get('/saisie/{saisie}', 'saisie')->name('pdf.saisie');
+  });
 
   // Route de gestion des informations de la ferme d'un user
-  Route::prefix('ferme')->controller(FermeController::class)->group(function() {
+  Route::prefix('ferme')->controller(FermeController::class)->group(function () {
 
     Route::get('/{user}', 'index')->name('ferme.index');
 
@@ -263,11 +253,10 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     Route::get('/edit/{user}', 'edit')->name('ferme.edit');
 
     Route::put('{user}', 'update')->name('ferme.update');
-
   });
 
   // Gestion des amis
-  Route::prefix('amis')->controller(AmiController::class)->group(function() {
+  Route::prefix('amis')->controller(AmiController::class)->group(function () {
 
     Route::get('/{user}', 'index')->name('amis.index');
 
@@ -278,7 +267,6 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     Route::get('/edit/{user}', 'edit')->name('amis.edit');
 
     Route::put('{user}', 'update')->name('amis.update');
-
   });
 
   // Gestion des comparaisons
@@ -289,8 +277,8 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
   Route::get('/comparaison/theme/{theme}/{saisies}', [CompareController::class, 'salertes'])->name('compare.salertes');
 
   // Gestion des notes
-    Route::resource('/notes', NoteController::class);
+  Route::resource('/notes', NoteController::class);
 });
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
