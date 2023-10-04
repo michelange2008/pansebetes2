@@ -1,8 +1,8 @@
-{{-- matrice de champs d'input type text
+{{-- matrice de champs d'input type checkbox
 -> 2 variables obligatoire: $name, $label,
 -> 1 variable facultative en cas de modification et non de création
 --}}
-<div class="form-group my-3">
+<div class="my-3 form-group">
 
   <label for="{{ $name }}">{{ ucfirst($label) }}</label>
 
