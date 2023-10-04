@@ -56,7 +56,7 @@ class StatsController extends Controller
 
         $titre = new Titre("stats_clair.svg", "Statistiques d'utilisations de Panse-Bête", false);
 
-        return view('stats.index', [
+        return view('stats.generales', [
             'nb_utilisateurs' => $nb_utilisateurs,
             'nb_user_saisie' => $nb_user_saisie,
             'nb_saisies' => $nb_saisies,
@@ -64,6 +64,16 @@ class StatsController extends Controller
             'nb_pb_mensuel' => $nb_pb_mensuel,
             'origine_users' => $origine_users,
             'profession_users' => $profession_users,
+        ]);
+    }
+
+    function elevages() : View {
+
+        $titre = new Titre("divers/ferme_blanche.svg", "Synthèse des Panse-Bête réalisés", false);
+
+        
+        return view('stats.elevages', [
+            "titre" => $titre,
         ]);
     }
 }
