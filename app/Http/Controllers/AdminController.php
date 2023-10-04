@@ -15,6 +15,9 @@ use App\Models\Note;
 use App\Models\Profession;
 use App\Models\Region;
 use App\Models\Role;
+use App\Models\StatsDisplay;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class AdminController extends Controller
 {
@@ -31,7 +34,7 @@ class AdminController extends Controller
      * @param type var Description
      * @return return type
      */
-    public function utilisateurs()
+    public function utilisateurs(): View
     {
       $users = DB::table('users')
               ->where('users.id', '<>', 0)
@@ -88,9 +91,9 @@ class AdminController extends Controller
      * Undocumented function long description
      *
      * @param type var Description
-     * @return return type
+     * @return return RedirectResponse
      */
-    public function roleUpdate(Request $request, $id)
+    public function roleUpdate(Request $request, $id): RedirectResponse
     {
 
       User::where('id', $id)
@@ -110,7 +113,7 @@ class AdminController extends Controller
      * @param int $id
      * @return return view
      */
-    public function del($id)
+    public function del($id): View
     {
       $user = User::find($id);
 
@@ -144,7 +147,7 @@ class AdminController extends Controller
      * @param int $id
      * @return return route
      */
-    public function destroy(Request $request, $id)
+    public function destroy(Request $request, $id): RedirectResponse
     {
       // Si on a fait le choix de garder les saisies
       if ($request->keep_saisies == 1) {
@@ -182,6 +185,40 @@ class AdminController extends Controller
     public function notes()
     {
       // code...
+    }
+
+    /**
+     * Affiche la page pour choisir qui peut voir les statistiques
+     *
+     * @return View
+     */
+    function statsDisplayEdit() : View {
+
+      $titre = new Titre(icone: "admin/statsDisplay_clair.svg", titre: "Qui peut voir les statistiques",
+                translate: false);
+      $statsDisplayList = [
+        ['id' => 'admin', 'intitule' => 'Administrateurs uniquement'], 
+        ['id' => 'users', 'intitule' => "Administrateur et utilisateurs connectés"], 
+        ['id' => 'all', 'intitule' => "Tout le monde"]
+      ];
+      return view('admin.statsDisplay', [
+        'statsDisplay' => StatsDisplay::first(),
+        'statsDisplayList' => $statsDisplayList,
+        'titre' => $titre,
+      ]);
+    }
+
+    /**
+     * Met à jour la visibilité des statistiques (admin, users, all)
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    function statsDisplayStore(Request $request) : RedirectResponse {
+
+      StatsDisplay::where('id', 1)->update(['nom' => $request->statsDisplay]);
+
+      return redirect()->back()->with(['message' => "statsDisplay_update"]);
     }
 
 }

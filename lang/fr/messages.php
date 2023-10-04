@@ -21,4 +21,5 @@ return [
   'no_del_self' => "On ne peut pas se détruire soi-même",
   'no_keep_saisies' => "Impossible de garder les saisies",
   'user_destroyed' => "Cet utilisateur a bien été détruit",
+  'statsDisplay_update' => "La visibilité des statistiques a été modifiée.",
 ];

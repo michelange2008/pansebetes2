@@ -108,12 +108,10 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
   Route::resource('/paraferme', ParafermeController::class);
 });
 
-// Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
-//   Route::prefix('/statistiques')->controller(StatsController::class)->group(function() {
-//     Route::get('/', 'index')->name('stats.index');
-//   });
-// });
-
+/**
+ * Les statistiques ont des droits d'affichages qui peuvent être modifiés par l'administrateur
+ * le routes ne sont donc pas contraintes à un middleware de type auth ou isAdmin
+ */
 Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
   Route::get('/generales', 'generales')->name('stats.generales');
   Route::get('/elevages', 'elevages')->name('stats.elevages');
@@ -121,22 +119,13 @@ Route::prefix('/statistiques')->controller(StatsController::class)->group(functi
 
 Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
 
-  // Gestion des utilisateurs
-  Route::prefix('/utilisateur')->controller(UserController::class)->group(function () {
-
-    Route::get('/', 'index')->name('user.index');
-    Route::get('/create', 'create')->name('user.create');
-    Route::post('/store', 'store')->name('user.store');
-    Route::get('/', 'show')->name('user.show');
-    Route::get('/edit/', 'edit')->name('user.edit');
-    Route::put('/update/{id}', 'update')->name('user.update');
-    Route::get('/wantToDestroy', 'wantToDestroy')->name('user.wantToDestroy');
-    Route::delete('/destroy', 'destroy')->name('user.destroy');
-  });
   // Gestion des droits des utilisateurs par l'admin: acceptation, suppression
   Route::prefix('/administration')->controller(AdminController::class)->group(function () {
     // Affiche la liste des utilisateurs avec ceux à valider et ceux validés
     Route::get('/', 'utilisateurs')->name('admin.utilisateurs');
+    // Affiche la page permettant de choisir qui peut voir les stats
+    Route::get('/statsDisplayEdit', 'statsDisplayEdit')->name('admin.statsDisplayEdit');
+    Route::post('/statsDisplayStore', 'statsDisplayStore')->name('admin.statsDisplayStore');
     // Affichage des notes laissées par les utilisateurs
     Route::get('/notes', 'notes')->name('admin.notes');
     // Permet à l'administrateur du site de modifier le role_id ou de supprimer
@@ -154,8 +143,23 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     // Route utiliséee par afficherOrigines.js pour récupérer la liste des sorigines d'une salerte
     Route::get('/originesSalerte/{salerte_id}', 'originesSalerte');
   });
+  
+});
 
-
+Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function() {
+  
+  // Gestion du profil par les utilisateurs
+  Route::prefix('/utilisateur')->controller(UserController::class)->group(function () {
+  
+    Route::get('/', 'index')->name('user.index');
+    Route::get('/create', 'create')->name('user.create');
+    Route::post('/store', 'store')->name('user.store');
+    Route::get('/', 'show')->name('user.show');
+    Route::get('/edit/', 'edit')->name('user.edit');
+    Route::put('/update/{id}', 'update')->name('user.update');
+    Route::get('/wantToDestroy', 'wantToDestroy')->name('user.wantToDestroy');
+    Route::delete('/destroy', 'destroy')->name('user.destroy');
+  });
   // Routes principales
   //
   Route::controller(AccueilController::class)->group(function () {
@@ -278,6 +282,7 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
 
   // Gestion des notes
   Route::resource('/notes', NoteController::class);
+
 });
 
 

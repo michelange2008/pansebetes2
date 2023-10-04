@@ -27,8 +27,10 @@
               <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
             </div>
           </li>
-          {{-- Menu des statistiques dont les conditions d'affichage sont choisies par l'admin --}}
-          @if ( "stats" == "stats")
+          {{-- Menu des statistiques dont les conditions d'affichage sont choisies par l'admin 
+          Dans tous les cas les stats sont affichées si l'utilisateur est admin (cad role = admin ou webmaster
+          Sinon, il faut que les statsDisplay ne soient pas à la valeur admin (cf. middleware Menu) --}}
+          @if ( Auth::user()->isAdmin || Session('statsDisplay') != 'admin')
 
             @include('menus.menuGestion', ['menu' => session('menuStats')])
               

@@ -14,6 +14,14 @@
     "parent" : "admin",
     "hasSousmenu" : false
   },
+  "statsDisplay" : {
+    "nom" : "Affichage des stats",
+    "route" : "admin.statsDisplayEdit",
+    "icone" : "admin/statsDisplay.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : false
+  },
   "indicateurs" : {
     "nom" : "gestion des indicateurs",
     "id" : "indicateurs",
