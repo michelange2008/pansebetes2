@@ -112,9 +112,13 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
  * Les statistiques ont des droits d'affichages qui peuvent être modifiés par l'administrateur
  * le routes ne sont donc pas contraintes à un middleware de type auth ou isAdmin
  */
-Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
-  Route::get('/generales', 'generales')->name('stats.generales');
-  Route::get('/elevages', 'elevages')->name('stats.elevages');
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
+
+  Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
+    Route::get('/generales', 'generales')->name('stats.generales');
+    Route::get('/elevages', 'elevages')->name('stats.elevages');
+  });
+
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
@@ -136,21 +140,20 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
   });
   // Gestion des appels AJAX
   Route::prefix('/api')->controller(ApiController::class)->group(function () {
-    // Route utilisée par admin.js pour changer les saisies d'un utilisateur que l'on supprimme
+    // Route utilisée par admin.js pour changer les saisies d'un utilisateur que l'on supprime
     Route::get('/changeSaisieUser/{ancien_user_id}/{nouveau_user_id}', 'changeSaisieUser')->name('changeSaisieUser');
     // Route utilisée par admin.js pour la même raison que précédemment
     Route::get('/tousSauf/{id}', 'tousSauf')->name('tousSauf');
-    // Route utiliséee par afficherOrigines.js pour récupérer la liste des sorigines d'une salerte
+    // Route utilisée par afficherOrigines.js pour récupérer la liste des sorigines d'une salerte
     Route::get('/originesSalerte/{salerte_id}', 'originesSalerte');
   });
-  
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function() {
-  
+Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function () {
+
   // Gestion du profil par les utilisateurs
   Route::prefix('/utilisateur')->controller(UserController::class)->group(function () {
-  
+
     Route::get('/', 'index')->name('user.index');
     Route::get('/create', 'create')->name('user.create');
     Route::post('/store', 'store')->name('user.store');
@@ -282,7 +285,6 @@ Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], functio
 
   // Gestion des notes
   Route::resource('/notes', NoteController::class);
-
 });
 
 
