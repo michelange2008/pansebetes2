@@ -11,20 +11,7 @@
             @include('menus.menuConnexion')
 
           <li class="nav-item" title="Pour démarrer"><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Aide</a></li>
-          {{-- <li class="nav-item"><a class="nav-link" href="{{route('notes.create')}}">Votre avis</a></li> --}}
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="infos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              A propos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="infos">
-              <a class="dropdown-item" href="{{route('instructions')}}">Panse-Bêtes&nbsp?</a>
-              <a class="dropdown-item" href="{{route('description')}}">Otoveil&nbsp?</a>
-              <a class="dropdown-item" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a>
-              <a class="dropdown-item" href="{{route('contact')}}">Nous contacter</a>
-              <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
-            </div>
-          </li>
+
           {{-- Menu des statistiques dont les conditions d'affichage sont choisies par l'admin 
           Dans tous les cas les stats sont affichées si l'utilisateur est admin (cad role = admin ou webmaster
           Sinon, il faut que les statsDisplay ne soient pas à la valeur admin (cf. middleware Menu) --}}
@@ -40,6 +27,20 @@
 
           @endif  
 
+          <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Aide</a></li>
+          {{-- <li class="nav-item"><a class="nav-link" href="{{route('notes.create')}}">Votre avis</a></li> --}}
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="infos" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              A propos
+            </a>  
+            <div class="dropdown-menu" aria-labelledby="infos">
+              <a class="dropdown-item" href="{{route('instructions')}}">Panse-Bêtes&nbsp?</a>
+              <a class="dropdown-item" href="{{route('description')}}">Otoveil&nbsp?</a>
+              <a class="dropdown-item" href="{{route('credits')}}">Qui a fait quoi&nbsp?</a>
+              <a class="dropdown-item" href="{{route('contact')}}">Nous contacter</a>
+              <a class="dropdown-item" href="{{route('mentions_legales')}}">Mentions légales</a>
+            </div>  
+          </li>  
         </ul>
       </div>
       <a class="navbar-brand" href="{{ url('/') }}">

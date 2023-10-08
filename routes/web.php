@@ -43,7 +43,7 @@ Route::prefix('/')->controller(FrontController::class)->group(function () {
   Route::get('/presentation', 'presentation')->name('visiteur.presentation');
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
 
   Route::get('/dev', [DevController::class, 'dev'])->name('dev');
   Route::post('/store', [DevController::class, 'store'])->name('dev.store');
@@ -101,18 +101,20 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'menu']], function
     Route::delete('/delete/{origine_id}', 'destroy')->name('origine.destroy');
   });
 
-  Route::get('/paraferme/ranger', [ParafermeController::class, 'ranger'])->name('paraferme.ranger');
+  Route::prefix('/paraferme')->group( function() {
+    
+    Route::get('/paraferme/ranger', [ParafermeController::class, 'ranger'])->name('paraferme.ranger');
+    Route::post('/paraferme/storeRanger', [ParafermeController::class, 'storeRanger'])->name('paraferme.storeRanger');
+    Route::resource('/paraferme', ParafermeController::class);
+  });
 
-  Route::post('/paraferme/storeRanger', [ParafermeController::class, 'storeRanger'])->name('paraferme.storeRanger');
-
-  Route::resource('/paraferme', ParafermeController::class);
 });
 
 /**
  * Les statistiques ont des droits d'affichages qui peuvent être modifiés par l'administrateur
  * le routes ne sont donc pas contraintes à un middleware de type auth ou isAdmin
  */
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function () {
 
   Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
     Route::get('/generales', 'generales')->name('stats.generales');

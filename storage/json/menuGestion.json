@@ -22,19 +22,21 @@
     "parent" : "admin",
     "hasSousmenu" : false
   },
-  "indicateurs" : {
-    "nom" : "gestion des indicateurs",
-    "id" : "indicateurs",
-    "icone" : "",
-    "niveau" : "niv_1",
-    "hasSousmenu" : true
+  "parafermes" : {
+    "nom" : "Paramètres des exploitations",
+    "id" : "parafermes",
+    "route" : "paraferme.index",
+    "icone" : "categories/logement.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : false
   },
   "chiffres" : {
     "nom" : "Chiffres",
     "route" : "chiffre.index",
     "icone" : "saisie/chiffres.svg",
     "niveau" : "niv_2",
-    "parent" : "indicateurs",
+    "parent" : "admin",
     "hasSousmenu" : false
   },
   "alertes" : {
@@ -42,17 +44,8 @@
     "id" : "alertes",
     "icone" : "saisie/alertes.svg",
     "niveau" : "niv_2",
-    "parent" : "indicateurs",
+    "parent" : "admin",
     "hasSousmenu" : true
-  },
-  "parafermes" : {
-    "nom" : "Paramètres des exploitations",
-    "id" : "parafermes",
-    "route" : "paraferme.index",
-    "icone" : "categories/logement.svg",
-    "niveau" : "niv_2",
-    "parent" : "indicateurs",
-    "hasSousmenu" : false
   },
   "vl" : {
     "nom" : "Vaches laitières",
