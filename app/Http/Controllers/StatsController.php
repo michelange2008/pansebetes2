@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Comp\Titre;
 use App\Models\Saisie;
+use App\Models\Salerte;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 /**
@@ -71,9 +73,22 @@ class StatsController extends Controller
 
         $titre = new Titre("divers/ferme_blanche.svg", "Synthèse des Panse-Bête réalisés", false);
 
-        
+        $nb_saisies_salertes = DB::table('salertes')->where('danger', 1)
+                                ->select('saisie_id', DB::raw('count(*) as total'))
+                                ->groupBy('saisie_id')
+                                ->orderBy('total', 'asc')
+                                ->pluck('total');
+
+
+        $salertes = DB::table('salertes')->where('danger', 1)
+                    ->join('alertes', 'alertes.id', 'salertes.alerte_id')
+                    ->join('especes', 'especes.id', 'alertes.espece_id')
+                    ->select('especes.nom as espece_nom', 'alertes.nom as alerte_nom')
+                    ->get();
+
         return view('stats.elevages', [
             "titre" => $titre,
+            'nb_saisies_salertes' => $nb_saisies_salertes,
         ]);
     }
 }
