@@ -12,7 +12,7 @@ use App\Models\Chiffre;
 use App\Models\Salerte;
 use App\Models\Alerte;
 use PDF;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 use App\Traits\CategoriesTools;
 use App\Traits\ThemesTools;

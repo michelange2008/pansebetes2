@@ -1,7 +1,7 @@
 <?php
 namespace App\Traits;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\Theme;
 use App\Models\Alerte;
 use App\Models\Saisie;

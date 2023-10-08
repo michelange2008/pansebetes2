@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Indicateurs;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\Alerte;
 use App\Models\Numalerte;
 use App\Models\Salerte;

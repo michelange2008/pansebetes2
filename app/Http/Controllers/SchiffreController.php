@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\Schiffre;
 use App\Models\Chiffre;
 use App\Models\Groupe;

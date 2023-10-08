@@ -2,7 +2,7 @@
 
 namespace App\Http\Indicateurs;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 
 use App\Models\Saisie;
 use App\Models\Alerte;

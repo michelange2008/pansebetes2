@@ -1,7 +1,7 @@
 <?php
 namespace App\Traits;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\Chiffre;
 use App\Models\Espece;
 use App\Models\Numalerte;

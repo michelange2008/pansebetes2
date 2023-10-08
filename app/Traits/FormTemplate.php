@@ -1,7 +1,7 @@
 <?php
 namespace App\Traits;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Traits\LitJson;
 /**
  * Destiné à renvoyer la liste des éléments pour un formulaire create ou edit
