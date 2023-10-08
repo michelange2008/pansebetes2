@@ -16,10 +16,51 @@
   },
   "elevages" : {
     "nom" : "Synthèse des élevages",
+    "id" : "elevages",
     "route" : "stats.elevages",
     "icone" : "divers/ferme.svg",
     "niveau" : "niv_2",
     "parent" : "stats",
-    "hasSousmenu" : false
+    "hasSousmenu" : true
+  },
+  "vl_elevage" : {
+    "nom" : "Vaches laitières",
+    "route" : "stats.elevagesParEspece",
+    "id" : "Vaches laitières",
+    "niveau" : "niv_3",
+    "parent" : "elevages",
+    "icone" : "especes/VL.svg"
+  },
+  "va_elevage" : {
+    "nom" : "Vaches allaitantes",
+    "route" : "stats.elevagesParEspece",
+    "id" : "Vaches allaitantes",
+    "niveau" : "niv_3",
+    "parent" : "elevages",
+    "icone" : "especes/VA.svg"
+  },
+  "oa_elevage" : {
+    "nom" : "Brebis allaitantes",
+    "route" : "stats.elevagesParEspece",
+    "id" : "Brebis allaitantes",
+    "niveau" : "niv_3",
+    "parent" : "elevages",
+    "icone" : "especes/OA.svg"
+  },
+  "cp_elevage" : {
+    "nom" : "Chèvres laitières",
+    "route" : "stats.elevagesParEspece",
+    "id" : "Chèvres laitières",
+    "niveau" : "niv_3",
+    "parent" : "elevages",
+    "icone" : "especes/CP.svg"
+  },
+  "ol_elevage" : {
+    "nom" : "Brebis laitières",
+    "route" : "stats.elevagesParEspece",
+    "id" : "Brebis laitières",
+    "niveau" : "niv_3",
+    "parent" : "elevages",
+    "icone" : "especes/OL.svg"
   }
 }

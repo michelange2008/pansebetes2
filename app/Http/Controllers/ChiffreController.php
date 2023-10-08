@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Chiffre;
 
 use App\Fournisseurs\TabLab;
-
+use App\Models\Espece;
 use App\Traits\LitJson;
 use App\Traits\FormTemplate;
 use App\Traits\ChiffresDependances;
@@ -42,6 +42,41 @@ class ChiffreController extends Controller
         'indexTab' => $indexTab,
       ]);
     }
+
+        /**
+     * Affiche la liste des chiffres pour une espece donnée
+     *
+     *
+     * @param type $espece_id
+     * @return return view
+     */
+    public function indexParEspece($espece_nom)
+    {
+      $espece = Espece::where('nom', $espece_nom)->first();
+
+      session( [ 'espece_id' => $espece->id]);
+
+      $chiffres = DB::table('chiffres')->where('espece_id', $espece->id)
+                    ->join('groupes', 'groupes.id', 'chiffres.groupe_id')
+                    ->join('typenums', 'typenums.id', 'chiffres.typenum_id')
+                    ->select('chiffres.id as id', 'chiffres.nom as chiffre_nom',
+                    'chiffres.detail as chiffre_detail',
+                    'groupes.nom as groupe_nom', 'typenums.nom as typenum',
+                    'chiffres.min as min',
+                    'chiffres.requis', 'chiffres.supprimable')
+                    ->orderBy('groupes.ordre')->orderBy('chiffres.id')
+                    ->get();
+
+      $tabLab = new TabLab($chiffres, 'indexTabChiffre.json', 'especes/'.$espece->icone);
+
+      $indexTab = $tabLab->get();
+
+      return view('admin.index.indexCadre', [
+        'indexTab' => $indexTab,
+      ]);
+
+    }
+
 
     /**
      * Show the form for creating a new resource.

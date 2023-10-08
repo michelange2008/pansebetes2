@@ -51,6 +51,7 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
   Route::prefix('/chiffres')->controller(ChiffreController::class)->group(function () {
 
     Route::get('/', 'index')->name('chiffre.index');
+    Route::get('/index/{espece_nom}', 'indexParEspece')->name('chiffre.indexParEspece');
     Route::get('/create', 'create')->name('chiffre.create');
     Route::post('/store', 'store')->name('chiffre.store');
     Route::put('/update/{chiffre_id}', 'update')->name('chiffre.update');
@@ -119,6 +120,7 @@ Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], functio
   Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
     Route::get('/generales', 'generales')->name('stats.generales');
     Route::get('/elevages', 'elevages')->name('stats.elevages');
+    Route::get('/elevages/{espece_nom}', 'elevages')->name('stats.elevagesParEspece');
   });
 
 });

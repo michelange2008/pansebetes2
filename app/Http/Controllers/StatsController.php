@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comp\Titre;
+use App\Models\Espece;
 use App\Models\Saisie;
 use App\Models\Salerte;
 use App\Models\User;
@@ -69,7 +70,7 @@ class StatsController extends Controller
         ]);
     }
 
-    function elevages() : View {
+    function elevages($espece_nom) : View {
 
         $titre = new Titre("divers/ferme_blanche.svg", "Synthèse des Panse-Bête réalisés", false);
 
