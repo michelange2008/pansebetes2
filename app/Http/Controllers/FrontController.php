@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\StatsDisplay;
 use Illuminate\Http\Request;
 
 /**
@@ -14,7 +15,11 @@ class FrontController extends Controller
    */
   public function front()
   {
-    return view('front');
+    $statsDisplay = StatsDisplay::first();
+
+    $statsForAll = ($statsDisplay->nom == "all") ? true : false;
+
+    return view('front', ['statsForAll' => $statsForAll]);
   }
 
   /**
@@ -23,6 +28,10 @@ class FrontController extends Controller
   public function presentation()
   {
     return view('divers.presentation');
+  }
+
+  function statistiques() {
+    
   }
 
 }

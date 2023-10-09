@@ -11,4 +11,5 @@ return [
   'gratuit' => "L'inscription est gratuite.",
   'protection_donnees' => "Le projet est susceptible de faire une analyse statistique de l'ensemble données saisies sur le site, mais seulement après anonymisation de ces données.",
   'supprimer_possible' => "A tout moment, vous pouvez supprimer votre compte et les données saisies.",
+  'pb_en_chiffres' => "Panse-Bêtes en chiffres",
 ];

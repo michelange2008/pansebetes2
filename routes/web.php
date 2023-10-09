@@ -41,6 +41,7 @@ Route::prefix('/')->controller(FrontController::class)->group(function () {
   Route::get('/', 'front')->name('front');
   // Vidéo de présentation
   Route::get('/presentation', 'presentation')->name('visiteur.presentation');
+  Route::get('/statistiques', 'statistiques')->name('visiteur.statistiques');
 });
 
 Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
