@@ -32,28 +32,8 @@
 
                 <div class="flex-row d-flex justify-content-between">
 
-                    <div class="card">
-                        <div class="text-center card-body">
-                            <h3>{{ $nb_utilisateurs }} utilisateurs</h3>
-                            <h5>enregistrés</h5>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="text-center card-body">
-                            <h3>{{ $nb_saisies }} panse-bêtes</h3>
-                            <h5>réalisés par {{ $nb_user_saisie }} utilisateurs</h5>
-
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="text-center card-body">
-                            <h3>{{ round($nb_saisies / $nb_user_saisie, 1) }} panse-bêtes</h3>
-                            <h5>réalisés en moyenne par utilisateur</h5>
-                        </div>
-                    </div>
-
+                    @include('stats.statsCards')
+                    
                 </div>
 
             </div>
