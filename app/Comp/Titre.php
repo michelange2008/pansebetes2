@@ -10,6 +10,11 @@ namespace App\Comp;
  */
 class Titre
 {
+  public $icone;
+  public $titre;
+  public $soustitre;
+  public $bouton;
+  public $translate;
 
   function __construct($icone = "default.svg",
                       $titre = 'titre',
@@ -26,8 +31,4 @@ class Titre
 
   }
 
-  public function getIcone()
-  {
-    return $this->icone;
-  }
 }

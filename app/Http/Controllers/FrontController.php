@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\StatsDisplay;
+use App\Traits\StatsGenerales;
+use Illuminate\Contracts\View\View as View;
 use Illuminate\Http\Request;
 
 /**
@@ -10,6 +12,7 @@ use Illuminate\Http\Request;
  */
 class FrontController extends Controller
 {
+  use StatsGenerales;
   /**
    * Page initiale de Panse-Bêtes avec info, connexion et inscription
    */
@@ -30,8 +33,16 @@ class FrontController extends Controller
     return view('divers.presentation');
   }
 
-  function statistiques() {
-    
+  function statistiques() : View {
+
+
+    return view('divers.statistiques', [
+      'cardsStatsPb' => $this->cardsStatsPb(),
+      'nb_pb_mensuel' => $this->nbPbMensuels(),
+      'origine_users' => $this->origineUsers(),
+      'profession_users' => $this->professionUsers(),
+
+    ]);
   }
 
 }
