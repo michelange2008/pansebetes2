@@ -1,6 +1,6 @@
-@foreach ($cards as $card)
 
-    <div class="flex-row d-flex justify-content-between">
+<div class="flex-row d-flex justify-content-between">
+        @foreach ($cards as $card)
 
         <div class="card">
 
@@ -13,6 +13,6 @@
             </div>
         </div>
 
+        @endforeach
     </div>
 
-@endforeach

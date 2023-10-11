@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\StatsDisplay;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,7 +21,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('front');
+        $statsDisplay = StatsDisplay::first();
+
+        $statsForAll = ($statsDisplay->nom == "all") ? true : false;
+
+        return view('front', ['statsForAll' => $statsForAll]);
     }
 
     /**

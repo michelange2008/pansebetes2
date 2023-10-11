@@ -33,16 +33,32 @@ class FrontController extends Controller
     return view('divers.presentation');
   }
 
-  function statistiques() : View {
+  /**
+   * Affiche les statistiques d'utilisation de Panse-Bêtes
+   *
+   * @return View
+   */
+  function utilisation() : View {
 
 
     return view('divers.statistiques', [
-      'cardsStatsPb' => $this->cardsStatsPb(),
+      'cards' => $this->cardsStatsPb(),
       'nb_pb_mensuel' => $this->nbPbMensuels(),
       'origine_users' => $this->origineUsers(),
       'profession_users' => $this->professionUsers(),
 
     ]);
+  }
+
+  /**
+   * Affiche les statistiques des exploitations
+   *
+   * @return View
+   **/
+  public function exploitations() : View
+  {
+    
+    return view('divers.exploitations');
   }
 
 }

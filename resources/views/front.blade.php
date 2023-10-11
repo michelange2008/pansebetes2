@@ -4,7 +4,7 @@
 
     <div class="p-3 my-3 bg-otorange">
 
-        <div class="container-fluid py-2">
+        <div class="py-2 container-fluid">
 
             <div class="col-md-6">
 
@@ -12,9 +12,9 @@
 
             </div>
 
-            <div class="d-flex flex-row justify-content-start align-items-center">
+            <div class="flex-row d-flex justify-content-start align-items-center">
 
-                <div class="col p-2">
+                <div class="p-2 col">
 
                     <h1 class="display-5 fw-bold">@lang('pb.bienvenue')</h1>
                     <p class="lead">@lang('pb.titre')</p>
@@ -26,7 +26,7 @@
                     </a>
                     @isset($statsForAll)
                         @if ($statsForAll)
-                            <a href="{{ route('visiteur.statistiques') }}" class="btn btn-otobleu">
+                            <a href="{{ route('visiteur.statistiques.utilisation') }}" class="btn btn-otobleu">
                                 <i class="fa-solid fa-square-poll-vertical"></i>
                                 @lang('pb.pb_en_chiffres')
                             </a>
@@ -44,13 +44,13 @@
 
     <div class="container-fluid">
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-around mb-3">
+        <div class="mb-3 row row-cols-1 row-cols-md-2 g-4 justify-content-around">
 
             <div class="col-md-5">
                 <div class="card">
 
                     <div class="card-header d-flex align-items-center">
-                        <img src="{{ url('storage/img/login.svg') }}" class="img-50  me-3" alt="...">
+                        <img src="{{ url('storage/img/login.svg') }}" class="img-50 me-3" alt="...">
                         <h5 class="card-title">@lang('auth.deja_inscrit')</h5>
                     </div>
 
