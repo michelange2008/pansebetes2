@@ -121,8 +121,9 @@ Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], functio
 
   Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
     Route::get('/generales', 'generales')->name('stats.generales');
-    Route::get('/elevages', 'elevages')->name('stats.elevages');
-    Route::get('/elevages/{espece_nom}', 'elevages')->name('stats.elevagesParEspece');
+    Route::get('/exploitations', 'exploitations')->name('stats.exploitations');
+    Route::get('/pansebetes', 'pansebetes')->name('stats.pansebetes');
+    Route::get('/pansebetes/{espece_nom}', 'pansebetes')->name('stats.pansebetesParEspece');
   });
 
 });

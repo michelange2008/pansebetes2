@@ -6,12 +6,12 @@
 </div>
 <hr>
 <div class="my-3 row">
-    <div class="col-md-6">
-        <h3 class="h3">Origine des utilisateurs.trices</h3>
+    <div class="col-lg-6">
+        <h3 class="text-center">Origine des utilisateurs.trices</h3>
         {{ $origine_users->renderHtml() }}
     </div>
-    <div class="col-md-6">
-        <h3 class="h3">Profession des utilisateurs.trices</h3>
+    <div class="col-lg-6">
+        <h3 class="text-center">Profession des utilisateurs.trices</h3>
         {{ $profession_users->renderHtml() }}
     </div>
 </div>

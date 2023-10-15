@@ -31,13 +31,13 @@
         <div class="m-3 row justify-content-center">
             <div class="col-md-11">
                 <h2 class="h2">@lang('pb.pb_utilisation')</h2>
-                @include('stats.statsCards')
+                @include('stats.composants.statsCards')
             </div>
         </div>
 
         <div class="m-3 row justify-content-center">
             <div class="my-3 col-md-11">
-                @include('stats.utilisationPb')
+                @include('stats.composants.utilisationPb')
             </div>
         </div>
 

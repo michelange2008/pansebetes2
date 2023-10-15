@@ -14,53 +14,61 @@
     "parent" : "stats",
     "hasSousmenu" : false
   },
-  "elevages" : {
-    "nom" : "Synthèse des élevages",
-    "id" : "elevages",
-    "route" : "stats.elevages",
+  "exploitations" : {
+    "nom" : "Synthèse des exploitations",
+    "route" : "stats.exploitations",
     "icone" : "divers/ferme.svg",
+    "niveau" : "niv_2",
+    "parent" : "stats",
+    "hasSousmenu" : false
+  },
+  "pansebetes" : {
+    "nom" : "Synthèse des Panse-Bêtes",
+    "id" : "pansebetes",
+    "route" : "stats.pansebetes",
+    "icone" : "stats.svg",
     "niveau" : "niv_2",
     "parent" : "stats",
     "hasSousmenu" : true
   },
   "vl_elevage" : {
     "nom" : "Vaches laitières",
-    "route" : "stats.elevagesParEspece",
+    "route" : "stats.pansebetesParEspece",
     "id" : "Vaches laitières",
     "niveau" : "niv_3",
-    "parent" : "elevages",
+    "parent" : "pansebetes",
     "icone" : "especes/VL.svg"
   },
   "va_elevage" : {
     "nom" : "Vaches allaitantes",
-    "route" : "stats.elevagesParEspece",
+    "route" : "stats.pansebetesParEspece",
     "id" : "Vaches allaitantes",
     "niveau" : "niv_3",
-    "parent" : "elevages",
+    "parent" : "pansebetes",
     "icone" : "especes/VA.svg"
   },
   "oa_elevage" : {
     "nom" : "Brebis allaitantes",
-    "route" : "stats.elevagesParEspece",
+    "route" : "stats.pansebetesParEspece",
     "id" : "Brebis allaitantes",
     "niveau" : "niv_3",
-    "parent" : "elevages",
+    "parent" : "pansebetes",
     "icone" : "especes/OA.svg"
   },
   "cp_elevage" : {
     "nom" : "Chèvres laitières",
-    "route" : "stats.elevagesParEspece",
+    "route" : "stats.pansebetesParEspece",
     "id" : "Chèvres laitières",
     "niveau" : "niv_3",
-    "parent" : "elevages",
+    "parent" : "pansebetes",
     "icone" : "especes/CP.svg"
   },
   "ol_elevage" : {
     "nom" : "Brebis laitières",
-    "route" : "stats.elevagesParEspece",
+    "route" : "stats.pansebetesParEspece",
     "id" : "Brebis laitières",
     "niveau" : "niv_3",
-    "parent" : "elevages",
+    "parent" : "pansebetes",
     "icone" : "especes/OL.svg"
   }
 }

@@ -4,25 +4,55 @@ namespace App\Traits;
 
 trait LitCsv
 {
-  public static function litCsv($csv)
+  public static function litCsv(string $csv, bool $entetes=false , string $sep=";")
   {
-    // dd(storage_path('csv'));
-      $csvAvecChemin = storage_path('app/public')."/".$csv;
-    $ligne = 1;
 
-    if(($fichier = fopen($csvAvecChemin, 'r')) !== FALSE)
-    {
-      $table;
+    $csvAvecChemin = storage_path('app/public') . "/" . $csv;
 
-      while(($data = fgetcsv($fichier,";")) !== FALSE)
-      {
+    if (($fichier = fopen($csvAvecChemin, 'r')) !== FALSE) {
 
-          $table[] = explode(";" , $data[0]);
+      $table = [];
+
+      while (($data = fgetcsv($fichier, null, $sep)) !== FALSE) {
+        dump($data);
+
+        $table[] = explode(";", $data[0]);
       }
-      $tableSansTitre = array_slice($table, 1);
+      if ($entetes) {
+        $table = array_slice($table, 1);
+      }
 
-      return $tableSansTitre;
+      return $table;
+    }
+  }
 
+  /**
+   * Crée un array avec la première colonne du csv comme clefs
+   *
+   * @param Csv $csv dont le première colonne doit faire les clefs
+   * @return Array $table
+   **/
+  public function litCsvKeyFirstCol(string $csv, bool $entetes=false, string $sep=";")
+  {
+    $csvAvecChemin = storage_path('app/public') . "/" . $csv;
+
+    if (($fichier = fopen($csvAvecChemin, 'r')) !== FALSE) {
+
+      $table = [];
+
+      while (($data = fgetcsv($fichier, null, $sep)) !== FALSE) {
+
+        $table[($data[0])] = $data[1];
+
+      }
+
+      if ($entetes) {
+
+        $table = array_slice($table, 1);
+
+      }
+
+      return $table;
     }
   }
 }
