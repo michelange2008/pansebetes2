@@ -37,8 +37,15 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
         $message = auth()->user()->name." vient de se connecter 😀.";
         $this->notify($message);
+        if(auth()->user()->valide)
+        {
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+            return redirect()->intended(RouteServiceProvider::HOME);
+        }
+        else
+        {
+            return redirect()->route('user_non_valide');
+        }
     }
 
     /**

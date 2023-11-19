@@ -51,6 +51,7 @@ class RegisteredUserController extends Controller
             'profession_id' => $request->profession,
             'region_id' => $request->region,
             'role_id' => 3,
+            'valide' => 1,
         ]);
 
         event(new Registered($user));

@@ -43,7 +43,7 @@ class AdminController extends Controller
               ->join('professions', 'professions.id', 'users.profession_id')
               ->select('users.id as id', 'users.name as nom', 'users.email as email',
               'professions.nom as profession', 'regions.nom as region',
-              'roles.nom as role')
+              'roles.nom as role', 'users.valide as valide')
               ->get();
 
       foreach ($users as $user) {
@@ -67,7 +67,7 @@ class AdminController extends Controller
      * @param type var Description
      * @return return type
      */
-    public function roleEdit($id)
+    public function userEdit($id)
     {
       $user = User::find($id);
       // $nb_saisies = Saisie::where('user_id', $user->id)->count();
@@ -76,7 +76,7 @@ class AdminController extends Controller
       $professions = Profession::all();
       $regions = Region::all();
 
-      return view('admin.roleEdit', [
+      return view('admin.userEdit', [
         'user' => $user,
         'roles' =>$roles,
         'professions' => $professions,
@@ -93,18 +93,18 @@ class AdminController extends Controller
      * @param type var Description
      * @return return RedirectResponse
      */
-    public function roleUpdate(Request $request, $id): RedirectResponse
+    public function userUpdate(Request $request, $id): RedirectResponse
     {
-
       User::where('id', $id)
           ->update([
             'name' => $request->name,
             'role_id' => $request->role_id,
             'profession_id' => $request->profession_id,
             'region_id' => $request->region_id,
+            'valide' => ($request->valide != null) ? 1 : 0,
           ]);
 
-      return redirect()->route('admin.utilisateurs')->with('message', "role_modifie");
+      return redirect()->route('admin.utilisateurs')->with('message', "user_modifie");
     }
 
     /**

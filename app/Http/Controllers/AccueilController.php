@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Log;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\App;
+
 use App\Models\Espece;
-use App\Models\Alerte;
 use App\Models\Saisie;
 use App\Models\Ami;
 use App\Models\User;
@@ -39,7 +39,7 @@ class AccueilController extends Controller
           $saisies_ami = Saisie::where('user_id', $ami->user_id)->get();
           // On les passe en revue
           foreach ($saisies_ami as $saisie_ami) {
-            // Et on les ajoute à la listet des séries
+            // Et on les ajoute à la liste des séries
             $saisies = $saisies->push($saisies_ami->first());
           }
         }
@@ -66,7 +66,7 @@ class AccueilController extends Controller
      */
     public function saisiesAmi(User $user)
     {
-      // Si l'user ami est aussi l'user indentifié, on renvoie à la méthode accueil
+      // Si l'user ami est aussi l'user identifié, on renvoie à la méthode accueil
       // de base.
       if ($user == auth()->user()) {
         return redirect()->route('accueil');
@@ -141,6 +141,19 @@ class AccueilController extends Controller
         'theme' => 'aide',
         'bouton' => 'retour',
         'route' => 'accueil',
+      ]);
+    }
+
+    /**
+     * affiche la page lors de la connexion d'un user non valide
+     *
+     * @return view non_valide.blade.php
+     **/
+    public function nonValide()
+    {
+      return view('user_non_valide', [
+        'mail_name' => config('app.mail_name'),
+        'mail_adress' => config('app.mail_adress'),
       ]);
     }
 

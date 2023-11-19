@@ -12,6 +12,7 @@ return [
   'user_profession' => "profession",
   'user_region' => "région",
   'user_role' => "rôle",
+  'user_valide' => "Valide",
   'chiffre_nom' => "nom du paramètre",
   'chiffre_detail' => "détails",
   'chiffre_create' => "Ajout d'un paramètre",
