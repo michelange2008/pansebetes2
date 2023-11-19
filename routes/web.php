@@ -45,7 +45,9 @@ Route::prefix('/')->controller(FrontController::class)->group(function () {
   Route::get('/statistiques/exploitations', 'exploitations')->name('visiteur.statistiques.exploitations');
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
+Route::get('Invalide', [AccueilController::class, 'nonValide'])->name('user_non_valide');
+
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'isValid', 'addAdmin', 'menu']], function () {
 
   Route::get('/dev', [DevController::class, 'dev'])->name('dev');
   Route::post('/store', [DevController::class, 'store'])->name('dev.store');
@@ -117,7 +119,7 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
  * Les statistiques ont des droits d'affichages qui peuvent être modifiés par l'administrateur
  * le routes ne sont donc pas contraintes à un middleware de type auth ou isAdmin
  */
-Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'isValid', 'menu']], function () {
 
   Route::prefix('/statistiques')->controller(StatsController::class)->group(function () {
     Route::get('/generales', 'generales')->name('stats.generales');
@@ -128,7 +130,7 @@ Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], functio
 
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'isValid', 'addAdmin', 'menu']], function () {
 
   // Gestion des droits des utilisateurs par l'admin: acceptation, suppression
   Route::prefix('/administration')->controller(AdminController::class)->group(function () {
@@ -140,8 +142,8 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
     // Affichage des notes laissées par les utilisateurs
     Route::get('/notes', 'notes')->name('admin.notes');
     // Permet à l'administrateur du site de modifier le role_id ou de supprimer
-    Route::get('/roleEdit/{id}', 'roleEdit')->name('admin.roleEdit');
-    Route::put('/{id}', 'roleUpdate')->name('admin.roleUpdate');
+    Route::get('/userEdit/{id}', 'userEdit')->name('admin.userEdit');
+    Route::put('/{id}', 'userUpdate')->name('admin.userUpdate');
     Route::get('/del/{id}', 'del')->name('admin.del');
     Route::delete('/{id}', 'destroy')->name('admin.destroy');
   });
@@ -156,7 +158,7 @@ Route::group(['middleware' => ['auth', 'verified', 'isAdmin', 'addAdmin', 'menu'
   });
 });
 
-Route::group(['middleware' => ['auth', 'verified', 'addAdmin', 'menu']], function () {
+Route::group(['middleware' => ['auth', 'verified', 'isValid', 'addAdmin', 'menu']], function () {
 
   // Gestion du profil par les utilisateurs
   Route::prefix('/utilisateur')->controller(UserController::class)->group(function () {
