@@ -6,7 +6,7 @@
 
   <div class="container-fluid">
 
-    <div class="row justify-content-center my-3">
+    <div class="my-3 row justify-content-center">
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="row justify-content-center my-3">
+    <div class="my-3 row justify-content-center">
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="row justify-content-center my-3">
+    <div class="my-3 row justify-content-center">
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
@@ -49,11 +49,11 @@
 
     </div>
 
-    <div class="row justify-content-start my-3">
+    <div class="my-3 row justify-content-start">
 
       <div class="offset-2 col-sm-6 col-md-5 col-lg-4">
 
-        <form class="" action="{{ route('admin.roleUpdate', $user->id) }}" method="post">
+        <form class="" action="{{ route('admin.userUpdate', $user->id) }}" method="post">
           @csrf
           @method("DELETE")
 

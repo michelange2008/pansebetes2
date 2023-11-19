@@ -8,7 +8,7 @@
     "nom" : {
       "col" : "user_nom",
       "type" : "lien",
-      "route" : "admin.roleEdit",
+      "route" : "admin.userEdit",
       "id" : "id",
       "aligne" : "left",
       "sortable" : true
@@ -35,6 +35,12 @@
       "col" : "user_role",
       "type" : "item",
       "aligne" : "left",
+      "sortable" : true
+    },
+    "valide" : {
+      "col" : "user_valide",
+      "type" : "ouinon",
+      "aligne" : "center",
       "sortable" : true
     },
     "del" : {

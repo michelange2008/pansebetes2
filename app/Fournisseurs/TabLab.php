@@ -1,7 +1,6 @@
 <?php
 namespace App\Fournisseurs;
-use Illuminate\Support\Facades\Route;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 use App\Traits\LitJson;
 use App\Comp\Titre;
@@ -148,7 +147,7 @@ class TabLab extends Tab
 
           }
             // Et dans chaque cas on appelle une méthode de Tab.php en fonction de
-            // la variable type qui permet de créer un item formatté selon le type
+            // la variable type qui permet de créer un item formaté selon le type
             switch ($colonne->type) {
               case 'date' :
               $item = $this->dateFactory($id, $value);
@@ -199,7 +198,14 @@ class TabLab extends Tab
               break;
 
               case 'ouinon' :
-              $item = $this->ouinonFactory($id, $value);
+                try {
+                  $item = $this->ouinonFactory($id, $value);
+                } catch (\Exception $e) {
+                  dump("Problème avec l'utilisation de lienFactory:
+                  pas de variable route définie");
+                  dump($colonne);
+                  dd($e);
+                }
               break;
 
               case 'edit':
@@ -253,7 +259,7 @@ class TabLab extends Tab
         }
 
       }
-      // On pourcours le json (sous partie colonnes)
+      // On parcours le json (sous partie colonnes)
       // S'il faut une colonne suppr, on l'ajoute
       if($cadre->suppr ) {
         // Mais on n'ajoute un lien de suppression seulement si il existe une

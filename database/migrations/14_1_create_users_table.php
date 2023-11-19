@@ -21,7 +21,9 @@ return new class extends Migration
             $table->string('password');
             $table->foreignId('profession')->constrained()->default(100);
             $table->foreignId('region_id')->constrained()->default(100);
+            $table->boolean('admin')->default(0);
             $table->foreignId('role_id')->constrained()->default(3);
+            $table->boolean('valide')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -29,7 +29,7 @@
 
             <div class="offset-2 col-sm-6 col-md-5 col-lg-4">
 
-                <form class="" action="{{ route('admin.roleUpdate', $user->id) }}" method="post">
+                <form class="" action="{{ route('admin.userUpdate', $user->id) }}" method="post">
                     @csrf
                     @method('PUT')
 
@@ -44,7 +44,14 @@
                         'label' => 'rôle',
                         'required' => true,
                         'options' => $roles,
-                        'isName' => $user->role->id,
+                        'isName' => $user->role,
+                    ])
+
+                    @inputCheckbox([
+                        'name' => 'valide',
+                        'label'=> 'valide',
+                        'isName' => $user->valide,
+                        'checked' => $user->valide,
                     ])
 
                     @inputSelect([
@@ -52,7 +59,7 @@
                         'label' => 'profession',
                         'required' => true,
                         'options' => $professions,
-                        'isName' => $user->profession->id,
+                        'isName' => $user->profession,
                     ])
 
                     @inputSelect([
@@ -60,7 +67,7 @@
                         'label' => 'region',
                         'required' => true,
                         'options' => $regions,
-                        'isName' => $user->region->id,
+                        'isName' => $user->region,
                     ])
 
                     @enregistreAnnule()

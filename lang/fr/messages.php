@@ -17,7 +17,7 @@ return [
   'paraferme_update' => "Le paramètre a été modifié",
   'paraferme_del' => "Le paramètre a été supprimé",
   'deux_saisies' => "Il faut au moins cocher deux saisies pour pouvoir les comparer",
-  'role_modifie' => "Le rôle de cet utilisateur a été modifié.",
+  'user_modifie' => "Cet utilisateur a été modifié.",
   'no_del_self' => "On ne peut pas se détruire soi-même",
   'no_keep_saisies' => "Impossible de garder les saisies",
   'user_destroyed' => "Cet utilisateur a bien été détruit",
