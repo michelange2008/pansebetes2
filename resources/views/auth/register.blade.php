@@ -21,7 +21,7 @@
             @csrf
 
             <div class="col-md-5">
-                <label for="name" class="form-label">@lang('auth.name')*</label>
+                <label for="name" class="form-label">@lang('auth.name')</label>
                 <input type="text" name="name" value="{{ old('name') }}" required
                     class="form-control @error('name') is-invalid @enderror">
                 @error('name')
@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-md-5">
-                <label for="email" class="form-label">@lang('auth.email')*</label>
+                <label for="email" class="form-label">@lang('auth.email')</label>
                 <input type="email" name="email" value="{{ old('email') }}" required
                     class="form-control @error('email') is-invalid @enderror">
                 @error('email')
@@ -43,7 +43,7 @@
             </div>
 
             <div class="col-md-5">
-                <label for="password" class="form-label">@lang('auth.mdp')*</label>
+                <label for="password" class="form-label">@lang('auth.mdp')</label>
                 <input type="password" name="password" value="" class="form-control" data-toggle="password" required>
                 @error('password')
                     <div class="alert alert-danger">
@@ -53,7 +53,7 @@
             </div>
 
             <div class="col-md-5">
-                <label for="password_confirmation" class="form-label">@lang('auth.mdp_confirm')*</label>
+                <label for="password_confirmation" class="form-label">@lang('auth.mdp_confirm')</label>
                 <input id="password_confirmation" type="password" name="password_confirmation" value=""
                     class="form-control" data-toggle="password" required>
                 @error('password-confirmation')
@@ -63,29 +63,28 @@
                 @enderror
             </div>
 
-            <div class="col-md-10">
-                <p class="mt-3 text-secondary">Les champs marqués d'un astérique sont obligatoires.</p>
-                <p class="mt-3 text-secondary">Les deux champs ci-dessous sont facultatifs.</p>
-            </div>
-
             <div class="col-md-5">
-                <select class="my-4 form-select" name="profession">
-                    <option selected disabled>Votre profession ?</option>
+                <select class="my-4 form-select" name="profession" required>
+                    <option selected disabled value="">Votre profession ?</option>
                     @foreach ($professions as $profession)
-                        <option value="{{ $profession->id }}">{{ $profession->nom }}</option>
+                    <option value="{{ $profession->id }}">{{ $profession->nom }}</option>
                     @endforeach
                 </select>
             </div>
 
             <div class="col-md-5">
-                <select class="my-4 form-select" name="region">
-                  <option selected disabled>Votre région ?</option>
+                <select class="my-4 form-select" name="region" required>
+                    <option selected disabled value="">Votre région ?</option>
                     @foreach ($regions as $region)
-                        <option value="{{ $region->id }}">{{ $region->nom }}</option>
+                    <option value="{{ $region->id }}">{{ $region->nom }}</option>
                     @endforeach
                 </select>
             </div>
 
+            <div class="col-md-10" style="font-style: italic; color:gray">
+                <p>(Tous les champs sont obligatoires)</p>
+            </div>
+            
             <div class="col-md-10">
                 <button type="submit" class="btn btn-otobleu">Enregistrer</button>
                 <a class="btn btn-secondary" href="{{ route('accueil') }}">@lang('auth.abandonne')</a>
