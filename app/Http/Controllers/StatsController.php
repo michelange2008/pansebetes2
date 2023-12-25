@@ -59,6 +59,8 @@ class StatsController extends Controller
 
     function pansebetes($espece_nom): View
     {
+        return view('divers.workinprogress');
+        
         $espece = Espece::where('nom', $espece_nom)->first();
 
         $nb_exploitations = DB::table('paraferme_user')

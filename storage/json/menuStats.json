@@ -37,6 +37,7 @@
     "id" : "Vaches laitières",
     "niveau" : "niv_3",
     "parent" : "pansebetes",
+    "visible" : true,
     "icone" : "especes/VL.svg"
   },
   "va_elevage" : {
@@ -45,6 +46,7 @@
     "id" : "Vaches allaitantes",
     "niveau" : "niv_3",
     "parent" : "pansebetes",
+    "visible" : false,
     "icone" : "especes/VA.svg"
   },
   "oa_elevage" : {
@@ -53,6 +55,7 @@
     "id" : "Brebis allaitantes",
     "niveau" : "niv_3",
     "parent" : "pansebetes",
+    "visible" : false,
     "icone" : "especes/OA.svg"
   },
   "cp_elevage" : {
@@ -61,6 +64,7 @@
     "id" : "Chèvres laitières",
     "niveau" : "niv_3",
     "parent" : "pansebetes",
+    "visible" : false,
     "icone" : "especes/CP.svg"
   },
   "ol_elevage" : {
@@ -69,6 +73,7 @@
     "id" : "Brebis laitières",
     "niveau" : "niv_3",
     "parent" : "pansebetes",
+    "visible" : false,
     "icone" : "especes/OL.svg"
   }
 }

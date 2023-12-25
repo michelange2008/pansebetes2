@@ -58,7 +58,7 @@
 
                   @foreach ($menu as $niv_3 => $contenu)
 
-                    @if ($menu->$niv_3->niveau == 'niv_3' && $menu->$niv_3->parent == $menu->$niv_2->id)
+                    @if ($menu->$niv_3->niveau == 'niv_3' && $menu->$niv_3->parent == $menu->$niv_2->id && $menu->$niv_3->visible)
 
                       <a class="dropdown-item" href="{{route($menu->$niv_3->route, $menu->$niv_3->id)}}">
 

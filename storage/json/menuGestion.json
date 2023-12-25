@@ -53,6 +53,7 @@
     "route" : "alerte.indexParEspece",
     "id" : "Vaches laitières",
     "niveau" : "niv_3",
+    "visible" : true,
     "parent" : "alertes",
     "icone" : "especes/VL.svg"
   },
@@ -61,6 +62,7 @@
     "route" : "alerte.indexParEspece",
     "id" : "Vaches allaitantes",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "alertes",
     "icone" : "especes/VA.svg"
   },
@@ -69,6 +71,7 @@
     "route" : "alerte.indexParEspece",
     "id" : "Brebis allaitantes",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "alertes",
     "icone" : "especes/OA.svg"
   },
@@ -77,6 +80,7 @@
     "route" : "alerte.indexParEspece",
     "id" : "Chèvres laitières",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "alertes",
     "icone" : "especes/CP.svg"
   },
@@ -85,6 +89,7 @@
     "route" : "alerte.indexParEspece",
     "id" : "Brebis laitières",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "alertes",
     "icone" : "especes/OL.svg"
   },
@@ -93,6 +98,7 @@
     "route" : "chiffre.indexParEspece",
     "id" : "Vaches laitières",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "chiffres",
     "icone" : "especes/VL.svg"
   },
@@ -101,6 +107,7 @@
     "route" : "chiffre.indexParEspece",
     "id" : "Vaches allaitantes",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "chiffres",
     "icone" : "especes/VA.svg"
   },
@@ -109,6 +116,7 @@
     "route" : "chiffre.indexParEspece",
     "id" : "Brebis allaitantes",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "chiffres",
     "icone" : "especes/OA.svg"
   },
@@ -117,6 +125,7 @@
     "route" : "chiffre.indexParEspece",
     "id" : "Chèvres laitières",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "chiffres",
     "icone" : "especes/CP.svg"
   },
@@ -125,6 +134,7 @@
     "route" : "chiffre.indexParEspece",
     "id" : "Brebis laitières",
     "niveau" : "niv_3",
+    "visible" :true,
     "parent" : "chiffres",
     "icone" : "especes/OL.svg"
   }
