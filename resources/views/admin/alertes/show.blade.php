@@ -6,7 +6,7 @@
 
   <div class="container-fluid">
 
-    <div class="row mt-3 justify-content-center">
+    <div class="mt-3 row justify-content-center">
 
       <div class="col-sm-11 col-md-10 col-lg-9">
 
@@ -21,7 +21,7 @@
 
     </div>
 
-    <div class="row mt-3 justify-content-center">
+    <div class="mt-3 row justify-content-center">
 
 
         <div class="col-sm-11 col-md-10 col-lg-9">
@@ -194,14 +194,14 @@
 
     </div>
 
-    <div class="row mt-3 justify-content-center">
+    <div class="mt-3 row justify-content-center">
 
       <div class="col-sm-11 col-md-10 col-lg-9 d-flex justify-content-end">
 
         @edit(['route' => route('alerte.edit', $alerte->id)])
 
         @annule([
-          'route' => route('alerte.indexParEspece', $alerte->espece->nom),
+          'route' => route('alerte.indexParEspece', $alerte->espece->id),
           'nomAnnule' => __('boutons.retour'),
         ])
 

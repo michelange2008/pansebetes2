@@ -29,11 +29,15 @@
 
         @isset($isName)
 
-          @if ($option->id == $isName->id )
+          @isset($isName->id)
 
-            selected = "selected"
+            @if ($option->id == $isName->id ) selected = "selected" @endif
 
-          @endif
+          @else
+
+            @if ($option->id == $isName ) selected = "selected" @endif
+              
+          @endisset
 
         @endisset
 

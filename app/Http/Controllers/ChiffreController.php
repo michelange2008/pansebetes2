@@ -50,9 +50,9 @@ class ChiffreController extends Controller
      * @param type $espece_id
      * @return return view
      */
-    public function indexParEspece($espece_nom)
+    public function indexParEspece($espece_id)
     {
-      $espece = Espece::where('nom', $espece_nom)->first();
+      $espece = Espece::find($espece_id);
 
       session( [ 'espece_id' => $espece->id]);
 
