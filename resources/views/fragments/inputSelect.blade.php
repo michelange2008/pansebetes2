@@ -1,21 +1,16 @@
 <div class="my-3 form-group">
 
-  <label class="form-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
+    <label class="form-label" for="{{ $name }}">{{ ucfirst($label) }}</label>
 
-   <select id="{{ $name }}" class="form-control" name="{{ $name }}"
-
-    @isset($required)
+    <select id="{{ $name }}" class="form-control" name="{{ $name }}"
+        @isset($required)
       @if ($required) required @endif
-    @endisset
+    @endisset>
+        <option value=""></option>
 
-    >
-    <option value=""></option>
-
-    @foreach ($options as $option)
-
-      <option value="{{ $option->id }}"
-
-        @isset($default)
+        @foreach ($options as $option)
+            <option value="{{ $option->id }}"
+                @isset($default)
 
           @if ($option->id == $default)
 
@@ -24,43 +19,46 @@
           @endif
 
         @endisset
-
-        {{-- mais si c'est une modification on choisit l'ancienne valeur --}}
-
+                {{-- mais si c'est une modification on choisit l'ancienne valeur --}}
         @isset($isName)
+        @if (is_object($isName))
+            
+          @if ($option->id == $isName->id)
 
-          @isset($isName->id)
+            selected = "selected"
 
-            @if ($option->id == $isName->id ) selected = "selected" @endif
+          @endif
+        @else
+          
+            @if ($option->id == $isName)
+            
+            selected = "selected"
 
-          @else
+          @endif
 
-            @if ($option->id == $isName ) selected = "selected" @endif
-              
-          @endisset
+        @endif
 
-        @endisset
+        @endisset>
 
-        >
-
-        {{ ucfirst( $option->nom ) }}
-        {{-- dans certains cas on peut avoir un peu plus d'information sur le
+                {{ ucfirst($option->nom) }}
+                {{-- dans certains cas on peut avoir un peu plus d'information sur le
         sens des éléments de la liste déroulante  --}}
-        @isset($option->detail)
-          ({{ $option->detail }})
-        @endisset
+                @isset($option->detail)
+                    ({{ $option->detail }})
+                @endisset
 
-      </option>
+            </option>
+        @endforeach
 
-    @endforeach
+    </select>
+    {{-- affichage de l'erreur --}}
 
-  </select>
-  {{-- affichage de l'erreur --}}
+    <div class="invalid-feedback">
 
-  <div class="invalid-feedback">
-
-    @error( $name ) {{ $message }} @enderror
+        @error($name)
+            {{ $message }}
+        @enderror
 
     </div>
 
-  </div>
+</div>
