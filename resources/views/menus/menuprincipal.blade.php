@@ -17,15 +17,15 @@
           Sinon, il faut que les statsDisplay ne soient pas à la valeur admin (cf. middleware Menu) --}}
           @if ( Auth::user()->isAdmin || Session('statsDisplay') != 'admin')
 
-            @include('menus.menuGestion', ['menu' => session('menuStats')])
+            @include('menus.menuStats')
               
           @endif
 
-          {{-- @if (Auth::user()->isAdmin)
+          @if (Auth::user()->isAdmin)
 
             @include('menus.menuGestion', ['menu' => session('menuGestion')])
 
-          @endif   --}}
+          @endif  
 
           <li class="nav-item"><a class="nav-link" href="{{route('aide')}}">Aide</a></li>
           {{-- <li class="nav-item"><a class="nav-link" href="{{route('notes.create')}}">Votre avis</a></li> --}}
