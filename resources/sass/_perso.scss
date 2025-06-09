@@ -438,7 +438,10 @@ a, a:link, a:hover  {
     transition: filter 1s;
   }
 
-
+  .nouvelle-saisie-inactive {
+    height: 60px;
+    filter: opacity(0.4);
+  }
   .arrowUp {
     display: block;
     border-width: 0 15px 20px;
