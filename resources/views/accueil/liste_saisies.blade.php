@@ -10,7 +10,7 @@
 
           <div class="d-flex flex-row align-items-start">
 
-            <img src="{{ 'storage/img/especes/'.$saisie->espece->icone }}" alt="">
+            <img src="{{ asset('storage/img/especes/'.$saisie->espece->icone) }}" alt="">
 
             <div class="saisie-info d-flex flex-column">
 
