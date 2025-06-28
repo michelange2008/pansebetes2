@@ -17,7 +17,7 @@
           Sinon, il faut que les statsDisplay ne soient pas à la valeur admin (cf. middleware Menu) --}}
           @if ( Auth::user()->isAdmin || Session('statsDisplay') != 'admin')
 
-            @include('menus.menuGestion', ['menu' => session('menuStats')])
+            @include('menus.menuStats')
               
           @endif
 

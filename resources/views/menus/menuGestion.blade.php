@@ -1,91 +1,121 @@
-@foreach ($menu as $niv_1 => $contenu)
+<li class="nav-item dropdown">
 
-  @if ($menu->$niv_1->niveau == 'niv_1')
+    <a href="#" class="nav-link dropdown-toggle" id="admin" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="true">
+        Administration
+    </a>
 
-    <li class="nav-item">
+    <ul class="dropdown-menu" aria-labelledby="admin">
+        <li>
+            <a class="dropdown-item" href="{{ route('admin.utilisateurs') }}">
+                <img class="img-40" src="{{ url('storage/img/infos_perso.svg') }}" alt="">
+                Utilisateurs
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="{{ route('admin.statsDisplayEdit') }}">
+                <img class="img-40" src="{{ url('storage/img/admin/statsDisplay.svg') }}" alt="">
+                Affichage des stats
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="{{ route('paraferme.index') }}">
+                <img class="img-40" src="{{ url('storage/img/categories/logement.svg') }}" alt="">
+                Paramètres des exploitations
+            </a>
 
-      @if (!$menu->$niv_1->hasSousmenu)
+        </li>
+        <li>
+            <a href="{{ route('chiffre.indexParEspece', 2) }}" class="dropdown-item" id="chiffres">
 
-      <a href="{{ route($menu->$niv_1->route, $menu->$niv_1->id) }}" class="nav-link"
-        id="{{ $menu->$niv_1->id }}">
+                <img class="img-40" src="{{ url('storage/img/saisie/chiffres.svg') }}" alt="">
 
-        {{ ucfirst($menu->$niv_1->nom) }}
+                Chiffres
 
-      </a>
+            </a>
+        </li>
+        <li>
+          <a href="{{ route('alerte.indexParEspece', 2) }}" class="dropdown-item" id="alertes">
 
-    </li>
+              <img class="img-40" src="{{ url('storage/img/saisie/alertes.svg') }}" alt="">
 
-    @else
-    <li class="nav-item dropdown">
+              Alertes
 
-      <a href="#" class="nav-link dropdown-toggle"
-        id="{{ $menu->$niv_1->id }}"
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          </a>
+      </li>
 
-        {{ ucfirst($menu->$niv_1->nom) }}
+        {{-- <button href="#" class="nav-link dropdown-toggle dropdown-toggle-split" id="alertes"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 
-      </a>
+            <img class="img-40" src="{{ url('storage/img/saisie/alertes.svg') }}" alt="">
 
-      <div class="dropdown-menu" aria-labelledby="{{ $menu->$niv_1->id }}">
+            Alertes
 
+        </button>
 
-          @foreach ($menu as $niv_2 => $contenu)
+        <ul class="dropdown-menu" aria-labelledby="alertes">
 
-            @if ($menu->$niv_2->niveau == 'niv_2' && $menu->$niv_2->parent == $menu->$niv_1->id)
+            <a class="dropdown-item" href="{{ route('alerte.indexParEspece', 2) }}">
+                <img class="img-40" src="{{ url('storage/img/especes/VL.svg') }}" alt="">
+                Vaches laitières
+            </a>
 
-              @if (!$menu->$niv_2->hasSousmenu)
+            <a class="dropdown-item" href="{{ route('alerte.indexParEspece', 1) }}">
+                <img class="img-40" src="{{ url('storage/img/especes/VA.svg') }}" alt="">
+                Vaches allaitantes
+            </a>
+            <a class="dropdown-item" href="{{ route('alerte.indexParEspece', 3) }}">
+                <img class="img-40" src="{{ url('storage/img/especes/CP.svg') }}" alt="">
+                Chèvres
+            </a>
+            <a class="dropdown-item" href="{{ route('alerte.indexParEspece', 4) }}">
+                <img class="img-40" src="{{ url('storage/img/especes/OA.svg') }}" alt="">
+                Brebis allaitantes
+            </a>
 
-                <a class="dropdown-item" href="{{route($menu->$niv_2->route)}}">
+            <a class="dropdown-item" href="{{ route('alerte.indexParEspece', 5) }}">
+                <img class="img-40" src="{{ url('storage/img/especes/OL.svg') }}" alt="">
+                Brebis laitières
+            </a>
 
-                  <img class="img-40" src="{{url('storage/img/'. $menu->$niv_2->icone)}}" alt="">
+        </ul>
+ --}}
 
-                  {{ $menu->$niv_2->nom }}
+        {{-- <button href="#" class="nav-link dropdown-toggle dropdown-toggle-split" id="chiffres"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 
+            <img class="img-40" src="{{ url('storage/img/saisie/chiffres.svg') }}" alt="">
+
+            Chiffres
+
+        </button>
+
+        <ul class="dropdown-menu" aria-labelledby="chiffres">
+            <li>
+
+                <a class="dropdown-item" href="{{ route('chiffre.indexParEspece', 2) }}">
+                    <img class="img-40" src="{{ url('storage/img/especes/VL.svg') }}" alt="">
+                    Vaches laitières
                 </a>
+            </li>
 
-
-              @else
-
-                <a id={{ $menu->$niv_2->id }} class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-
-                  <img class="img-40" src="{{url('storage/img/'. $menu->$niv_2->icone)}}" alt="">
-
-                  {{ ucfirst($menu->$niv_2->nom) }}
-
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="{{ $menu->$niv_2->id }}">
-
-                  @foreach ($menu as $niv_3 => $contenu)
-
-                    @if ($menu->$niv_3->niveau == 'niv_3' && $menu->$niv_3->parent == $menu->$niv_2->id && $menu->$niv_3->visible)
-
-                      <a class="dropdown-item" href="{{route($menu->$niv_3->route, $menu->$niv_3->id)}}">
-
-                        <img class="img-40" src="{{url('storage/img/'. $menu->$niv_3->icone)}}" alt="">
-
-                        {{ ucfirst($menu->$niv_3->nom) }}
-
-                      </a>
-
-                    @endif
-
-                  @endforeach
-
-                </div>
-
-              @endif
-
-            @endif
-
-          @endforeach
-
-        </div>
-
-        @endif
-
-    </li>
-
-  @endif
-
-@endforeach
+            <a class="dropdown-item" href="{{ route('chiffre.indexParEspece', 1) }}">
+                      <img class="img-40" src="{{ url('storage/img/especes/VA.svg') }}" alt="">
+                      Vaches allaitantes
+                    </a>
+                  <a class="dropdown-item" href="{{ route('chiffre.indexParEspece', 3) }}">
+                      <img class="img-40" src="{{ url('storage/img/especes/CP.svg') }}" alt="">
+                      Chèvres
+                    </a>
+                    <a class="dropdown-item" href="{{ route('chiffre.indexParEspece', 4) }}">
+                      <img class="img-40" src="{{ url('storage/img/especes/OA.svg') }}" alt="">
+                      Brebis allaitantes
+                    </a>
+                    <a class="dropdown-item" href="{{ route('chiffre.indexParEspece', 5) }}">
+                      <img class="img-40" src="{{ url('storage/img/especes/OL.svg') }}" alt="">
+                      Brebis laitières
+                    </a>
+        </ul>
+ --}}
+    </ul>
+</li>

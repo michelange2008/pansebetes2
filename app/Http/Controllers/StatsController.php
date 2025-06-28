@@ -57,11 +57,11 @@ class StatsController extends Controller
         ]);
     }
 
-    function pansebetes($espece_nom): View
+    public function pansebetes($espece_id): View
     {
         return view('divers.workinprogress');
         
-        $espece = Espece::where('nom', $espece_nom)->first();
+        $espece = Espece::find($espece_id);
 
         $nb_exploitations = DB::table('paraferme_user')
             ->join('users', 'users.id', 'paraferme_user.user_id')

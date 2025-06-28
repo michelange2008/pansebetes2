@@ -1,0 +1,141 @@
+{
+  "admin" : {
+    "nom" : "administration",
+    "id" : "admin",
+    "icone" : "",
+    "niveau" : "niv_1",
+    "hasSousmenu" : true
+  },
+  "users" : {
+    "nom" : "Utilisateurs",
+    "route" : "admin.utilisateurs",
+    "icone" : "infos_perso.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : false
+  },
+  "statsDisplay" : {
+    "nom" : "Affichage des stats",
+    "route" : "admin.statsDisplayEdit",
+    "icone" : "admin/statsDisplay.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : false
+  },
+  "parafermes" : {
+    "nom" : "Paramètres des exploitations",
+    "id" : "parafermes",
+    "route" : "paraferme.index",
+    "icone" : "categories/logement.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : false
+  },
+  "chiffres" : {
+    "nom" : "Chiffres",
+    "id" : "chiffres",
+    "route" : "chiffre.index",
+    "icone" : "saisie/chiffres.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : true
+  },
+  "alertes" : {
+    "nom" : "Alertes",
+    "id" : "alertes",
+    "icone" : "saisie/alertes.svg",
+    "niveau" : "niv_2",
+    "parent" : "admin",
+    "hasSousmenu" : true
+  },
+  "vl_alertes" : {
+    "nom" : "Vaches laitières",
+    "route" : "alerte.indexParEspece",
+    "id" : "Vaches laitières",
+    "niveau" : "niv_3",
+    "visible" : true,
+    "parent" : "alertes",
+    "icone" : "especes/VL.svg"
+  },
+  "va_alertes" : {
+    "nom" : "Vaches allaitantes",
+    "route" : "alerte.indexParEspece",
+    "id" : "Vaches allaitantes",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "alertes",
+    "icone" : "especes/VA.svg"
+  },
+  "oa_alertes" : {
+    "nom" : "Brebis allaitantes",
+    "route" : "alerte.indexParEspece",
+    "id" : "Brebis allaitantes",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "alertes",
+    "icone" : "especes/OA.svg"
+  },
+  "cp_alertes" : {
+    "nom" : "Chèvres laitières",
+    "route" : "alerte.indexParEspece",
+    "id" : "Chèvres laitières",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "alertes",
+    "icone" : "especes/CP.svg"
+  },
+  "ol_alertes" : {
+    "nom" : "Brebis laitières",
+    "route" : "alerte.indexParEspece",
+    "id" : "Brebis laitières",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "alertes",
+    "icone" : "especes/OL.svg"
+  },
+  "vl_chiffres" : {
+    "nom" : "Vaches laitières",
+    "route" : "chiffre.indexParEspece",
+    "id" : "Vaches laitières",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "chiffres",
+    "icone" : "especes/VL.svg"
+  },
+  "va_chiffres" : {
+    "nom" : "Vaches allaitantes",
+    "route" : "chiffre.indexParEspece",
+    "id" : "Vaches allaitantes",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "chiffres",
+    "icone" : "especes/VA.svg"
+  },
+  "oa_chiffres" : {
+    "nom" : "Brebis allaitantes",
+    "route" : "chiffre.indexParEspece",
+    "id" : "Brebis allaitantes",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "chiffres",
+    "icone" : "especes/OA.svg"
+  },
+  "cp_chiffres" : {
+    "nom" : "Chèvres laitières",
+    "route" : "chiffre.indexParEspece",
+    "id" : "Chèvres laitières",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "chiffres",
+    "icone" : "especes/CP.svg"
+  },
+  "ol_chiffres" : {
+    "nom" : "Brebis laitières",
+    "route" : "chiffre.indexParEspece",
+    "id" : "Brebis laitières",
+    "niveau" : "niv_3",
+    "visible" :true,
+    "parent" : "chiffres",
+    "icone" : "especes/OL.svg"
+  }
+}
